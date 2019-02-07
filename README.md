@@ -6,15 +6,10 @@
 [![](https://vsmarketplacebadge.apphb.com/rating-short/SteveKrantzman.xmp-snippets.svg)](https://marketplace.visualstudio.com/items?itemName-SteveKrantzman.xmp-snippets) 
 [![](https://img.shields.io/badge/Dev--Community-XMP-orange.svg)](https://www.dnndev.com)
 
-
-
-
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_Logo.png" width="150" height="150" alt="XMP Snippets Logo"></p>
 <br />
 
 > Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  VS Code with XMP Snippets allows you to author and edit XMP forms and templates in DNN Dynamically. Although the form and template editor built into XMP is a great tool, it does have limitations. Write you code in VS Code and Preview side by side in your browser.
-
-<br />
 
 # XMP Snippets
 
@@ -29,11 +24,11 @@ XMP Snippets are very easy to use
 ## Benefits
 There are many benefits to coding XMod Pro Templates and Forms in VS Code with XMP Snippets over the traditional method. A few are listed below:
 
-* All the benefits of one of the top rated code editors.
-* Saves a tremendous amount of time.
-* Multiple Undos! Even undo past your last save as long as you have not closed the open file or VS Code.
-* Easy Versioning.
-* Code in one screen and preview in another.
+* __All the benefits of one of the top rated code editors.__
+* __Saves a tremendous amount of time.__
+* __Multiple Undos! Even undo past your last save as long as you have not closed the open file or VS Code.__
+* __Easy Versioning.__
+* __Code in one screen and preview in another.__
 
 
 ## Features
@@ -45,7 +40,7 @@ The XMP snippets are broken into three types.
     
 > XMod Pro Templates and Forms, prefix with xt or xf accordingly
 
-<p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets%20XMP_Features.gif"   alt="XMP Snippets XMP Features Animated GIF"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_XMP_Features.gif"   alt="XMP Snippets XMP Features Animated GIF"></p>
 
 <br />
 
