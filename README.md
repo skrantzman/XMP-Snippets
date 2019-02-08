@@ -9,7 +9,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_Logo.png" width="150" height="150" alt="XMP Snippets Logo"></p>
 <br />
 
-> Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  VS Code with XMP Snippets allows you to author and edit XMP forms and templates in DNN Dynamically. Although the form and template editor built into XMP is a great tool, it does have a few limitations. Write you code in VS Code and fine tune in the XMP editor side by side.
+> Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  VS Code with XMP Snippets allows you to author and edit XMP forms and templates quickly. Although the form and template editor built into XMP is a great tool, it does have a few limitations. Write the bulk of your code in VS Code quickly and fine tune it in the XMP editor.
 
 # XMP Snippets
 
@@ -17,9 +17,9 @@ XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Te
 
 XMP Snippets are very easy to use
 
-* For XMP Template Controls start by typing __xf__
-* For XMP Form Controls start by typing __xt__
-* For Form.X Form Controls start by typing __fx__
+* For XMP Template Controls start by typing __xf__, followed by the start of the desiered template control.
+* For XMP Form Controls start by typing __xt__, followed by the start of the desiered form control.
+* For Form.X Form Controls start by typing __fx__, followed by the start of the desiered Form.x control.
 
 ## Benefits
 There are many benefits to coding XMod Pro Templates and Forms in VS Code with XMP Snippets over the traditional method. A few are listed below:
@@ -38,13 +38,13 @@ The XMP snippets are broken into three types.
 2. Form Controls
 3. Form.X Controls
     
-> XMod Pro Templates and Forms, prefix with xt or xf accordingly
+> XMod Pro Templates and Forms, prefix with xt or xf accordingly. Then start to type the name of the desired XMod Pro control.
 
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_XMP_Features.gif"   alt="XMP Snippets XMP Features Animated GIF"></p>
 
 <br />
 
-> Form.X form controls in XMP Templates, prefix with fx
+> Form.X form controls in XMP Templates, prefix with fx. Then start to type the name of the desired Form.X control.
 
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_FormX_Features.gif"   alt="XMP Snippets Form.X Features Animated GIF"></p>
 
