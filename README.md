@@ -63,7 +63,7 @@ No known issues as of publish date
 
 ## Release Notes
 
-__v 0.1.0__ 
+__v 1.0.0__ 
 * Initial Release of XMP-Snippets
 
 
