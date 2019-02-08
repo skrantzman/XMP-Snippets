@@ -9,7 +9,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_Logo.png" width="150" height="150" alt="XMP Snippets Logo"></p>
 <br />
 
-> Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  VS Code with XMP Snippets allows you to author and edit XMP forms and templates in DNN Dynamically. Although the form and template editor built into XMP is a great tool, it does have limitations. Write you code in VS Code and Preview side by side in your browser.
+> Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  VS Code with XMP Snippets allows you to author and edit XMP forms and templates in DNN Dynamically. Although the form and template editor built into XMP is a great tool, it does have a few limitations. Write you code in VS Code and fine tune in the XMP editor side by side.
 
 # XMP Snippets
 
@@ -28,7 +28,7 @@ There are many benefits to coding XMod Pro Templates and Forms in VS Code with X
 * __Saves a tremendous amount of time.__
 * __Multiple Undos! Even undo past your last save as long as you have not closed the open file or VS Code.__
 * __Easy Versioning.__
-* __Code in one screen and preview in another.__
+* __Quickly Scaffold projects in VS Code in one screen and copy and paste into the XMP Editor in another screen.__
 
 
 ## Features
@@ -63,9 +63,7 @@ No known issues as of publish date
 
 ## Release Notes
 
-v 0.0.2 
+__v 0.1.0__ 
 * Initial Release of XMP-Snippets
-* Updated ReadMe.md
-* Updated Gifs
 
 
