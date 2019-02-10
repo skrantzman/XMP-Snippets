@@ -9,7 +9,7 @@
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_Logo.png" width="150" height="150" alt="XMP Snippets Logo"></p>
 <br />
 
-> Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  VS Code with XMP Snippets allows you to author and edit XMP forms and templates quickly. Although the form and template editor built into XMP is a great tool, you may prefer VS Code as your go-to HTML editor. Together they are a great combination, quickly write the bulk of your code in VS Code and fine tune it in the XMP editor.
+> __Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  Author and edit XMP forms and templates quickly. Although the form and template editor built into XMP is a great tool, you may prefer VS Code as your go-to HTML editor. Together they are a great combination - quickly write the bulk of your code in VS Code and fine tune it in the XMP editor.__
 
 # XMP Snippets
 
@@ -24,11 +24,11 @@ XMP Snippets are very easy to use
 ## Benefits
 There are many benefits to coding XMod Pro Templates and Forms in VS Code with XMP Snippets over the traditional method. A few are listed below:
 
-* __All the benefits of one of the top rated code editors.__
-* __Saves a tremendous amount of time.__
+* __All the benefits of the top rated code editor.__
 * __Multiple Undos! Even undo past your last save as long as you have not closed the open file or VS Code.__
-* __Easy Versioning.__
+* __Easy Versioning, and can even use git__
 * __Quickly Scaffold projects in VS Code in one screen and copy and paste into the XMP Editor in another screen.__
+* __Saves a tremendous amount of time.__
 
 
 ## Features

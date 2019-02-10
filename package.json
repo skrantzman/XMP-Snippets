@@ -1,7 +1,7 @@
 {
     "name": "xmp-snippets",
     "displayName": "XMP Snippets",
-    "description": "Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  VS Code with XMP Snippets allows you to author and edit XMP forms and templates quickly.",
+    "description": "XMod Pro and Form.X Snippets for Html.",
     "version": "1.0.0",
     "publisher": "SteveKrantzman",
     "icon": "images/XMP_Snippets_Logo.png",
