@@ -2,84 +2,84 @@
     "xmod:AddButton": {
         "prefix": "xt xmod:AddButton",
         "body": [
-            "<xmod:AddButton text=\"\" ></xmod:AddButton> \n "
+            "<xmod:AddButton text=\"${1:Submit}\" ></xmod:AddButton> \n "
             ],
         "description": "XMP Template Control - xmod:AddButton"
     },
     "xmod:AddImage": {
         "prefix": "xt xmod:AddImage",
         "body": [
-            "<xmod:AddImage AlternateText=\"\" ImageUrl=\"\" ></xmod:AddImage>\n "
+            "<xmod:AddImage AlternateText=\"${1}\" ImageUrl=\"${2}\" ></xmod:AddImage>\n "
             ],
         "description": "XMP Template Control - xmod:AddImmage"
     },
     "xmod:AddLink": {
         "prefix": "xt xmod:AddLink",
         "body": [
-            "<xmod:AddLink text=\"\" ></xmod:AddLink>\n "
+            "<xmod:AddLink text=\"${1}\" ></xmod:AddLink>\n "
             ],
         "description": "XMP Template Control - xmod:AddLink"
 	},
     "xmod:AjaxButton": {
         "prefix": "xt xmod:AjaxButton",
         "body": [
-            "<xmod:AjaxButton \n    text=\"\" \n    Url=\"\"\n    Target=\"\"\n/>\n "
+            "<xmod:AjaxButton text=\"${1}\" Url=\"${2}\" Target=\"${3}\"\n/>\n "
             ],
         "description": "XMP Template Control - xmod:AjaxButton"
     },
     "xmod:AjaxLink": {
         "prefix": "xt xmod:AjaxLink",
         "body": [
-            "<xmod:AjaxLink \n    text=\"\"\n    Url=\"\"\n    Target=\"\"\n/>\n\n\n "
+            "<xmod:AjaxLink text=\"${1}\" Url=\"${2}\" Target=\"${3}\"\n/>\n"
             ],
         "description": "XMP Template Control - xmod:AjaxLink"
     },
     "xmod:AjaxImage": {
         "prefix": "xt xmod:AjaxImage",
         "body": [
-            "<xmod:AjaxImage\n    AlternateText=\"\" \n    Url=\"\"\n    Target=\"\" \n/>\n\n "
+            "<xmod:AjaxImage AlternateText=\"${1}\" Url=\"${2}\"\n Target=\"${3}\" \n/>\n"
             ],
         "description": "XMP Template Control - xmod:AjaxImage"
     },    
     "Case": {
         "prefix": "xt Case",
         "body": [
-            "    <Case CompareType=\"\" Value=\"\" Expression=\"\" Operator=\"\" IgnoreCase=\"\"></Case>\n"
+            "    <Case CompareType=\"${1|Numeric,Float,Date,Text,Regex,Boolean,Role|}\" Value=\"${2}\" Operator=\"${3|=,<>,>,>=,<,<=|}\" Expression=\"${4}\"  IgnoreCase=\"${5|True,False|}\"></Case>\n"
             ],
         "description": "XMP Template Control - Case"
     },
     "Command": {
         "prefix": "xt Command",
         "body": [
-            "<Command Target=\"\" Type=\"\">\n    <Parameter Name=\"\" Value=\"\" />\n</Command>\n "
+            "<Command Target=\"${1}\" Type=\"${2|List,Detail|}\">\n    <Parameter Name=\"${3}\" Value=\"${4}\" />${0}\n</Command>\n "
             ],
         "description": "XMP Template Control - Command"
     },	
     "xmod:CommandButton": {
         "prefix": "xt xmod:CommandButton",
         "body": [
-            "<xmod:CommandButton text=\"\"\n    <Command Target=\"\" Type=\"list\">\n        <Parameter Name=\"\" Value=' ' />\n    </Command>\n</xmod:CommandButton> \n "
+            "<xmod:CommandButton text=\"{1}\"\n    <Command Target=\"{2}\" Type=\"{3|List,Detail|}\">\n        <Parameter Name=\"{4}\" Value='{5}' />{0}\n    </Command>\n</xmod:CommandButton> \n "
             ],
         "description": "XMP Template Control - xmod:CommandButton"
     },
     "xmod:CommandImage": {
         "prefix": "xt xmod:CommandImage",
         "body": [
-            "<xmod:CommandImage text=\"\" ImageUrl=\"\" ImageAlign=\"\">\n    <Command Target=\"\" Type=\"detail\">\n        <Parameter Name=\"\" Value=' ' />\n    </Command>\n</xmod:CommandImage>\n "
+            "<xmod:CommandImage text=\"{1}\" ImageUrl=\"{2}\" ImageAlign=\"{3}\">\n    <Command Target=\"{4}\" Type=\"{5|List,Detail|}\">\n        <Parameter Name=\"{6}\" Value='{7}' />{0}\n    </Command>\n</xmod:CommandImage>\n "
             ],
         "description": "XMP Template Control - xmod:CommandImage"
     },
     "xmod:CommandLink": {
         "prefix": "xt xmod:CommandLink",
         "body": [
-            "<xmod:CommandLink text=\"\" >\n    <Command Target=\"\" Type=\"list\">\n        <Parameter Name=\"\" Value=' ' />\n    </Command>\n</xmod:CommandLink>  \n"
+            "<xmod:CommandLink text=\"{1}\" >\n    <Command Target=\"{2}\" Type=\"{3|List,Detail|}\">\n        <Parameter Name=\"{4}\" Value='{5}' />{0}\n    </Command>\n</xmod:CommandLink>  \n"
             ],
         "description": "XMP Template Control - xmod:CommandLink"
     },
     "xmod:DataList": {
         "prefix": "xt xmod:DataList",
         "body": [
-            "<xmod:DataList Id=\"\" Ajax=\"true\" AddRoles=\"\">\n    <ListDataSource CommandText=\"SELECT * FROM TableName\" />\n    <DetailDataSource CommandText=\"SELECT * FROM TableName WHERE UserId=@UserId\" />\n\n    <HeaderTemplate>\n        <h1>Header HereList</h1>\n    </HeaderTemplate>\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n    <FooterTemplate>\n    </FooterTemplate>\n    <DetailTemplate>\n        <h1>This is the detail view</h1> \n    </DetailTemplate>\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n</xmod:DataList> \n "
+            "<xmod:DataList Id=\"{1}\" Ajax=\"{2|True,False|}\" AddRoles=\"{1}\">\n    <ListDataSource CommandText=\"{1:SELECT 1}\" />\n    <DetailDataSource CommandText=\"SELECT * FROM ${2:TableName} WHERE UserId=@UserId\" />\n\n    <HeaderTemplate>\n        <h1></h1>\n    </HeaderTemplate>\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n    <FooterTemplate>\n    </FooterTemplate>\n    <DetailTemplate>\n        <h1>This is the detail view</h1> \n    </DetailTemplate>\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n</xmod:DataList> \n "
             ],
         "description": "XMP Template Control - xmod:DataList"
     },
