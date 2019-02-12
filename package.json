@@ -2,7 +2,7 @@
     "name": "xmp-snippets",
     "displayName": "XMP Snippets",
     "description": "XMod Pro and Form.X Snippets for Html.",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "SteveKrantzman",
     "icon": "images/XMP_Snippets_Logo.png",
     "homepage": "https://github.com/skrantzman/XMP-Snippets",
@@ -11,7 +11,7 @@
         "url": "https://github.com/skrantzman/XMP-Snippets"
     },
     "engines": {
-        "vscode": "^1.1.0"
+        "vscode": "^1.0.0"
     },
     "keywords": [
         "XMP",
