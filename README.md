@@ -28,7 +28,7 @@ There are many benefits to coding XMod Pro Templates and Forms in VS Code with X
 * __Multiple Undos! Even undo past your last save as long as you have not closed the open file or VS Code.__
 * __Easy Versioning, and can even use git__
 * __Quickly Scaffold projects in VS Code in one screen and copy and paste into the XMP Editor in another screen.__
-* __Saves a tremendous amount of time.__
+* __Tab through each inserted control's properties to set their values.__
 
 
 ## Features
@@ -63,7 +63,7 @@ No known issues as of publish date
 
 ## Release Notes
 
-__v 1.0.0__ 
-* Initial Release of XMP-Snippets
+__v 1.1.0__ 
+* Added Tabstops to XMP-Snippet control properties.
 
 

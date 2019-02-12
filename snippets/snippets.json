@@ -9,7 +9,7 @@
     "xmod:AddImage": {
         "prefix": "xt xmod:AddImage",
         "body": [
-            "<xmod:AddImage AlternateText=\"${1}\" ImageUrl=\"${2}\" ></xmod:AddImage>\n "
+            "<xmod:AddImage AlternateText=\"${1}\" ImageUrl=\"${2:~/images/add.gif}\" ></xmod:AddImage>\n "
             ],
         "description": "XMP Template Control - xmod:AddImmage"
     },
@@ -27,19 +27,19 @@
             ],
         "description": "XMP Template Control - xmod:AjaxButton"
     },
+    "xmod:AjaxImage": {
+        "prefix": "xt xmod:AjaxImage",
+        "body": [
+            "<xmod:AjaxImage AlternateText=\"${1}\"\n    Url=\"${2}\"\n    Target=\"${3}\"\n    ImageUrl=\"${4:~/images/add.gif}\"\n/>\n"
+            ],
+        "description": "XMP Template Control - xmod:AjaxImage"
+    },
     "xmod:AjaxLink": {
         "prefix": "xt xmod:AjaxLink",
         "body": [
             "<xmod:AjaxLink text=\"${1}\" Url=\"${2}\" Target=\"${3}\"\n/>\n"
             ],
         "description": "XMP Template Control - xmod:AjaxLink"
-    },
-    "xmod:AjaxImage": {
-        "prefix": "xt xmod:AjaxImage",
-        "body": [
-            "<xmod:AjaxImage AlternateText=\"${1}\" Url=\"${2}\"\n Target=\"${3}\" \n/>\n"
-            ],
-        "description": "XMP Template Control - xmod:AjaxImage"
     },    
     "Case": {
         "prefix": "xt Case",
@@ -51,147 +51,147 @@
     "Command": {
         "prefix": "xt Command",
         "body": [
-            "<Command Target=\"${1}\" Type=\"${2|List,Detail|}\">\n    <Parameter Name=\"${3}\" Value=\"${4}\" />${0}\n</Command>\n "
+            "<Command Target=\"${1}\" Type=\"${2|List,Detail|}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />${0}\n</Command>\n "
             ],
         "description": "XMP Template Control - Command"
     },	
     "xmod:CommandButton": {
         "prefix": "xt xmod:CommandButton",
         "body": [
-            "<xmod:CommandButton text=\"{1}\"\n    <Command Target=\"{2}\" Type=\"{3|List,Detail|}\">\n        <Parameter Name=\"{4}\" Value='{5}' />{0}\n    </Command>\n</xmod:CommandButton> \n "
+            "<xmod:CommandButton text=\"${1}\"\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />${0}\n    </Command>\n</xmod:CommandButton> \n "
             ],
         "description": "XMP Template Control - xmod:CommandButton"
     },
     "xmod:CommandImage": {
         "prefix": "xt xmod:CommandImage",
         "body": [
-            "<xmod:CommandImage text=\"{1}\" ImageUrl=\"{2}\" ImageAlign=\"{3}\">\n    <Command Target=\"{4}\" Type=\"{5|List,Detail|}\">\n        <Parameter Name=\"{6}\" Value='{7}' />{0}\n    </Command>\n</xmod:CommandImage>\n "
+            "<xmod:CommandImage text=\"${1}\" ImageUrl=\"${2}\" ImageAlign=\"${3}\">\n    <Command Target=\"${4}\" Type=\"${5|List,Detail|}\">\n        <Parameter Name=\"${6}\" Value='${7:[[${8}]]}' />${0}\n    </Command>\n</xmod:CommandImage>\n "
             ],
         "description": "XMP Template Control - xmod:CommandImage"
     },
     "xmod:CommandLink": {
         "prefix": "xt xmod:CommandLink",
         "body": [
-            "<xmod:CommandLink text=\"{1}\" >\n    <Command Target=\"{2}\" Type=\"{3|List,Detail|}\">\n        <Parameter Name=\"{4}\" Value='{5}' />{0}\n    </Command>\n</xmod:CommandLink>  \n"
+            "<xmod:CommandLink text=\"${1}\" >\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />${0}\n    </Command>\n</xmod:CommandLink>  \n"
             ],
         "description": "XMP Template Control - xmod:CommandLink"
     },
     "xmod:DataList": {
         "prefix": "xt xmod:DataList",
         "body": [
-            "<xmod:DataList Id=\"{1}\" Ajax=\"{2|True,False|}\" AddRoles=\"{1}\">\n    <ListDataSource CommandText=\"{1:SELECT 1}\" />\n    <DetailDataSource CommandText=\"SELECT * FROM ${2:TableName} WHERE UserId=@UserId\" />\n\n    <HeaderTemplate>\n        <h1></h1>\n    </HeaderTemplate>\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n    <FooterTemplate>\n    </FooterTemplate>\n    <DetailTemplate>\n        <h1>This is the detail view</h1> \n    </DetailTemplate>\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n</xmod:DataList> \n "
+            "<xmod:DataList Id=\"${1}\" Ajax=\"${2|True,False|}\" AddRoles=\"${3}\">\n    <ListDataSource CommandText=\"${4:SELECT 1}\" />\n    <DetailDataSource CommandText=\"SELECT * FROM ${5:TableName} WHERE UserId=@UserId\" />\n\n    <HeaderTemplate>\n        <h1>${6}</h1>\n    </HeaderTemplate>\n\n    <ItemTemplate>\n    </ItemTemplate>\n\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n\n    <FooterTemplate>\n    </FooterTemplate>\n\n    <DetailTemplate>\n        <h1>${7}</h1> \n    </DetailTemplate>\n\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n\n</xmod:DataList>\n${0} "
             ],
         "description": "XMP Template Control - xmod:DataList"
     },
     "xmod:DeleteButton": {
         "prefix": "xt xmod:DeleteButton",
         "body": [
-            "<xmod:DeleteButton text=\"Delete\" OnClientClick=\"return confirm('Are you sure you want to delete this record?');\">\n    <Parameter Name=\"\" Value=' ' />\n</xmod:DeleteButton> \n "
+            "<xmod:DeleteButton text=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DeleteButton>\n${0}"
             ],
         "description": "XMP Template Control - xmod:DeleteButton"
     },
     "xmod:DeleteImage": {
         "prefix": "xt xmod:DeleteImage",
         "body": [
-            "<xmod:DeleteImage AlternateText=\"Delete Record\" OnClientClick=\"return confirm('Are you sure you want to delete this record?');\" ImageUrl=\"~/images/delete.gif\">\n    <Parameter Name=\"\" Value=' ' />\n</xmod:DeleteImage>\n "
+            "<xmod:DeleteImage AlternateText=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\" ImageUrl=\"${3:~/images/delete.gif}\">\n    <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:DeleteImage>\n "
             ],
         "description": "XMP Template Control - xmod:DeleteImage"
     },
     "xmod:DeleteLink": {
         "prefix": "xt xmod:DeleteLink",
         "body": [
-            "<xmod:DeleteLink text=\"Delete Employee\" onclientclick=\"return confirm('Are you sure you want to delete this record?');\">\n    <Parameter Name=\"\" Value=' ' />\n</xmod:DeleteLink>\n "
+            "<xmod:DeleteLink text=\"${1:Delete}\" onclientclick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DeleteLink>\n "
             ],
         "description": "XMP Template Control - xmod:DeleteLink"
     },
     "xmod:DetailButton": {
         "prefix": "xt xmod:DetailButton",
         "body": [
-            "<xmod:DetailButton text=\"View detail\">\n    <Parameter Name=\"\" Value=' ' />\n</xmod:DetailButton>\n "
+            "<xmod:DetailButton text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:DetailButton>\n "
             ],
         "description": "XMP Template Control - xmod:DetailButton"
     },
     "xmod:DetailImage": {
         "prefix": "xt xmod:DetailImage",
         "body": [
-            "<xmod:DetailImage AlternateText=\"View Profile\" ImageUrl=\"~/images/person.gif\">\n    <Parameter Name=\"\" Value=' ' />\n</xmod:DetailImage> \n "
+            "<xmod:DetailImage AlternateText=\"${1:View Detail}\" ImageUrl=\"${2:~/images/about.gif}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DetailImage> \n "
             ],
         "description": "XMP Template Control - xmod:DetailImage"
     },
     "xmod:DetailLink": {
         "prefix": "xt xmod:DetailLink",
         "body": [
-            "<xmod:DetailLink text=\"View detail\">\n    <Parameter Name=\"\" Value=' ' />\n</xmod:DetailLink>\n "
+            "<xmod:DetailLink text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:DetailLink>\n "
             ],
         "description": "XMP Template Control - xmod:DetailLink"
     },
     "xmod:Each": {
         "prefix": "xt xmod:Each",
         "body": [
-            " <ul>\n        <xmod:Each Delimiter=\"|\" Value='[[Images]]'>\n          <ItemTemplate><img src=\"/img/{value}\" /></ItemTemplate>\n       </xmod:Each>\n</ul>\n\n "
+            " <ul>\n        <xmod:Each Delimiter=\"${1:|}\" Value='${2:[[${3}]]}'>\n          <ItemTemplate><img src=\"${4:~/imgages/}\" /></ItemTemplate>\n       </xmod:Each>\n</ul>\n\n "
             ],
         "description": "XMP Template Control - xmod:Each"
     },
     "xmod:EditButton": {
         "prefix": "xt xmod:EditButton",
         "body": [
-            "<xmod:EditButton text=\"Edit Record\" >\n    <Parameter Name=\"\" Value=' ' />\n</xmod:EditButton>\n "
+            "<xmod:EditButton text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:EditButton>\n "
             ],
         "description": "XMP Template Control - xmod:EditButton"
-    },
-    "xmod:EditLink": {
-        "prefix": "xt xmod:EditLink",
-        "body": [
-            "<xmod:EditLink text=\"Edit Record\" >\n    <Parameter Name=\"\" Value=' ' />\n</xmod:EditLink>\n "
-            ],
-        "description": "XMP Template Control - xmod:EditLink"
     },
     "xmod:EditImage": {
         "prefix": "xt xmod:EditImage",
         "body": [
-            "<xmod:EditImage AlternateText=\"Edit Employee\" ImageUrl=\"~/images/edit.gif\" >\n    <Parameter Name=\"\" Value=' ' />\n</xmod:EditImage>\n "
+            "<xmod:EditImage AlternateText=\"${1:Edit}\" ImageUrl=\"${2:~/images/edit.gif}\" >\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:EditImage>\n "
             ],
         "description": "XMP Template Control - xmod:EditImage"
+    },
+    "xmod:EditLink": {
+        "prefix": "xt xmod:EditLink",
+        "body": [
+            "<xmod:EditLink text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:EditLink>\n "
+            ],
+        "description": "XMP Template Control - xmod:EditLink"
     },    
     "Else": {
         "prefix": "xt Else",
         "body": [
-            "<Else>...</Else>\n"
+            "<Else>${1}</Else>\n"
             ],
         "description": "XMP Template Control - Else"
     },
     "xmod:Feed": {
         "prefix": "xt xmod:Feed",
         "body": [
-        "<xmod:Feed \n    ContentType=\"\" \n    Filename=\"\"\n    ViewRoles=\"\" >\n\n    <ListDataSource CommandText=\"SELECT * FROM ...  \"/>\n    <HeaderTemplate> </HeaderTemplate>\n    <ItemTemplate> </ItemTemplate>\n\n</xmod:Feed>\n "
+        "<xmod:Feed \n    ContentType=\"${1|text/html,text/javascript,text/plain,text/xml|}\" Filename=\"${2}\" ViewRoles=\"${3}\" >\n   <ListDataSource CommandText=\"${4:SELECT...} \"/>\n\n    <HeaderTemplate> </HeaderTemplate>\n\n    <ItemTemplate> </ItemTemplate>\n\n    <FooterTemplate> </FooterTemplate>\n\n</xmod:Feed>\n "
         ],
     "description": "XMP Template Control - xmod:Feed"
     },    
     "xmod:Format": {
         "prefix": "xt xmod:Format",
         "body": [
-            "<xmod:Format  Type=\"numeric\" Value='  ' Pattern=\"\" />\n "
+            "<xmod:Format  Type=\"${1|Numeric,Float,Date,Text,RegEx,Cloak,HtmlEncode,HtmlDecode,UrlEncode,UrlDecode|}\" Value='${2:[[${3}]]}' Pattern=\"${4}\" />\n "
             ],
         "description": "XMP Template Control - xmod:Format"
     },
     "xmod:IfEmpty": {
         "prefix": "xt xmod:IfEmpty",
         "body": [
-            "<xmod:IfEmpty   Value=\"string\">\n      ...Content Goes Here...\n</xmod:IfEmpty> \n "
+            "<xmod:IfEmpty   Value='${1:[[${2}]]}'>\n      ${2:...Content Goes Here...}\n</xmod:IfEmpty> \n "
             ],
         "description": "XMP Template Control - xmod:IfEmpty"
     },
     "xmod:IfNotEmpty": {
         "prefix": "xt xmod:IfNotEmpty",
         "body": [
-            "<xmod:IfNotEmpty  Value=\"string\">\n         ...Content Goes Here...\n</xmod:IfNotEmpty> \n "
+            "<xmod:IfNotEmpty  Value='${1:[[${2}]]}'>\n         ${2:...Content Goes Here...}\n</xmod:IfNotEmpty> \n "
             ],
         "description": "XMP Template Control - xmod:IfNotEmpty"
     },
     "xmod:Include": {
         "prefix": "xt xmod:Include",
         "body": [
-            "<xmod:Include FileName=\"string\" /> \n\n "
+            "<xmod:Include FileName=\"${1:string}\" /> \n\n "
             ],
         "description": "XMP Template Control - xmod:Include"
     },
@@ -205,98 +205,98 @@
     "xmod:JsonFeed": {
         "prefix": "xt xmod:JsonFeed",
         "body": [
-            "<xmod:JsonFeed>\n    <ListDataSource CommandText=\"\">\n       <Parameter Name=\"\" Value=\"\" DataType=\"\" DefaultValue=\"\" />\n    </ListDataSource>\n</xmod:JsonFeed>\n "
+            "<xmod:JsonFeed>\n    <ListDataSource CommandText=\"${1:SELECT ...}\">\n       <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' DataType=\"${5|string,int32,int64,boolean|}\" DefaultValue=\"${6}\" />\n    </ListDataSource>\n</xmod:JsonFeed>\n "
             ],
         "description": "XMP Template Control - xmod:JsonFeed"
     },
     "xmod:LoadFeed": {
         "prefix": "xt xmod:LoadFeed",
         "body": [
-            "<xmod:LoadFeed\n    FeedName=\"\"\n    LoadingCssClass=\"\"\n    LoadingImageUrl=\"\"\n    Target=\"\"  >\n \n    <Field Name=\"\" Value=\"\" />\n</xmod:LoadFeed> \n\n "
+            "<xmod:LoadFeed\n    FeedName=\"${1}\"\n    LoadingCssClass=\"${2}\"\n    LoadingImageUrl=\"${3}\"\n    Target=\"${4}\"  >\n \n    <Field Name=\"${5}\" Value='${6:[[${7}]]}' />\n</xmod:LoadFeed> \n\n "
             ],
         "description": "XMP Template Control - xmod:LoadFeed"
     },    
     "xmod:LoadFeedButton": {
         "prefix": "xt xmod:LoadFeedButton",
         "body": [
-            "<xmod:LoadFeedButton \n    Text=\"\" \n    FeedName=\"\" \n    Target=\"\">\n\n    <Field Name=\"\" Value=\"\" />\n</xmod:LoadFeedButton>\n\n "
+            "<xmod:LoadFeedButton \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\">\n\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:LoadFeedButton>\n\n "
             ],
         "description": "XMP Template Control - xmod:LoadFeedButton"
     },
     "xmod:LoadFeedImage": {
         "prefix": "xt xmod:LoadFeedImage",
         "body": [
-            "<xmod:LoadFeedImage \n    AlternateText=\"\" \n    ImageUrl=\"\" \n    FeedName=\"\" \n    Target=\"\"   >\n\n    <Field Name=\"\" Value=\"\" />\n</xmod:LoadFeedImage>\n\n "
+            "<xmod:LoadFeedImage \n    AlternateText=\"${1}\" \n    ImageUrl=\"${2}\" \n    FeedName=\"${3}\" \n    Target=\"${4}\"   >\n\n    <Field Name=\"${5}\" Value='${6:[[${7}]]}' />\n</xmod:LoadFeedImage>\n\n "
             ],
         "description": "XMP Template Control - xmod:LoadFeedImage"
     },
     "xmod:LoadFeedLink": {
         "prefix": "xt xmod:LoadFeedLink",
         "body": [
-            "<xmod:LoadFeedLink \n    Text=\"\" \n    FeedName=\"\" \n    Target=\"\"  >\n\n    <Field Name=\"\" Value=\"\" />\n</xmod:LoadFeedLink>\n\n "
+            "<xmod:LoadFeedLink \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\"  >\n\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:LoadFeedLink>\n\n "
             ],
         "description": "XMP Template Control - xmod:LoadFeedLink"
     },    
     "xmod:MetaTags": {
         "prefix": "xt xmod:MetaTags",
         "body": [
-            "<xmod:MetaTags> \n    <Title append=\"true\">...Title text...</Title> \n    <Keywords append=\"true\">...Keywords...</Keywords> \n    <Description append=\"true\">...Description...</Description> \n    <Redirect Delay=\"integer\" Url=\"string\" />\n</xmod:MetaTags>\n "
+            "<xmod:MetaTags> \n    <Title append=\"${1|true,false|}\">...Title text...</Title> \n    <Keywords append=\"${2|true,false|}\">...Keywords...</Keywords> \n    <Description append=\"${3|true,false|}\">...Description...</Description> \n    <Redirect Delay=\"${4:integer}\" Url=\"${5:string}\" />\n</xmod:MetaTags>\n "
             ],
         "description": "XMP Template Control - xmod:MetaTags"
     },
     "xmod:NavigateUrl": {
         "prefix": "xt xmod:NavigateUrl",
         "body": [
-            "<a href=\"<xmod:NavigateUrl TabId=\"237\"><Parameter Name=\"eid\" Value='[[ ]]' /></xmod:NavigateUrl>\">View Work History</a>\n"
+            "<a href=\"<xmod:NavigateUrl TabId=\"${1}\"><Parameter Name=\"${2}\" Value='${3:[[${4}]]}' /></xmod:NavigateUrl>\">${5:Link Text Here}</a>\n"
             ],
         "description": "XMP Template Control - xmod:NavigateUrl"
     },
     "Pager": {
         "prefix": "xt Pager",
         "body": [
-            "<Pager PageSize=\"15\" PageNumCssClass=\"CommandButton\" FirstPageCaption=\"First\" LastPageCaption=\"Last\" >\n "
+            "<Pager PageSize=\"${1|5,10,15,25,50,100|}\" PageNumCssClass=\"${2:CommandButton}\" FirstPageCaption=\"${3:First}\" LastPageCaption=\"${4:Last}\" >\n "
             ],
         "description": "XMP Template Control - Pager"
     },    
     "xmod:Redirect": {
         "prefix": "xt xmod:Redirect",
         "body": [
-            "<xmod:Redirect text=\"\" Target=\"http://mysite.com/ \">\n    <Field Name=\"\" Value='[[ ]]' /> \n</xmod:Redirect>\n "
+            "<xmod:Redirect ${1|Button,LinkButton,ImageButton|} text=\"${2}\" Target=\"${3:http://mysite.com/} \">\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' /> \n</xmod:Redirect>\n "
             ],
         "description": "XMP Template Control - xmod:Redirect"
     },
     "xmod:Register": {
         "prefix": "xt xmod:Register",
         "body": [
-            "<xmod:Register  TagPrefix=\"\"  Namespace=\"\"  Assembly=\"\"  />\n "
+            "<xmod:Register TagPrefix=\"${1}\"  Namespace=\"${2}\"  Assembly=\"${3}\"  />\n "
             ],
         "description": "XMP Template Control - xmod:Register"
     },
     "xmod:ReturnButton": {
         "prefix": "xt xmod:ReturnButton",
         "body": [
-            "<xmod:ReturnButton text=\"Go Back\" />\n "
+            "<xmod:ReturnButton text=\"${1:Go Back}\" />\n "
             ],
         "description": "XMP Template Control - xmod:ReturnButton"
     },
     "xmod:ReturnImage": {
         "prefix": "xt xmod:ReturnImage",
         "body": [
-            "<xmod:ReturnImage text=\"Go Back\" ImageUrl=\"~/images/leftarrow.gif\" AlternateText=\"Return\" />\n "
+            "<xmod:ReturnImage text=\"${1:Go Back}\" ImageUrl=\"${2:~/images/leftarrow.gif}\" AlternateText=\"${3:Return}\" />\n "
             ],
         "description": "XMP Template Control - xmod:ReturnImage"
     },
     "xmod:ReturnLink": {
         "prefix": "xt xmod:ReturnLink",
         "body": [
-            "<xmod:ReturnLink text=\"Go Back\" />\n "
+            "<xmod:ReturnLink text=\"${1:Go Back}\" />\n "
             ],
         "description": "XMP Template Control - xmod:ReturnLink"
     },
     "xmod:ScriptBlock": {
         "prefix": "xt xmod:ScriptBlock",
         "body": [
-            "<xmod:ScriptBlock ScriptId=\"\" BlockType=\"\" RegisterOnce=\"true\" Url=\"\" >\n\n</xmod:ScriptBlock>\n "
+            "<xmod:ScriptBlock ScriptId=\"${1}\" BlockType=\"${2|HeadScript,ClientScript,StartupScript,ClientScriptInclude|}\" RegisterOnce=\"${3|true,false|}\" Url=\"${4}\" >\n    ${0}\n</xmod:ScriptBlock>\n "
             ],
         "description": "XMP Template Control - xmod:ScriptBlock"
 	},
@@ -310,91 +310,91 @@
 	"xmod:ScriptBlock - CSS": {
         "prefix": "xt xmod:ScriptBlock - CSS",
         "body": [
-            "    <Style type=\"text/css\">\n    /* CSS Styling */\n    </Style>\n"
+            "    <Style type=\"text/css\">\n    /* CSS Styling */\n    </Style>"
             ],
         "description": "XMP Template Control - xmod:ScriptBlock CSS"
     },
     "SearchSort": {
         "prefix": "xt SearchSort",
         "body": [
-            "<SearchSort FilterExpression=\"FirstName LIKE '%{0}%'\" SearchLabelText=\"Search For:\" SearchButtonText=\"GO\" SortFieldNames=\"FirstName,LastName,Zip\" SortFieldLabels=\"First Name,Last Name,Zip Code\" >\n    <table>\n        <tr>\n            <td><strong>{SearchLabel}</strong> {SearchBox} {SearchButton}</td>\n            <td align=\"right\"> <strong>{SortLabel}</strong> {SortFieldList} {SortButton} Reverse {ReverseSort} </td>\n        </tr>\n    </table>\n</SearchSort> \n "
+            "<SearchSort FilterExpression=\"${1:FirstName LIKE '%{0}%'}\" SearchLabelText=\"${2:Search For:}\" SearchButtonText=\"${3:GO}\" SortFieldNames=\"${4:FirstName,LastName,Zip}\" SortFieldLabels=\"${5:First Name,Last Name,Zip Code}\" >\n    <table>\n        <tr>\n            <td><strong>{SearchLabel}</strong> {SearchBox} {SearchButton}</td>\n            <td align=\"right\"> <strong>{SortLabel}</strong> {SortFieldList} {SortButton} Reverse {ReverseSort} </td>\n        </tr>\n    </table>\n</SearchSort> \n "
             ],
         "description": "XMP Template Control - SearchSort"
     },    
     "xmod:Select": {
         "prefix": "xt xmod:Select",
         "body": [
-            "<xmod:Select  mode=\"\">\n    <Case CompareType=\"\" Value=\"\" Expression=\"\" Operator=\"\" IgnoreCase=\"\"></Case>\n    <Else>...</Else>\n</xmod:Select>\n "
+            "<xmod:Select  mode=\"${1|Standard,Inclusive|}\">\n    <Case CompareType=\"${2|Numeric,Float,Date,Text,Regex,Boolean,Role|}\" Value='${3:[[${4}]]}' Operator=\"${5|<,>,<>,=,<=,>=|}\" Expression=\"${6}\" IgnoreCase=\"${7|true,false|}\">\n        ${8}\n    </Case>\n    <Else>\n        ${9}\n    </Else>\n</xmod:Select>\n "
             ],
         "description": "XMP Template Control - xmod:Select"
     },
     "xmod:Slideshow": {
         "prefix": "xt xmod:Slideshow",
         "body": [
-            "<xmod:Slideshow Id=\"\" ImageField=\"\" BasePath=\"/images/.../\" Timeout=\"6000\" Height=\"250\"  Width=\"200\">\n    <ListDataSource CommandText=\"SELECT ...PicUrl FROM ...\" />\n</xmod:Slideshow>\n "
+            "<xmod:Slideshow Id=\"${1}\" ImageField=\"${2}\" BasePath=\"${3:~/images/}\" Timeout=\"${4:6000}\" Height=\"${5:250}\"  Width=\"${6:200}\">\n    <ListDataSource CommandText=\"${7:SELECT...}\" />\n</xmod:Slideshow>\n "
             ],
         "description": "XMP Template Control - xmod:Slideshow"
     },
     "xmod:Template": {
         "prefix": "xt xmod:Template",
         "body": [
-            "<xmod:Template  Id=\"\" AddRoles=\"\"  DeleteRoles=\"\"  DetailRoles=\"\" EditRoles=\"\" >\n    <ListDataSource CommandText=\"SELECT * FROM ...\"  />\n    <DetailDataSource CommandText=\"SELECT * FROM ... WHERE UserId=@UserId\"  />\n    <DeleteCommand CommandText=\"DELETE * FROM ... WHERE UserId=@UserId\" />\n        <Pager> ... </Pager>\n        <SearchSort>...</SearchSort>\n\n    <HeaderTemplate>\n    </HeaderTemplate>\n\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n\n    <SeparatorTemplate>\n    </SeparatorTemplate>\n\n    <FooterTemplate>\n    </FooterTemplate>\n\n    <DetailTemplate>\n    </DetailTemplate>\n\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n </xmod:Template>\n "
+            "<xmod:Template  Id=\"${1}\" AddRoles=\"${2}\"  DeleteRoles=\"${3}\"  DetailRoles=\"${4}\" EditRoles=\"${5}\" >\n    <ListDataSource CommandText=\"${6:SELECT 1}\"  />\n    <DetailDataSource CommandText=\"${7:SELECT 1}\"  />\n    <DeleteCommand CommandText=\"DELETE * FROM ... WHERE UserId=@UserId\" />\n        <Pager> ... </Pager>\n        <SearchSort>...</SearchSort>\n\n    <HeaderTemplate>\n    </HeaderTemplate>\n\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n\n    <SeparatorTemplate>\n    </SeparatorTemplate>\n\n    <FooterTemplate>\n    </FooterTemplate>\n\n    <DetailTemplate>\n    </DetailTemplate>\n\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n </xmod:Template>\n "
             ],
         "description": "XMP Template Control - xmod:Template"
     },
     "xmod:ToggleButton": {
         "prefix": "xt xmod:ToggleButton",
         "body": [
-            "<xmod:ToggleButton  text=\"\" Target=\"\" Speed=\"Fast\" />\n "
+            "<xmod:ToggleButton  text=\"${1}\" Target=\"${2}\" Speed=\"${3|Slow,Medium,Fast|}\" />\n "
             ],
         "description": "XMP Template Control - xmod:ToggleButton"
     },
     "xmod:ToggleImage": {
         "prefix": "xt xmod:ToggleImage",
         "body": [
-            "<xmod:ToggleImage AlternateText=\"\" text=\"\" ImageUrl=\"~/images/add.gif\" Target=\"\" Speed=\"Fast\"  /> \n "
+            "<xmod:ToggleImage AlternateText=\"${1}\" text=\"\" ImageUrl=\"${2:~/images/add.gif}\" Target=\"${3}\" Speed=\"${4|Slow,Medium,Fast|}\" /> \n "
             ],
         "description": "XMP Template Control - xmod:ToggleImage"
     },
     "xmod:ToggleLink": {
         "prefix": "xt xmod:ToggleLink",
         "body": [
-            "<xmod:ToggleLink text=\"\" Target=\"\" Speed=\"Fast\" />\n "
+            "<xmod:ToggleLink text=\"${1}\" Target=\"${2}\" Speed=\"${3|Slow,Medium,Fast|}\" />\n "
             ],
         "description": "XMP Template Control - xmod:ToggleLink"
     },
     "Action": {
         "prefix": "xf Action",
         "body": [
-            "<Action Assembly=\"\"  Namespace=\"\"  />\n\n "
+            "<Action Assembly=\"${1}\"  Namespace=\"${2}\"  />\n\n "
             ],
         "description": "XMP Form Control - Action"
     },	
     "AddButton": {
         "prefix": "xf AddButton",
         "body": [
-            "<AddButton text=\"Add\" />\n "
+            "<AddButton text=\"${1:Add}\" />\n "
             ],
         "description": "XMP Form Control - AddButton"
     },      
     "AddForm": {
         "prefix": "xf AddForm",
         "body": [
-            "<AddForm ClientName=\"\">\n    <SelectCommand  CommandText=\"SELECT @... AS ..., '...' AS ...\"  />\n    <SubmitCommand  CommandText=\"INSERT INTO ...\"  CommandType=\"StoredProcedure\"/>\n    <ControlDataSource Id=\"\" CommandText=\"SELECT ..., ... FROM ... ORDER BY ... ASC\"/>\n\n </AddForm> \n "
+            "<AddForm ClientName=\"${1}\">\n    <SelectCommand  CommandText=\"${2:SELECT 1}\"  />\n    <SubmitCommand  CommandText=\"${3:INSERT INTO ...}\"  CommandType=\"StoredProcedure\"/>\n    <ControlDataSource Id=\"${4}\" CommandText=\"${5:SELECT ..., ... FROM ... ORDER BY ... ASC}\"/>\n\n </AddForm> \n "
             ],
         "description": "XMP Form Control - AddForm"
     },
     "AddImage": {
         "prefix": "xf AddImage",
         "body": [
-            "<AddImage AlternateText=\"Add\" ImageUrl=\"~/images/add.gif\"  />\n "
+            "<AddImage AlternateText=\"${1:Add}\" ImageUrl=\"${2:~/images/add.gif}\"  />\n "
             ],
         "description": "XMP Form Control - AddImage"
     },
     "AddLink": {
         "prefix": "xf AddLink",
         "body": [
-            "<AddLink text=\"Add\" />\n "
+            "<AddLink text=\"${1:Add}\" />\n "
             ],
         "description": "XMP Form Control - AddLink"
     },
@@ -408,161 +408,161 @@
     "AddToRoles": {
         "prefix": "xf AddToRoles",
         "body": [
-            "<AddToRoles \n    Culture=\"locale-Id\"\n    EndDate=\"date\"\n    If=\"basic conditional equality expression\"\n    RoleNames=\"comma-delimited list of DNN roles\"\n    StartDate=\"date\" \n    UserId=\"integer\" \n />\n "
+            "<AddToRoles \n    Culture=\"locale-Id\"\n    StartDate=\"date\" \n    EndDate=\"date\"\n    If=\"basic conditional equality expression\"\n    RoleNames=\"comma-delimited list of DNN roles\"\n    UserId=\"integer\" \n />\n "
             ],
         "description": "XMP Form Control - AddToRoles"
     },
     "AddUser": {
         "prefix": "xf AddUser",
         "body": [
-            "<AddUser \n    Approved =\"\"\n    DisplayName ='[[]]'\n    Username ='[[]]'\n    Email ='[[]]'\n    FirstName ='[[]]'\n    LastName ='[[]]' \n    Password ='[[]]'\n    RoleNames ='[[]]'\n    Unit ='[[]]'\n    Street ='[[]]'\n    City ='[[]]'\n    PostalCode ='[[]]'\n    Region = '[[]]'\n    Country ='[[]]'\n    Telephone ='[[]]'\n    RoleNames=\"\"\n    UpdatePasswordOnNextLogin =\"\"\n        <Property Name=\"\" Value='[[]]]' />\n/>\n"
+            "<AddUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    RoleNames=\"${16}\"\n    UpdatePasswordOnNextLogin =\"${17|true,false|}\">\n        <Property Name=\"${18}\" Value='[[${19}]]]' />\n</AddUser>\n"
             ],
         "description": "XMP Form Control - AddUser"
     },
     "AjaxButton": {
         "prefix": "xf AjaxButton",
         "body": [
-            "<AjaxButton \n    text=\"\" \n    Url=\"\"\n    Target=\"\" \n/>\n "
+            "<AjaxButton \n    text=\"${1}\" \n    Url=\"${2}\"\n    Target=\"${3}\" \n/>\n "
             ],
         "description": "XMP Form Control - AjaxButton"
     },
     "AjaxImage": {
         "prefix": "xf AjaxImage",
         "body": [
-            "<AjaxImage \n    AlternateText=\"\" \n    Url=\"\"\n    Target=\"\" \n/>\n "
+            "<AjaxImage \n    AlternateText=\"${1}\" \n    Url=\"${2}\"\n    Target=\"${3}\" \n/>\n "
             ],
         "description": "XMP Form Control - AjaxImage"
     },
     "AjaxLink": {
         "prefix": "xf AjaxLink",
         "body": [
-            "<AjaxLink \n    text=\"\" \n    Url=\"\"\n    Target=\"\" \n/>\n "
+            "<AjaxLink \n    text=\"${1}\" \n    Url=\"${2}\"\n    Target=\"${3}\" \n/>\n "
             ],
         "description": "XMP Form Control - AjaxLink"
     },
     "CalendarButton": {
         "prefix": "xf CalendarButton",
         "body": [
-            "<CalendarButton text=\"Select Date\" Target=\"\" format=\"yyyy-MM-dd\" />\n "
+            "<CalendarButton text=\"${1:Select Date}\" Target=\"${2}\" format=\"${3:yyyy-MM-dd}\" />\n "
             ],
         "description": "XMP Form Control - CalendarButton"
       },
     "CalendarImage": {
         "prefix": "xf CalendarImage",
         "body": [
-            "<CalendarImage text=\"Select Date\"  AlternateText=\"Select Date\" Format=\"yyyy-MM-dd\" ImageUrl=\"~/images/calendar.jpg\" Target=\"\" />\n "
+            "<CalendarImage text=\"${1:Select Date}\"  AlternateText=\"${2:Select Date}\" Format=\"${3:yyyy-MM-dd}\" ImageUrl=\"${4:~/images/calendar.jpg}\" Target=\"${5}\" />\n "
             ],
         "description": "XMP Form Control - CalendarImage"
     },
     "CalendarLink": {
         "prefix": "xf CalendarLink",
         "body": [
-            "<CalendarLink text=\"Select Date\" Target=\"\" Format=\"yyyy-MM-dd\" />\n "
+            "<CalendarLink text=\"${1:Select Date}\" Target=\"${2}\" Format=\"${3:yyyy-MM-dd}\" />\n "
             ],
         "description": "XMP Form Control - CalendarLink"
     },
     "CancelButton": {
         "prefix": "xf CancelButton",
         "body": [
-            "<CancelButton text =\"Cancel\" />\n "
+            "<CancelButton text =\"${1:Cancel}\" />\n "
             ],
         "description": "XMP Form Control - CancelButton"
     },
     "CancelImage": {
         "prefix": "xf CancelImage",
         "body": [
-            "<CancelImage AlternateText =\"Cancel\" ImageUrl=\"~/images/cancel.gif\" />\n "
+            "<CancelImage AlternateText =\"${1:Cancel}\" ImageUrl=\"${2:~/images/cancel.gif}\" />\n "
             ],
         "description": "XMP Form Control - CancelImage"
     },
     "CancelLink": {
         "prefix": "xf CancelLink",
         "body": [
-            "<CancelLink text =\"Cancel\" />\n "
+            "<CancelLink text =\"${1:Cancel}\" />\n "
             ],
         "description": "XMP Form Control - CancelLink"
     },
     "Captcha": {
         "prefix": "xf Captcha",
         "body": [
-            "<Captcha Id=\"\" text=\"\" CaptchaLength=\"5\"  ErrorMessage=\"\" />\n "
+            "<Captcha Id=\"${1}\" text=\"${2}\" CaptchaLength=\"${3:5}\"  ErrorMessage=\"${4}\" />\n "
             ],
         "description": "XMP Form Control - Captcha"
     },
     "CheckBox": {
         "prefix": "xf CheckBox",
         "body": [
-            "<CheckBox Id=\"\"  text=\"\" DataField=\"\" DataType=\"boolean\" Checked=\"true\" />\n "
+            "<CheckBox Id=\"${1}\"  text=\"${2}\" DataField=\"${3}\" DataType=\"boolean\" Checked=\"${4|true,false|}\" />\n "
             ],
         "description": "XMP Form Control - CheckBox"
     },
     "CheckBoxList": {
         "prefix": "xf CheckBoxList",
         "body": [
-            "<CheckBoxList  Id=\"\"  DataField=\"\"  DataType=\"\" >\n    <ListItem Value=\"\" Selected=\"\">Item1</ListItem>\n    <ListItem Value=\"\">Item2</ListItem>\n</CheckBoxList> \n "
+            "<CheckBoxList  Id=\"${1}\"  DataField=\"${2}\"  DataType=\"${3|string,int32,int64,boolean|}\" >\n    <ListItem Value=\"${4}\" Selected=\"${5}\">Item1</ListItem>\n    <ListItem Value=\"${6}\">Item2</ListItem>\n</CheckBoxList> \n "
             ],
         "description": "XMP Form Control - CheckBoxList"
     },
     "xmod:ContinueButton": {
         "prefix": "xf xmod:ContinueButton",
         "body": [
-            "<xmod:ContinueButton  text=\"View Your Data\" redirect=\"http://mysite.com/data\" RedirectMethod=\"Get\" />\n "
+            "<xmod:ContinueButton  text=\"${1:View Your Data}\" redirect=\"${2:http://mysite.com/data}\" RedirectMethod=\"${3|Get,Post|}\" />\n "
             ],
         "description": "XMP Form Control - xmod:ContinueButton"
     },
     "xmod:ContinueImage": {
         "prefix": "xf xmod:ContinueImage",
         "body": [
-            "<xmod:ContinueImage AlternateText=\"View Your data\" ImageUrl=\"~/images/profile.gif\" redirect=\"http://mysite.com/data\" RedirectMethod=\"Get\" />\n "
+            "<xmod:ContinueImage AlternateText=\"${1:View Your data}\" ImageUrl=\"${2:~/images/profile.gif}\" redirect=\"${3:https://mysite.com/data}\" RedirectMethod=\"${4|Get,Post|}\" />\n "
             ],
         "description": "XMP Form Control - xmod:ContinueImage"
     },
     "xmod:ContinueLink": {
         "prefix": "xf xmod:ContinueLink",
         "body": [
-            "<xmod:ContinueLink text=\"View Your Data\" redirect=\"http://mysite.com/data\" RedirectMethod=\"Get\"  />\n "
+            "<xmod:ContinueLink text=\"${1:View Your Data}\" redirect=\"${2:https://mysite.com/data}\" RedirectMethod=\"${3|Get,Post|}\"  />\n "
             ],
         "description": "XMP Form Control - xmod:ContinueLink"
     },
     "ControlDataSource": {
         "prefix": "xf ControlDataSource",
         "body": [
-            "<ControlDataSource Id=\"\" CommandText=\"SELECT ..., ... FROM ... ORDER BY ... ASC\"\n    <Parameter Name=\"\" Value='[[]]' DataType=\"\" />\n<ControlDataSource>\n"
+            "<ControlDataSource Id=\"${1}\" CommandText=\"${2:SELECT ..., ... FROM ... ORDER BY ... ASC}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int64,boolean|}\" />\n<ControlDataSource>\n"
             ],
         "description": "XMP Form Control - ControlDataSource"
     },
     "DateInput": {
         "prefix": "xf DateInput",
         "body": [
-            "<DateInput  Id=\"\" DataField=\"\"  DataType=\"date\" Format=\"yyyy-MM-dd\"  Culture=\"en-GB\" />\n "
+            "<DateInput  Id=\"${1}\" DataField=\"${2}\"  DataType=\"${3|date,datetime|}\" Format=\"${4:yyyy-MM-dd}\" />\n "
             ],
         "description": "XMP Form Control - DateInput"
     },
     "DetailDataSource": {
         "prefix": "xf DetailDataSource",
         "body": [
-            "<DetailDataSource Id=\"\" CommandText=\"\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"\" Value='[[]]' DataType=\"\" />\n<DetailDataSource>\n"
+            "<DetailDataSource Id=\"${1}\" CommandText=\"${2:SELECT 1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int64,boolean|}\">\n<DetailDataSource>\n"
             ],
         "description": "XMP Form Control - DetailDataSource"
     },
     "DropDownList": {
         "prefix": "xf DropDownList",
         "body": [
-            "<DropDownList  Id=\"\" DataField=\"\" DataType=\"\" DataTextField=\"\" DataValueField=\"\" DataSourceId=\"\" AppendDataBoundItems=\"\" TargetDataSourceId=\"\" ParameterName=\"\"  TargetControlId=\"\"  >\n    <ListItem Value=\"\" Selected=\"\">Item1</ListItem>\n    <ListItem Value=\"\">Item2</ListItem>\n</DropDownList> \n "
+            "<DropDownList  Id=\"${1}\" DataField=\"${2}\" DataType=\"${3|string,int32,int64,boolean|}\" DataTextField=\"${4}\" DataValueField=\"${5}\"\n               DataSourceId=\"${6}\" AppendDataBoundItems=\"${7|true,false|}\" TargetDataSourceId=\"${8}\" ParameterName=\"${9}\"  TargetControlId=\"${10}\"  >\n    <ListItem Value=\"\" Selected=\"${11}\">Item1</ListItem>\n    <ListItem Value=\"\">Item2</ListItem>\n</DropDownList> \n "
             ],
         "description": "XMP Form Control - DropDownList"
     },
     "DualList": {
         "prefix": "xf DualList",
         "body": [
-            "><DualList Id=\"\" DataField=\"\" DataSourceId=\"\"  DataType=\"\" DataTextField=\"\"  DataValueField=\"\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</DualList>\n "
+            "><DualList Id=\"${1}\" DataField=\"${2}\" DataSourceId=\"${3}\"  DataType=\"${4|string,int32,int64,boolean|}\" DataTextField=\"${5}\"  DataValueField=\"${6}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</DualList>\n "
             ],
         "description": "XMP Form Control - DualList"
     },      
     "EditForm": {
         "prefix": "xf EditForm",
         "body": [
-            "<EditForm ClientName=\"\">\n    <SelectCommand  CommandText=\"SELECT @... AS ..., '...' AS ...  \"/>\n    <SubmitCommand  CommandText=\"INSERT INTO table_name( ) VALUES( )\" />\n    <ControlDataSource Id=\"\" CommandText=\"SELECT ..., ... FROM ... ORDER BY ... ASC\"/>\n\n</EditForm>\n "
+            "<EditForm ClientName=\"${1}\">\n    <SelectCommand  CommandText=\"${2:SELECT 1} \"/>\n    <SubmitCommand  CommandText=\"${3:INSERT INTO table_name( ) VALUES( )}\" />\n    <ControlDataSource Id=\"${4}\" CommandText=\"${5:SELECT ..., ... FROM ... ORDER BY ... ASC}\"/>\n\n</EditForm>\n "
             ],
         "description": "XMP Form Control - EditForm"
       },
@@ -576,28 +576,28 @@
     "Email": {
         "prefix": "xf Email",
         "body": [
-            "<Email \n    To=\"\"  \n    From=\"\" \n    CC=\"\"  \n    BCC=\"\"  \n    ReplyTo=\"\" \n    \n    Subject=\"\"\n    \n    ..text/HTML and [[FieldTokens]] to make up Body of the Email...\n\n    Format=\"\"  Attachment=\"\"  SendIf=\"\" >\n</Email> \n "
+            "<Email To=\"${1}\" From=\"${2}\" ReplyTo=\"${5}\" Subject=\"${6}\" Format=\"${7|HTML,Text|}\" >\n \n    ${8:..text, HTML and [[FieldTokens]] to make up Body of the Email...}\n\n</Email> \n "
             ],
         "description": "XMP Form Control - Email"
     },
     "FileUpload": {
         "prefix": "xf FileUpload",
         "body": [
-            "<FileUpload  Id=\"\" \n    Path=\"~/images/...\" DataField=\"\" DataType=\"string\" \n    Extensions=\"gif,jpg\" \n    UploadButtonText=\"Upload\" \n    UseUniqueFileName=\"true\"\n /> \n "
+            "<FileUpload Id=\"${1}\" Path=\"${2:~/images/}\" DataField=\"${3}\" DataType=\"string\" Extensions=\"${4:gif,jpg}\" UploadButtonText=\"${5:Upload}\" UseUniqueFileName=\"${6|true,false|}\" /> \n "
             ],
         "description": "XMP Form Control - FileUpload"
     },
     "HtmlInput": {
         "prefix": "xf HtmlInput",
         "body": [
-            "<HtmlInput Id=\"\" DataField=\"\" DataType=\"string\" Height=\"400\" Width=\"600\" />\n "
+            "<HtmlInput Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" Height=\"${3:400}\" Width=\"${4:600}\" />\n "
             ],
         "description": "XMP Form Control - HtmlInput"
     },
     "Include": {
         "prefix": "xf Include",
         "body": [
-            "<Include FileName=\"string\" /> \n "
+            "<Include FileName=\"${1}\" /> \n "
             ],
         "description": "XMP Form Control - Include"
     },
@@ -611,259 +611,259 @@
     "Label": {
         "prefix": "xf Label",
         "body": [
-            "<Label ID=\"\" For=\"\" text=\"\" /> \n "
+            "<Label ID=\"${1}\" For=\"${2}\" text=\"${3}\" />\n" 
             ],
         "description": "XMP Form Control - Label"
     },
     "ListBox": {
         "prefix": "xf ListBox",
         "body": [
-            "<ListBox Id=\"\" DataSourceId=\"\" DataField=\"\" DataTextField=\"\"  DataValueField=\"\" DataType=\"string\" SelectionMode=\"single\" SelectedItemsSeparator=\"\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>    \n</ListBox>\n "
+            "<ListBox Id=\"${1}\" DataSourceId=\"${2}\" DataField=\"${3}\" DataTextField=\"${4}\"  DataValueField=\"${5}\" DataType=\"${6|string,int32,int62,boolean|}\" SelectionMode=\"${7|single,multiple|}\" SelectedItemsSeparator=\"${8:|}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>    \n</ListBox>\n "
             ],
         "description": "XMP Form Control - ListBox"
     },
     "ListDataSource": {
         "prefix": "xf ListDataSource",
         "body": [
-            "<ListDataSource Id=\"\" CommandText=\"\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"\" Value='[[]]' DataType=\"\" />\n<ListDataSource>\n"
+            "<ListDataSource Id=\"${1}\" CommandText=\"${2:SELECT...}\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int62,boolean|}\" />\n<ListDataSource>\n"
             ],
         "description": "XMP Form Control - ListDataSource"
     },
     "Login": {
         "prefix": "xf Login",
         "body": [
-            "<Login \n    Username='[[Uname]]' \n    Password='[[Pword]]' \n    UsernameField=\"UsrName\" \n    UserIdField=\"UsrId\" \n/>\n\n "
+            "<Login \n    Username='[[${1:Uname}]]' \n    Password='[[${2:Pword}]]' \n    UsernameField=\"${3:UsrName}\" \n    UserIdField=\"${4:UsrId}\" \n/>\n\n "
             ],
         "description": "XMP Form Control - Login"
     },
     "Panel": {
         "prefix": "xf Panel",
         "body": [
-            "<Panel  Id=\"\"  ShowRoles=\"Editor\" =\"Expression\" >\n    ...HTML, text, and Control Tags...\n</Panel>\n "
+            "<Panel  Id=\"${1}\"  ShowRoles=\"${2:Editor}\" ShowIf=\"${3:Expression}\" >\n    ${4:...HTML, text, and Control Tags...}\n</Panel>\n "
             ],
         "description": "XMP Form Control - Panel"
     },
     "Parameter": {
         "prefix": "xf Parameter",
         "body": [
-            "<Parameter Name=\"\" Value=\"\" />\n "
+            "<Parameter Name=\"${1}\" Value='${2:[[${3}]]}' />\n "
             ],
         "description": "XMP Form Control - Parameter"
     },
     "Password": {
         "prefix": "xf Password",
         "body": [
-            "<Password Id=\"\" DataField=\"\" DataType=\"string\" /> \n "
+            "<Password Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" /> \n "
             ],
         "description": "XMP Form Control - Password"
     },
     "RadioButton": {
         "prefix": "xf RadioButton",
         "body": [
-            "<RadioButton  Id=\"\" text=\"\" DataField=\"\" DataType=\"boolean\" DataValueField=\"\" Checked=\"true\"  />\n "
+            "<RadioButton  Id=\"${1}\" text=\"${2}\" DataField=\"${3}\" DataType=\"boolean\" DataValueField=\"${4}\" Checked=\"${5|true,false|}\"  />\n "
             ],
         "description": "XMP Form Control - RadioButton"
     },
     "RadioButtonList": {
         "prefix": "xf RadioButtonList",
         "body": [
-            "<RadioButtonList Id=\"\"  DataSourceId=\"\"  DataTextField=\"\"  DataValueField=\"\" DataType=\"string\">\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</RadioButtonList>     \n "
+            "<RadioButtonList Id=\"${1}\"  DataSourceId=\"${2}\"  DataTextField=\"${3}\"  DataValueField=\"${4}\" DataType=\"${5|string,int32,int64,boolean|}\">\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</RadioButtonList>     \n "
             ],
         "description": "XMP Form Control - RadioButtonList"
     },
     "Redirect": {
         "prefix": "xf Redirect",
         "body": [
-            "<Redirect \n    Target=\"\" \n    If=\"  \"  \n    Method=\"\"\n/>\n "
+            "<Redirect Target=\"${1}\" If=\"${2}\" Method=\"${3|Get,Post|}\"/>\n "
             ],
         "description": "XMP Form Control - Redirect"
     },
     "Register": {
         "prefix": "xf Register",
         "body": [
-            "<Register \n    TagPrefix=\"\"\n    Namespace=\"\"\n    Assembly=\"\"\n/>\n "
+            "<Register TagPrefix=\"${1}\" Namespace=\"${2}\" Assembly=\"${3}\"/>\n "
             ],
         "description": "XMP Form Control - Register"
     },
     "RemoveFromRoles": {
         "prefix": "xf RemoveFromRoles",
         "body": [
-            "<RemoveFromRoles \n    RoleNames=\"Role1,Editors\" \n    UserId='[[User:Id]]' \n/>\n\n "
+            "<RemoveFromRoles RoleNames=\"${1:Role1,Editors}\" UserId='[[${2:User:Id}]]' />\n "
             ],
         "description": "XMP Form Control - RemoveFromRoles"
     },
     "ScriptBlock": {
         "prefix": "xf ScriptBlock",
         "body": [
-            "<ScriptBlock ScriptId=\"\" BlockType=\"\" RegisterOnce=\"\" Url=\"\">\n    <Script type=\"text/javascript\">\n        ...Javascript... \n    </Script>\n</ScriptBlock>     \n "
+            "<ScriptBlock ScriptId=\"${1}\" BlockType=\"${2|HeadScript,ClientScript,ClientScriptInclude,StartupScript|}\" RegisterOnce=\"${3|true,false|}\" Url=\"${4}\">\n    <Script type=\"text/javascript\">\n        ...Javascript... \n    </Script>\n</ScriptBlock>     \n "
             ],
         "description": "XMP Form Control - ScriptBlock"
 	},  
 	"SelectCommand": {
         "prefix": "xf SelectCommand",
         "body": [
-			"<SelectCommand CommandText=\"\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"\" Value='[[]]' DataType=\"\" />\n</SelectCommand>\n"
+			"<SelectCommand CommandText=\"${1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int64,boolean|}\" />\n</SelectCommand>\n"
             ],
         "description": "XMP Control - SelectCommand"
 	},
     "SilentPost": {
         "prefix": "xf SilentPost",
         "body": [
-            "<SilentPost  If=\"expression\" Url=\"\">\n    <Field Name=\"\"  Value='' />\n    <Field Name=\"\"  Value='' />\n</SilentPost>\n "
+            "<SilentPost  If=\"${1:expression}\" Url=\"${2}\">\n    <Field Name=\"${3}\"  Value='[[${4}]]' />\n    <Field Name=\"${5}\"  Value='[[${6}]]' />\n</SilentPost>\n "
             ],
         "description": "XMP Form Control - SilentPost"
     },  
 	"SubmitCommand": {
         "prefix": "xf SubmitCommand",
         "body": [
-			"<SubmitCommand CommandText=\"\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"\" Value='[[]]' DataType=\"\" />\n</SelectCommand>\n"
+			"<SubmitCommand CommandText=\"${1:SELECT...}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int64,boolean|}\" />\n</SelectCommand>\n"
             ],
         "description": "XMP Control - SubmitCommand"
 	},
     "Tabstrip": {
         "prefix": "xf Tabstrip",
         "body": [
-            "<Tabstrip HoverBackColor=\"\" HoverForeColor=\"\" SelectedBackColor=\"\" SelectedForeColor=\"\">\n\n    <tab text=\"tab1\">\n        ...HTML/text Content...\n    </tab>\n    <tab text=\"tab2\">\n\n    </tab\n</Tabstrip>\n "
+            "<Tabstrip HoverBackColor=\"${1}\" HoverForeColor=\"${2}\" SelectedBackColor=\"${3}\" SelectedForeColor=\"${4}\">\n\n    <tab text=\"${5:tab1}\">\n        ${6:...HTML/text Content...}\n    </tab>\n    <tab text=\"${7:tab2}\">\n        ${8}\n    </tab>\n</Tabstrip>\n "
             ],
         "description": "XMP Form Control - Tabstrip"
     },	
     "Text": {
         "prefix": "xf Text",
         "body": [
-            "<Text DataField=\"\" />\n "
+            "<Text DataField=\"${1}\" />\n "
             ],
         "description": "XMP Form Control - Text"
     },
     "TextArea": {
         "prefix": "xf TextArea",
         "body": [
-            "<TextArea Id=\"\" DataField=\"\" DataType=\"string\" Height=\"400\" Width=\"600\" Placeholder=\"string\" />\n "
+            "<TextArea Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" Height=\"${3:400}\" Width=\"${4:600}\" Placeholder=\"${5:Placeholder Text...}\" />\n "
             ],
         "description": "XMP Form Control - TextArea"
     },
     "TextBox": {
         "prefix": "xf TextBox",
         "body": [
-            "<TextBox Id=\"\" DataField=\"\" DataType=\"string\" Width=\"200\" Placeholder=\"string\" /> \n "
+            "<TextBox Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" Width=\"${3:200}\" Placeholder=\"${4:Placeholder Text...}\" /> \n "
             ],
         "description": "XMP Form Control - TextBox"
     },
     "UpdateButton": {
         "prefix": "xf UpdateButton",
         "body": [
-            "<UpdateButton text=\"Update\"/>\n "
+            "<UpdateButton text=\"${1:Update}\"/>\n "
             ],
         "description": "XMP Form Control - UpdateButton"
     },
     "UpdateImage": {
         "prefix": "xf UpdateImage",
         "body": [
-            "<UpdateImage  AlternateText=\"Update\" ImageUrl=\"~/images/update.gif\"  />\n "
+            "<UpdateImage  AlternateText=\"${1:Update}\" ImageUrl=\"${2:~/images/update.gif}\"  />\n "
             ],
         "description": "XMP Form Control - UpdateImage"
     },
     "UpdateLink": {
         "prefix": "xf UpdateLink",
         "body": [
-            "<UpdateLink text=\"Update\" />\n "
+            "<UpdateLink text=\"${1:Update}\" />\n "
             ],
         "description": "XMP Form Control - UpdateLink"
     },
     "UpdateUser": {
         "prefix": "xf UpdateUser",
         "body": [
-            "<UpdateUser \n    Approved =\"\"\n    DisplayName ='[[]]'\n    Username ='[[]]'\n    Email ='[[]]'\n    FirstName ='[[]]'\n    LastName ='[[]]' \n    Password ='[[]]'\n    RoleNames ='[[]]'\n    Unit ='[[]]'\n    Street ='[[]]'\n    City ='[[]]'\n    PostalCode ='[[]]'\n    Region = '[[]]'\n    Country ='[[]]'\n    Telephone ='[[]]'\n    UpdatePasswordOnNextLogin =\"\"\n        <Property Name=\"\" Value='[[]]]' />\n/>\n"
+            "<UpdateUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    UpdatePasswordOnNextLogin =\"${16|true,false|}\">\n        <Property Name=\"${17}\" Value='[[${18}]]]' />\n</UpdateUser>\n"
             ],
         "description": "XMP Form Control - UpdateUser"
     },
     "ValidateAction": {
         "prefix": "xf ValidateAction",
         "body": [
-            "<Validate Text=\"\" Type=\"Action\" />\n "
+            "<Validate Text=\"${1}\" Type=\"Action\" />\n "
             ],
         "description": "XMP Form Control - ValidateAction"
     },
     "ValidateCheckbox": {
         "prefix": "xf ValidateCheckbox",
         "body": [
-            "<Validate  text=\"\" Type=\"CheckBox\" Target=\"\" MustBeChecked =\"true\" Message=\"Please make selection\" />\n "
+            "<Validate  text=\"${1}\" Type=\"CheckBox\" Target=\"${2}\" MustBeChecked =\"${3|true,false|}\" Message=\"${4:Please make selection}\" />\n "
             ],
         "description": "XMP Form Control - ValidateCheckbox"
     },
     "ValidateCompare": {
         "prefix": "xf ValidateCompare",
         "body": [
-            "<Validate text=\"\" Type=\"Compare\" Target=\"\" CompareTarget=\"\" Message=\"The fields don't match\"  /> \n "
+            "<Validate text=\"${1}\" Type=\"Compare\" Target=\"${2}\" CompareTarget=\"${3}\" Message=\"${4:The fields don't match}\"  /> \n "
             ],
         "description": "XMP Form Control - ValidateCompare"
     },
     "ValidateDatabase": {
         "prefix": "xf ValidateDatabase",
         "body": [
-            "<Validate text=\"\" Type=\"Database\" />\n "
+            "<Validate text=\"${1}\" Type=\"Database\" />\n "
             ],
         "description": "XMP Form Control - ValidateDatabase"
     },
     "ValidateEmail": {
         "prefix": "xf ValidateEmail",
         "body": [
-            "<Validate text=\"\" Type=\"Email\" Target=\"\" Message=\"Please enter a valid email address\"/> \n "
+            "<Validate text=\"${1}\" Type=\"Email\" Target=\"${2}\" Message=\"${3:Please enter a valid email address}\"/> \n "
             ],
         "description": "XMP Form Control - ValidateEmail"
     },
     "ValidateRange": {
         "prefix": "xf ValidateRange",
         "body": [
-            "<Validate text=\"\" Type=\"Range\" Target=\"\" MinimumValue=\"1\" MaximumValue=\"10\" DataType=\"integer\" \n    Message=\"You can only enter values between x and y ...\" />\n "
+            "<Validate text=\"${1}\" Type=\"Range\" Target=\"${2}\" MinimumValue=\"${3:1}\" MaximumValue=\"${4:10}\" DataType=\"${5|string,integer,double,date,currency|}\" Message=\"${6:You can only enter values between x and y ...}\" />\n "
             ],
         "description": "XMP Form Control - ValidateRange"
     },
     "ValidateRegEx": {
         "prefix": "xf ValidateRegEx",
         "body": [
-            "<Validate text=\"\" Type=\"RegEx\" Target=\"\" ValidationExpression=\"\" Message=\"The value must be in the format: \" />\n "
+            "<Validate text=\"${1}\" Type=\"RegEx\" Target=\"${2}\" ValidationExpression=\"${3}\" Message=\"${4:The value must be in the format: }\" />\n "
             ],
         "description": "XMP Form Control - ValidateRegEx"
     },
     "ValidateRequired": {
         "prefix": "xf ValidateRequired",
         "body": [
-            "<Validate  text=\"\" Type=\"Required\" Target=\"\" Message=\"You must enter something\" />  \n "
+            "<Validate  text=\"${1}\" Type=\"Required\" Target=\"${2}\" Message=\"${3:You must enter something}\" />  \n "
             ],
         "description": "XMP Form Control - ValidateRequired"
     },
     "ValidationSummary": {
         "prefix": "xf ValidationSummary",
         "body": [
-            "<ValidationSummary DisplayMode=\"BulletList\" HeaderText=\"Errors:\" CssClass=\"NormalRed\" /> \n "
+            "<ValidationSummary DisplayMode=\"${1:BulletList}\" HeaderText=\"${2:Errors:}\" CssClass=\"${3:NormalRed}\" /> \n "
             ],
         "description": "XMP Form Control - ValidationSummary"
 	},
     "ValidateXML": {
         "prefix": "xf ValidateXML",
         "body": [
-            "<Validate Type=\"XML\" target=\"txtXML\" message=\"Please enter well-formed XML\" />\n\n "
+            "<Validate Type=\"XML\" target=\"${1}\" message=\"${2:Please enter well-formed XML}\" />\n "
             ],
         "description": "XMP Form Control - ValidateXML"
     },
     "Variable": {
         "prefix": "xf Variable",
         "body": [
-            "<Variable Name=\"\" Value=\"\" DataType=\"\" /> \n\n "
+            "<Variable Name=\"${1}\" Value='${2:[[${3}]]}' DataType=\"${4|string,int32,int62,boolean|}\" /> \n\n "
             ],
         "description": "XMP Form Control - Variable"
 	},
 	"fx:AddButton": {
         "prefix": "fx AddButton",
         "body": [
-			"<fx:AddButton Text=\"Add Record\">\n    <Parameter Name=\"\" Value='[[]]]' DataType=\"\" />\n</fx:AddButton>\n"
+			"<fx:AddButton Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
             ],
         "description": "FormX Control - fx:AddButton"
 	},
 	"fx:EditButton": {
         "prefix": "fx EditButton",
         "body": [
-			"<fx:AddButton Text=\"Add Record\">\n    <Parameter Name=\"\" Value='[[]]]' DataType=\"\" />\n</fx:AddButton>\n"
+			"<fx:EditButton Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
             ],
         "description": "FormX Control - fx:EditButton"
 	},
@@ -877,7 +877,7 @@
 	"fx:In Line Edit Form": {
         "prefix": "fx In Line Edit Form",
         "body": [
-            "<xmod:Template>\n    <ListDataSource />\n    <DeleteCommand />\n    <HeaderTemplate>\n        <table>\n            <thead>\n                <tr>\n                    <th> </th>\n                </tr>\n            </thead>\n            <tbody>\n    </HeaderTemplate>\n    <ItemTemplate>\n                <tr>\n                <fx:FormX>\n                <Template>\n                    <td> </td>\n                </Template>\n                <EditForm>\n                </EditForm>\n            </fx:FormX>\n                </tr>\n    </ItemTemplate>\n    <FooterTemplate>\n            </tbody>\n        </table>\n    </FooterTemplate>\n</xmod:template>\n"
+            "<xmod:Template Id=\"${1}\" Ajax=\"${2|true,false|}\">\n    <ListDataSource />\n    <DeleteCommand />\n    <HeaderTemplate>\n        <table>\n            <thead>\n                <tr>\n                    <th> </th>\n                </tr>\n            </thead>\n            <tbody>\n    </HeaderTemplate>\n    <ItemTemplate>\n                <tr>\n                <fx:FormX Mode=\"${3|template,add,edit|}\">\n                <Template>\n                    <td> </td>\n                </Template>\n                <EditForm>\n                </EditForm>\n            </fx:FormX>\n                </tr>\n    </ItemTemplate>\n    <FooterTemplate>\n            </tbody>\n        </table>\n    </FooterTemplate>\n</xmod:template>\n"
             ],
         "description": "FormX Control - In Line Edit Form"
 	},
@@ -887,7 +887,7 @@
             "<xmod:Register TagPrefix=\"fx\" Namespace=\"Reflect.XModPro.Templates.FormX\" Assembly=\"Reflect.XModPro.Templates.FormX\" />\n"
             ],
         "description": "FormX Control - Register"
-	}
+    }
 }
 
 
