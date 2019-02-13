@@ -9,11 +9,11 @@
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_Logo.png" width="150" height="150" alt="XMP Snippets Logo"></p>
 <br />
 
-> __Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  Author and edit XMP forms and templates quickly. Although the form and template editor built into XMP is a great tool, you may prefer VS Code as your go-to HTML editor. Together they are a great combination - quickly write the bulk of your code in VS Code and fine tune it in the XMP editor.__
+> __Reduce the time you spend on creating complex XMOD Pro forms and templates, as well as Form.X forms within XMP templates.  Author and edit XMP form and template .ascx files directly. The form and template editor built into XMP is a great tool, but you may prefer VS Code as your go-to HTML editor. Together they are a great combination - quickly write the bulk of your code in VS Code and fine tune it in the XMP editor.__
 
 # XMP Snippets
 
-XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 125 snippets for you to use, and I plan on adding more to support direct editing of XMP .aspx files.
+XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 259 snippets for you to use, and I plan on adding more to support direct editing of XMP .aspx files.
 
 XMP Snippets are very easy to use
 
@@ -28,7 +28,8 @@ XMP Snippets are very easy to use
 There are many benefits to coding XMod Pro Templates and Forms in VS Code with XMP Snippets over the traditional method. A few are listed below:
 
 * __All the benefits of the top rated code editor.__
-* __Directly create and edit XMP form and template .ascx files. Code in VS Code and View in your browser side by side.__
+* __Directly create and edit XMP form and template .ascx files.__
+* __Code in VS Code and View in your browser side by side.__
 * __Multiple Undos! Even undo past your last save as long as you have not closed the open file or VS Code.__
 * __Easy Versioning, and can even use git.__
 * __Quickly Scaffold projects in VS Code in one screen and copy and paste into the XMP Editor in another screen.__
@@ -75,8 +76,8 @@ No known issues as of publish date
 
 __v 1.2.0__ 
 - ### Added Support for Direct Editing of XMP ASCX Files.
-    - Added 52 _xt snippets for XMP templates controls for ascx files.
-    - Added 73 _xf snippets for XMP forms controls for ascx files. 
+    - Added 52 _xt snippets for XMP template controls for ascx files.
+    - Added 73 _xf snippets for XMP form controls for ascx files. 
     - Added &ensp;5 _fx snippets for Form.X form controls for ascx files. 
     - Added &ensp;1 _xp snippet for Token Replacement in XMP ascx files. 
 
