@@ -68,6 +68,11 @@ Requirements to view files
 * XMod Pro module installed in DNN. No license required to run in dev environment [XMod Pro](https://www.dnndev.com  "XMod Pro Home Page")
 * Optional - Form.X module installed in DNN. License Required [Form.X](http://reflectmediagroup.com/Products/XMod-Pro-Plugins/Details/prodid/18 "Form.X Home Page")
 
+> To work with .ascx files you need to change the language mode of the files from "xml"to "html" or add the following to your VS Code settings json file: __"files.associations": {
+    "*.ascx": "html"
+    }__
+
+
 ## Known Issues
 
 No known issues as of publish date
