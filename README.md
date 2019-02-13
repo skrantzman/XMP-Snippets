@@ -13,7 +13,7 @@
 
 # XMP Snippets
 
-XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 259 snippets for you to use, and I plan on adding more to support direct editing of XMP .aspx files.
+XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 259 snippets for you to use, and it supports the direct editing of .ascx files.
 
 XMP Snippets are very easy to use
 
