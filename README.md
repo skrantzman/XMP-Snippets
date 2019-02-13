@@ -17,16 +17,20 @@ XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Te
 
 XMP Snippets are very easy to use
 
-* For XMP Template Controls start by typing __xf__, followed by the start of the desiered template control.
-* For XMP Form Controls start by typing __xt__, followed by the start of the desiered form control.
+* For XMP Template Controls start by typing __xt__, followed by the start of the desiered template control.
+* For XMP Form Controls start by typing __xf__, followed by the start of the desiered form control.
 * For Form.X Form Controls start by typing __fx__, followed by the start of the desiered Form.x control.
+* For Direct Editing of XMP Template in ascx files start by typine ___xt__, folowed by the start of the desired template control.
+* For Direct Editing of XMP Forms in ascx files start by typine ___xf__, folowed by the start of the desired template control.
+* For Direct Editing of Form.x Forms in ascx files start by typine ___fx__, folowed by the start of the desired template control. 
 
 ## Benefits
 There are many benefits to coding XMod Pro Templates and Forms in VS Code with XMP Snippets over the traditional method. A few are listed below:
 
 * __All the benefits of the top rated code editor.__
+* __Directly create and edit XMP form and template .ascx files. Code in VS Code and View in your browser side by side.__
 * __Multiple Undos! Even undo past your last save as long as you have not closed the open file or VS Code.__
-* __Easy Versioning, and can even use git__
+* __Easy Versioning, and can even use git.__
 * __Quickly Scaffold projects in VS Code in one screen and copy and paste into the XMP Editor in another screen.__
 * __Tab through each inserted control's properties to set their values.__
 
@@ -34,9 +38,9 @@ There are many benefits to coding XMod Pro Templates and Forms in VS Code with X
 ## Features
 
 The XMP snippets are broken into three types.
-1. Template Controls
-2. Form Controls
-3. Form.X Controls
+1. Template Controls (xt or _xt)
+2. Form Controls (xf or _xf)
+3. Form.X Controls (fx or _fx)
     
 > XMod Pro Templates and Forms, prefix with xt or xf accordingly. Then start to type the name of the desired XMod Pro control.
 
@@ -47,6 +51,12 @@ The XMP snippets are broken into three types.
 > Form.X form controls in XMP Templates, prefix with fx. Then start to type the name of the desired Form.X control.
 
 <p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_FormX_Features.gif"   alt="XMP Snippets Form.X Features Animated GIF"></p>
+
+<br />
+
+> Create and Edit XMP Form and Template ASCX files, prefix with _xf, _xt, or _fx. Then start to type the name of the desired Form.X control or template.
+
+<p align="center"><img src="https://raw.githubusercontent.com/skrantzman/XMP-Snippets/master/XMP_Snippets_ASCX_Features.gif"   alt="XMP Snippets Form.X Features Animated GIF"></p>
 
 ## Requirements
 
@@ -63,7 +73,11 @@ No known issues as of publish date
 
 ## Release Notes
 
-__v 1.1.0__ 
-* Added Tabstops to XMP-Snippet control properties.
+__v 1.2.0__ 
+- ### Added Support for Direct Editing of XMP ASCX Files.
+    - Added 52 _xt snippets for XMP templates controls for ascx files.
+    - Added 73 _xf snippets for XMP forms controls for ascx files. 
+    - Added &ensp;5 _fx snippets for Form.X form controls for ascx files. 
+    - Added &ensp;1 _xp snippet for Token Replacement in XMP ascx files. 
 
 

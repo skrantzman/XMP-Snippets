@@ -415,7 +415,7 @@
     "AddUser": {
         "prefix": "xf AddUser",
         "body": [
-            "<AddUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    RoleNames=\"${16}\"\n    UpdatePasswordOnNextLogin =\"${17|true,false|}\">\n        <Property Name=\"${18}\" Value='[[${19}]]]' />\n</AddUser>\n"
+            "<AddUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    RoleNames=\"${16}\"\n    UpdatePasswordOnNextLogin =\"${17|true,false|}\">\n        <Property Name=\"${18}\" Value='[[${19}]]' />\n</AddUser>\n"
             ],
         "description": "XMP Form Control - AddUser"
     },
@@ -772,7 +772,7 @@
     "UpdateUser": {
         "prefix": "xf UpdateUser",
         "body": [
-            "<UpdateUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    UpdatePasswordOnNextLogin =\"${16|true,false|}\">\n        <Property Name=\"${17}\" Value='[[${18}]]]' />\n</UpdateUser>\n"
+            "<UpdateUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    UpdatePasswordOnNextLogin =\"${16|true,false|}\">\n        <Property Name=\"${17}\" Value='[[${18}]]' />\n</UpdateUser>\n"
             ],
         "description": "XMP Form Control - UpdateUser"
     },
@@ -856,14 +856,14 @@
 	"fx:AddButton": {
         "prefix": "fx AddButton",
         "body": [
-			"<fx:AddButton Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
+			"<fx:AddButton Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
             ],
         "description": "FormX Control - fx:AddButton"
 	},
 	"fx:EditButton": {
         "prefix": "fx EditButton",
         "body": [
-			"<fx:EditButton Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
+			"<fx:EditButton Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
             ],
         "description": "FormX Control - fx:EditButton"
 	},
@@ -887,9 +887,932 @@
             "<xmod:Register TagPrefix=\"fx\" Namespace=\"Reflect.XModPro.Templates.FormX\" Assembly=\"Reflect.XModPro.Templates.FormX\" />\n"
             ],
         "description": "FormX Control - Register"
+    },
+    "xmod:AddButton_ascx": {
+        "prefix": "_xt xmod:AddButton_ascx",
+        "body": [
+            "<xmod:AddButton runat=\"server\" text=\"${1:Submit}\" ></xmod:AddButton> \n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:AddButton"
+    },
+    "xmod:AddImage_ascx": {
+        "prefix": "_xt xmod:AddImage_ascx",
+        "body": [
+            "<xmod:AddImage runat=\"server\" AlternateText=\"${1}\" ImageUrl=\"${2:~/images/add.gif}\" ></xmod:AddImage>\n "
+            ],
+        "description": "XMP Template Control - ASCX :AddImmage"
+    },
+    "xmod:AddLink_ascx": {
+        "prefix": "_xt xmod:AddLink_ascx",
+        "body": [
+            "<xmod:AddLink runat=\"server\" text=\"${1}\" ></xmod:AddLink>\n "
+            ],
+        "description": "XMP Template Control - ASCX :AddLink"
+	},
+    "xmod:AjaxButton_ascx": {
+        "prefix": "_xt xmod:AjaxButton_ascx",
+        "body": [
+            "<xmod:AjaxButton runat=\"server\" text=\"${1}\" Url=\"${2}\" Target=\"${3}\"\n/>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:AjaxButton"
+    },
+    "xmod:AjaxImage_ascx": {
+        "prefix": "_xt xmod:AjaxImage_ascx",
+        "body": [
+            "<xmod:AjaxImage runat=\"server\" AlternateText=\"${1}\"\n    Url=\"${2}\"\n    Target=\"${3}\"\n    ImageUrl=\"${4:~/images/add.gif}\"\n/>\n"
+            ],
+        "description": "XMP Template Control - ASCX xmod:AjaxImage"
+    },
+    "xmod:AjaxLink_ascx": {
+        "prefix": "_xt xmod:AjaxLink_ascx",
+        "body": [
+            "<xmod:AjaxLink runat=\"server\" text=\"${1}\" Url=\"${2}\" Target=\"${3}\"\n/>\n"
+            ],
+        "description": "XMP Template Control - ASCX xmod:AjaxLink"
+    },    
+    "Case_ascx": {
+        "prefix": "_xt Case_ascx",
+        "body": [
+            "    <Case runat=\"server\" CompareType=\"${1|Numeric,Float,Date,Text,Regex,Boolean,Role|}\" Value=\"${2}\" Operator=\"${3|=,<>,>,>=,<,<=|}\" Expression=\"${4}\"  IgnoreCase=\"${5|True,False|}\"></Case>\n"
+            ],
+        "description": "XMP Template Control - ASCX Case"
+    },
+    "Command_ascx": {
+        "prefix": "_xt Command",
+        "body": [
+            "<Command runat=\"server\" Target=\"${1}\" Type=\"${2|List,Detail|}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />${0}\n</Command>\n "
+            ],
+        "description": "XMP Template Control - ASCX Command"
+    },	
+    "xmod:CommandButton_ascx": {
+        "prefix": "_xt xmod:CommandButton_ascx",
+        "body": [
+            "<xmod:CommandButton runat=\"server\" text=\"${1}\"\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />${0}\n    </Command>\n</xmod:CommandButton> \n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:CommandButton"
+    },
+    "xmod:CommandImage_ascx": {
+        "prefix": "_xt xmod:CommandImage_ascx",
+        "body": [
+            "<xmod:CommandImage runat=\"server\" text=\"${1}\" ImageUrl=\"${2}\" ImageAlign=\"${3}\">\n    <Command Target=\"${4}\" Type=\"${5|List,Detail|}\">\n        <Parameter Name=\"${6}\" Value='${7:[[${8}]]}' />${0}\n    </Command>\n</xmod:CommandImage>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:CommandImage"
+    },
+    "xmod:CommandLink_ascx": {
+        "prefix": "_xt xmod:CommandLink_ascx",
+        "body": [
+            "<xmod:CommandLink runat=\"server\" text=\"${1}\" >\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />${0}\n    </Command>\n</xmod:CommandLink>  \n"
+            ],
+        "description": "XMP Template Control - ASCX xmod:CommandLink"
+    },
+    "xmod:DataList_ascx": {
+        "prefix": "_xt xmod:DataList_ascx",
+        "body": [
+            "<xmod:DataList runat=\"server\" Id=\"${1}\" Ajax=\"${2|True,False|}\" AddRoles=\"${3}\">\n    <ListDataSource CommandText=\"${4:SELECT 1}\" />\n    <DetailDataSource CommandText=\"SELECT * FROM ${5:TableName} WHERE UserId=@UserId\" />\n\n    <HeaderTemplate>\n        <h1>${6}</h1>\n    </HeaderTemplate>\n\n    <ItemTemplate>\n    </ItemTemplate>\n\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n\n    <FooterTemplate>\n    </FooterTemplate>\n\n    <DetailTemplate>\n        <h1>${7}</h1> \n    </DetailTemplate>\n\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n\n</xmod:DataList>\n${0} "
+            ],
+        "description": "XMP Template Control - ASCX xmod:DataList"
+    },
+    "xmod:DeleteButton_ascx": {
+        "prefix": "_xt xmod:DeleteButton_ascx",
+        "body": [
+            "<xmod:DeleteButton runat=\"server\" text=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DeleteButton>\n${0}"
+            ],
+        "description": "XMP Template Control - ASCX xmod:DeleteButton"
+    },
+    "xmod:DeleteImage_ascx": {
+        "prefix": "_xt xmod:DeleteImage_ascx",
+        "body": [
+            "<xmod:DeleteImage runat=\"server\" AlternateText=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\" ImageUrl=\"${3:~/images/delete.gif}\">\n    <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:DeleteImage>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:DeleteImage"
+    },
+    "xmod:DeleteLink_ascx": {
+        "prefix": "_xt xmod:DeleteLink_ascx",
+        "body": [
+            "<xmod:DeleteLink runat=\"server\" text=\"${1:Delete}\" onclientclick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DeleteLink>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:DeleteLink"
+    },
+    "xmod:DetailButton_ascx": {
+        "prefix": "_xt xmod:DetailButton_ascx",
+        "body": [
+            "<xmod:DetailButton runat=\"server\" text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:DetailButton>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:DetailButton"
+    },
+    "xmod:DetailImage_ascx": {
+        "prefix": "_xt xmod:DetailImage_ascx",
+        "body": [
+            "<xmod:DetailImage runat=\"server\" AlternateText=\"${1:View Detail}\" ImageUrl=\"${2:~/images/about.gif}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DetailImage> \n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:DetailImage"
+    },
+    "xmod:DetailLink_ascx": {
+        "prefix": "_xt xmod:DetailLink_ascx",
+        "body": [
+            "<xmod:DetailLink runat=\"server\" text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:DetailLink>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:DetailLink"
+    },
+    "xmod:Each_ascx": {
+        "prefix": "_xt xmod:Each_ascx",
+        "body": [
+            " <ul>\n        <xmod:Each runat=\"server\" Delimiter=\"${1:|}\" Value='${2:[[${3}]]}'>\n          <ItemTemplate><img src=\"${4:~/imgages/}\" /></ItemTemplate>\n       </xmod:Each>\n</ul>\n\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Each"
+    },
+    "xmod:EditButton_ascx": {
+        "prefix": "_xt xmod:EditButton_ascx",
+        "body": [
+            "<xmod:EditButton runat=\"server\" text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:EditButton>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:EditButton"
+    },
+    "xmod:EditImage_ascx": {
+        "prefix": "_xt xmod:EditImage_ascx",
+        "body": [
+            "<xmod:EditImage runat=\"server\" AlternateText=\"${1:Edit}\" ImageUrl=\"${2:~/images/edit.gif}\" >\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:EditImage>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:EditImage"
+    },
+    "xmod:EditLink_ascx": {
+        "prefix": "_xt xmod:EditLink_ascx",
+        "body": [
+            "<xmod:EditLink runat=\"server\" text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:EditLink>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:EditLink"
+    },    
+    "Else_ascx": {
+        "prefix": "_xt Else_ascx",
+        "body": [
+            "<Else runat=\"server\">${1}</Else>\n"
+            ],
+        "description": "XMP Template Control - ASCX Else"
+    },
+    "xmod:Feed_ascx": {
+        "prefix": "_xt xmod:Feed_ascx",
+        "body": [
+        "<xmod:Feed  runat=\"server\"\n    ContentType=\"${1|text/html,text/javascript,text/plain,text/xml|}\" Filename=\"${2}\" ViewRoles=\"${3}\" >\n   <ListDataSource CommandText=\"${4:SELECT...} \"/>\n\n    <HeaderTemplate> </HeaderTemplate>\n\n    <ItemTemplate> </ItemTemplate>\n\n    <FooterTemplate> </FooterTemplate>\n\n</xmod:Feed>\n "
+        ],
+    "description": "XMP Template Control - ASCX xmod:Feed"
+    },    
+    "xmod:Format_ascx": {
+        "prefix": "_xt xmod:Format_ascx",
+        "body": [
+            "<xmod:Format runat=\"server\"  Type=\"${1|Numeric,Float,Date,Text,RegEx,Cloak,HtmlEncode,HtmlDecode,UrlEncode,UrlDecode|}\" Value='${2:[[${3}]]}' Pattern=\"${4}\" />\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Format"
+    },
+    "xmod:IfEmpty_ascx": {
+        "prefix": "_xt xmod:IfEmpty_ascx",
+        "body": [
+            "<xmod:IfEmpty runat=\"server\"   Value='${1:[[${2}]]}'>\n      ${2:...Content Goes Here...}\n</xmod:IfEmpty> \n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:IfEmpty"
+    },
+    "xmod:IfNotEmpty_ascx": {
+        "prefix": "_xt xmod:IfNotEmpty_ascx",
+        "body": [
+            "<xmod:IfNotEmpty runat=\"server\"  Value='${1:[[${2}]]}'>\n         ${2:...Content Goes Here...}\n</xmod:IfNotEmpty> \n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:IfNotEmpty"
+    },
+    "xmod:Include_ascx": {
+        "prefix": "_xt xmod:Include_ascx",
+        "body": [
+            "<xmod:Include runat=\"server\" FileName=\"${1:string}\" /> \n\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Include"
+    },
+    "xmod:jQueryReady_ascx": {
+        "prefix": "_xt xmod:jQueryReady_ascx",
+        "body": [
+            "<xmod:jQueryReady runat=\"server\">\n\n\n\n</xmod:jQueryReady>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:jQueryReady"
+    },
+    "xmod:JsonFeed_ascx": {
+        "prefix": "_xt xmod:JsonFeed_ascx",
+        "body": [
+            "<xmod:JsonFeed runat=\"server\">\n    <ListDataSource CommandText=\"${1:SELECT ...}\">\n       <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' DataType=\"${5|string,int32,int64,boolean|}\" DefaultValue=\"${6}\" />\n    </ListDataSource>\n</xmod:JsonFeed>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:JsonFeed"
+    },
+    "xmod:LoadFeed_ascx": {
+        "prefix": "_xt xmod:LoadFeed_ascx",
+        "body": [
+            "<xmod:LoadFeed runat=\"server\"\n    FeedName=\"${1}\"\n    LoadingCssClass=\"${2}\"\n    LoadingImageUrl=\"${3}\"\n    Target=\"${4}\"  >\n \n    <Field Name=\"${5}\" Value='${6:[[${7}]]}' />\n</xmod:LoadFeed> \n\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:LoadFeed"
+    },    
+    "xmod:LoadFeedButton_ascx": {
+        "prefix": "_xt xmod:LoadFeedButton_ascx",
+        "body": [
+            "<xmod:LoadFeedButton runat=\"server\" \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\">\n\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:LoadFeedButton>\n\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:LoadFeedButton"
+    },
+    "xmod:LoadFeedImage_ascx": {
+        "prefix": "_xt xmod:LoadFeedImage_ascx",
+        "body": [
+            "<xmod:LoadFeedImage runat=\"server\" \n    AlternateText=\"${1}\" \n    ImageUrl=\"${2}\" \n    FeedName=\"${3}\" \n    Target=\"${4}\"   >\n\n    <Field Name=\"${5}\" Value='${6:[[${7}]]}' />\n</xmod:LoadFeedImage>\n\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:LoadFeedImage"
+    },
+    "xmod:LoadFeedLink_ascx": {
+        "prefix": "_xt xmod:LoadFeedLink_ascx",
+        "body": [
+            "<xmod:LoadFeedLink runat=\"server\" \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\"  >\n\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:LoadFeedLink>\n\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:LoadFeedLink"
+    },    
+    "xmod:MetaTags_ascx": {
+        "prefix": "_xt xmod:MetaTags_ascx",
+        "body": [
+            "<xmod:MetaTags runat=\"server\"> \n    <Title append=\"${1|true,false|}\">...Title text...</Title> \n    <Keywords append=\"${2|true,false|}\">...Keywords...</Keywords> \n    <Description append=\"${3|true,false|}\">...Description...</Description> \n    <Redirect Delay=\"${4:integer}\" Url=\"${5:string}\" />\n</xmod:MetaTags>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:MetaTags"
+    },
+    "xmod:NavigateUrl_ascx": {
+        "prefix": "_xt xmod:NavigateUrl_ascx",
+        "body": [
+            "<a href=\"<xmod:NavigateUrl runat=\"server\" TabId=\"${1}\"><Parameter Name=\"${2}\" Value='${3:[[${4}]]}' /></xmod:NavigateUrl>\">${5:Link Text Here}</a>\n"
+            ],
+        "description": "XMP Template Control - ASCX xmod:NavigateUrl"
+    },
+    "Pager_ascx": {
+        "prefix": "_xt Pager_ascx",
+        "body": [
+            "<Pager PageSize=\"${1|5,10,15,25,50,100|}\" PageNumCssClass=\"${2:CommandButton}\" FirstPageCaption=\"${3:First}\" LastPageCaption=\"${4:Last}\" >\n "
+            ],
+        "description": "XMP Template Control - ASCX Pager"
+    },    
+    "xmod:Redirect_ascx": {
+        "prefix": "_xt xmod:Redirect_ascx",
+        "body": [
+            "<xmod:Redirect runat=\"server\" ${1|Button,LinkButton,ImageButton|} text=\"${2}\" Target=\"${3:http://mysite.com/} \">\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' /> \n</xmod:Redirect>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Redirect"
+    },
+    "xmod:Register_ascx": {
+        "prefix": "_xt xmod:Register_ascx",
+        "body": [
+            "<xmod:Register runat=\"server\" TagPrefix=\"${1}\"  Namespace=\"${2}\"  Assembly=\"${3}\"  />\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Register"
+    },
+    "xmod:ReturnButton_ascx": {
+        "prefix": "_xt xmod:ReturnButton_ascx",
+        "body": [
+            "<xmod:ReturnButton runat=\"server\" text=\"${1:Go Back}\" />\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:ReturnButton"
+    },
+    "xmod:ReturnImage_ascx": {
+        "prefix": "_xt xmod:ReturnImage_ascx",
+        "body": [
+            "<xmod:ReturnImage runat=\"server\" text=\"${1:Go Back}\" ImageUrl=\"${2:~/images/leftarrow.gif}\" AlternateText=\"${3:Return}\" />\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:ReturnImage"
+    },
+    "xmod:ReturnLink_ascx": {
+        "prefix": "_xt xmod:ReturnLink_ascx",
+        "body": [
+            "<xmod:ReturnLink runat=\"server\" text=\"${1:Go Back}\" />\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:ReturnLink"
+    },
+    "xmod:ScriptBlock_ascx": {
+        "prefix": "_xt xmod:ScriptBlock_ascx",
+        "body": [
+            "<xmod:ScriptBlock ScriptId=\"${1}\" BlockType=\"${2|HeadScript,ClientScript,StartupScript,ClientScriptInclude|}\" RegisterOnce=\"${3|true,false|}\" Url=\"${4}\" >\n    ${0}\n</xmod:ScriptBlock>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:ScriptBlock"
+	},
+    "xmod:ScriptBlock_ascx - JavaScript": {
+        "prefix": "_xt xmod:ScriptBlock_ascx - JavaScript",
+        "body": [
+            "    <Script type=\"text/javascript\" ...>\n    //Javascript Code\n    </Script>\n"
+            ],
+        "description": "XMP Template Control - ASCX xmod:ScriptBlock JavaScript"
+	},
+	"xmod:ScriptBlock_ascx - CSS": {
+        "prefix": "_xt xmod:ScriptBlock_ascx - CSS",
+        "body": [
+            "    <Style type=\"text/css\">\n    /* CSS Styling */\n    </Style>"
+            ],
+        "description": "XMP Template Control - ASCX xmod:ScriptBlock CSS"
+    },
+    "SearchSort_ascx": {
+        "prefix": "_xt SearchSort_ascx",
+        "body": [
+            "<SearchSort FilterExpression=\"${1:FirstName LIKE '%{0}%'}\" SearchLabelText=\"${2:Search For:}\" SearchButtonText=\"${3:GO}\" SortFieldNames=\"${4:FirstName,LastName,Zip}\" SortFieldLabels=\"${5:First Name,Last Name,Zip Code}\" >\n    <table>\n        <tr>\n            <td><strong>{SearchLabel}</strong> {SearchBox} {SearchButton}</td>\n            <td align=\"right\"> <strong>{SortLabel}</strong> {SortFieldList} {SortButton} Reverse {ReverseSort} </td>\n        </tr>\n    </table>\n</SearchSort> \n "
+            ],
+        "description": "XMP Template Control - ASCX SearchSort"
+    },    
+    "xmod:Select_ascx": {
+        "prefix": "_xt xmod:Select_ascx",
+        "body": [
+            "<xmod:Select runat=\"server\"  mode=\"${1|Standard,Inclusive|}\">\n    <Case CompareType=\"${2|Numeric,Float,Date,Text,Regex,Boolean,Role|}\" Value='${3:[[${4}]]}' Operator=\"${5|<,>,<>,=,<=,>=|}\" Expression=\"${6}\" IgnoreCase=\"${7|true,false|}\">\n        ${8}\n    </Case>\n    <Else>\n        ${9}\n    </Else>\n</xmod:Select>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Select"
+    },
+    "xmod:Slideshow_ascx": {
+        "prefix": "_xt xmod:Slideshow_ascx",
+        "body": [
+            "<xmod:Slideshow runat=\"server\" Id=\"${1}\" ImageField=\"${2}\" BasePath=\"${3:~/images/}\" Timeout=\"${4:6000}\" Height=\"${5:250}\"  Width=\"${6:200}\">\n    <ListDataSource CommandText=\"${7:SELECT...}\" />\n</xmod:Slideshow>\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Slideshow"
+    },
+    "xmod:ToggleButton_ascx": {
+        "prefix": "_xt xmod:ToggleButton_ascx",
+        "body": [
+            "<xmod:ToggleButton runat=\"server\"  text=\"${1}\" Target=\"${2}\" Speed=\"${3|Slow,Medium,Fast|}\" />\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:ToggleButton"
+    },
+    "xmod:ToggleImage_ascx": {
+        "prefix": "_xt xmod:ToggleImage_ascx",
+        "body": [
+            "<xmod:ToggleImage runat=\"server\" AlternateText=\"${1}\" text=\"\" ImageUrl=\"${2:~/images/add.gif}\" Target=\"${3}\" Speed=\"${4|Slow,Medium,Fast|}\" /> \n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:ToggleImage"
+    },
+    "xmod:ToggleLink_ascx": {
+        "prefix": "_xt xmod:ToggleLink_ascx",
+        "body": [
+            "<xmod:ToggleLink runat=\"server\" text=\"${1}\" Target=\"${2}\" Speed=\"${3|Slow,Medium,Fast|}\" />\n "
+            ],
+        "description": "XMP Template Control - ASCX xmod:ToggleLink"
+    },
+    "xmp:Reigister_ascx_Temp": {
+        "prefix": "_xt Register XMP Template_ascx",
+        "body": [
+            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.TemplateBase\" %>",
+            "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls\" TagPrefix=\"xmod\" %>"
+        ],
+        "description": "XMP Template ASCX Register"
+    },
+    "Action_ascx": {
+        "prefix": "_xf Action_ascx",
+        "body": [
+            "<Action Assembly=\"${1}\"  Namespace=\"${2}\"  />\n\n "
+            ],
+        "description": "XMP Form Control - ASCX Action"
+    },	
+    "AddButton_ascx": {
+        "prefix": "_xf AddButton_ascx",
+        "body": [
+            "<AddButton text=\"${1:Add}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX AddButton"
+    },      
+    "AddForm_ascx": {
+        "prefix": "_xf AddForm_ascx",
+        "body": [
+            "<AddForm ClientName=\"${1}\">\n    <SelectCommand  CommandText=\"${2:SELECT 1}\"  />\n    <SubmitCommand  CommandText=\"${3:INSERT INTO ...}\"  CommandType=\"StoredProcedure\"/>\n    <ControlDataSource Id=\"${4}\" CommandText=\"${5:SELECT ..., ... FROM ... ORDER BY ... ASC}\"/>\n\n </AddForm> \n "
+            ],
+        "description": "XMP Form Control - ASCX AddForm"
+    },
+    "AddImage_ascx": {
+        "prefix": "_xf AddImage_ascx",
+        "body": [
+            "<AddImage AlternateText=\"${1:Add}\" ImageUrl=\"${2:~/images/add.gif}\"  />\n "
+            ],
+        "description": "XMP Form Control - ASCX AddImage"
+    },
+    "AddLink_ascx": {
+        "prefix": "_xf AddLink_ascx",
+        "body": [
+            "<AddLink text=\"${1:Add}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX AddLink"
+    },
+    "AddSuccessTemplate_ascx": {
+        "prefix": "_xf AddSuccessTemplate_ascx",
+        "body": [
+            "<AddSuccessTemplate>\n    <ItemTemplate>    </ItemTemplate>\n</AddSuccessTemplate>\n "
+            ],
+        "description": "XMP Form Control - ASCX AddSuccessTemplate"
+    },	
+    "AddToRoles_ascx": {
+        "prefix": "_xf AddToRoles_ascx",
+        "body": [
+            "<AddToRoles \n    Culture=\"locale-Id\"\n    StartDate=\"date\" \n    EndDate=\"date\"\n    If=\"basic conditional equality expression\"\n    RoleNames=\"comma-delimited list of DNN roles\"\n    UserId=\"integer\" \n />\n "
+            ],
+        "description": "XMP Form Control - ASCX AddToRoles"
+    },
+    "AddUser_ascx": {
+        "prefix": "_xf AddUser_ascx",
+        "body": [
+            "<AddUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    RoleNames=\"${16}\"\n    UpdatePasswordOnNextLogin =\"${17|true,false|}\">\n        <Property Name=\"${18}\" Value='${19:<%#Eval(\"Values\")(\"${20:Token Name Here}\")%>}' />\n</AddUser>\n"
+            ],
+        "description": "XMP Form Control - ASCX AddUser"
+    },
+    "AjaxButton_ascx": {
+        "prefix": "_xf AjaxButton_ascx",
+        "body": [
+            "<AjaxButton \n    text=\"${1}\" \n    Url=\"${2}\"\n    Target=\"${3}\" \n/>\n "
+            ],
+        "description": "XMP Form Control - ASCX AjaxButton"
+    },
+    "AjaxImage_ascx": {
+        "prefix": "_xf AjaxImage_ascx",
+        "body": [
+            "<AjaxImage \n    AlternateText=\"${1}\" \n    Url=\"${2}\"\n    Target=\"${3}\" \n/>\n "
+            ],
+        "description": "XMP Form Control - ASCX AjaxImage"
+    },
+    "AjaxLink_ascx": {
+        "prefix": "_xf AjaxLink_ascx",
+        "body": [
+            "<AjaxLink \n    text=\"${1}\" \n    Url=\"${2}\"\n    Target=\"${3}\" \n/>\n "
+            ],
+        "description": "XMP Form Control - ASCX AjaxLink"
+    },
+    "CalendarButton_ascx": {
+        "prefix": "_xf CalendarButton_ascx",
+        "body": [
+            "<CalendarButton text=\"${1:Select Date}\" Target=\"${2}\" format=\"${3:yyyy-MM-dd}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX CalendarButton"
+      },
+    "CalendarImage_ascx": {
+        "prefix": "_xf CalendarImage_ascx",
+        "body": [
+            "<CalendarImage text=\"${1:Select Date}\"  AlternateText=\"${2:Select Date}\" Format=\"${3:yyyy-MM-dd}\" ImageUrl=\"${4:~/images/calendar.jpg}\" Target=\"${5}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX CalendarImage"
+    },
+    "CalendarLink_ascx": {
+        "prefix": "_xf CalendarLink_ascx",
+        "body": [
+            "<CalendarLink text=\"${1:Select Date}\" Target=\"${2}\" Format=\"${3:yyyy-MM-dd}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX CalendarLink"
+    },
+    "CancelButton_ascx": {
+        "prefix": "_xf CancelButton_ascx",
+        "body": [
+            "<CancelButton text =\"${1:Cancel}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX CancelButton"
+    },
+    "CancelImage_ascx": {
+        "prefix": "_xf CancelImage_ascx",
+        "body": [
+            "<CancelImage AlternateText =\"${1:Cancel}\" ImageUrl=\"${2:~/images/cancel.gif}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX CancelImage"
+    },
+    "CancelLink_ascx": {
+        "prefix": "_xf CancelLink_ascx",
+        "body": [
+            "<CancelLink text =\"${1:Cancel}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX CancelLink"
+    },
+    "Captcha_ascx": {
+        "prefix": "_xf Captcha_ascx",
+        "body": [
+            "<Captcha Id=\"${1}\" text=\"${2}\" CaptchaLength=\"${3:5}\"  ErrorMessage=\"${4}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX Captcha"
+    },
+    "CheckBox_ascx": {
+        "prefix": "_xf CheckBox_ascx",
+        "body": [
+            "<CheckBox Id=\"${1}\"  text=\"${2}\" DataField=\"${3}\" DataType=\"boolean\" Checked=\"${4|true,false|}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX CheckBox"
+    },
+    "CheckBoxList_ascx": {
+        "prefix": "_xf CheckBoxList_ascx",
+        "body": [
+            "<CheckBoxList  Id=\"${1}\"  DataField=\"${2}\"  DataType=\"${3|string,int32,int64,boolean|}\" >\n    <ListItem Value=\"${4}\" Selected=\"${5}\">Item1</ListItem>\n    <ListItem Value=\"${6}\">Item2</ListItem>\n</CheckBoxList> \n "
+            ],
+        "description": "XMP Form Control - ASCX CheckBoxList"
+    },
+    "xmod:ContinueButton_ascx": {
+        "prefix": "_xf xmod:ContinueButton_ascx",
+        "body": [
+            "<xmod:ContinueButton  text=\"${1:View Your Data}\" redirect=\"${2:http://mysite.com/data}\" RedirectMethod=\"${3|Get,Post|}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX xmod:ContinueButton"
+    },
+    "xmod:ContinueImage_ascx": {
+        "prefix": "_xf xmod:ContinueImage_ascx",
+        "body": [
+            "<xmod:ContinueImage AlternateText=\"${1:View Your data}\" ImageUrl=\"${2:~/images/profile.gif}\" redirect=\"${3:https://mysite.com/data}\" RedirectMethod=\"${4|Get,Post|}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX xmod:ContinueImage"
+    },
+    "xmod:ContinueLink_ascx": {
+        "prefix": "_xf xmod:ContinueLink_ascx",
+        "body": [
+            "<xmod:ContinueLink text=\"${1:View Your Data}\" redirect=\"${2:https://mysite.com/data}\" RedirectMethod=\"${3|Get,Post|}\"  />\n "
+            ],
+        "description": "XMP Form Control - ASCX xmod:ContinueLink"
+    },
+    "ControlDataSource_ascx": {
+        "prefix": "_xf ControlDataSource_ascx",
+        "body": [
+            "<ControlDataSource Id=\"${1}\" CommandText=\"${2:SELECT ..., ... FROM ... ORDER BY ... ASC}\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int64,boolean|}\" />\n<ControlDataSource>\n"
+            ],
+        "description": "XMP Form Control - ASCX ControlDataSource"
+    },
+    "DateInput_ascx": {
+        "prefix": "_xf DateInput_ascx",
+        "body": [
+            "<DateInput  Id=\"${1}\" DataField=\"${2}\"  DataType=\"${3|date,datetime|}\" Format=\"${4:yyyy-MM-dd}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX DateInput"
+    },
+    "DetailDataSource_ascx": {
+        "prefix": "_xf DetailDataSource_ascx",
+        "body": [
+            "<DetailDataSource Id=\"${1}\" CommandText=\"${2:SELECT 1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int64,boolean|}\">\n<DetailDataSource>\n"
+            ],
+        "description": "XMP Form Control - ASCX DetailDataSource"
+    },
+    "DropDownList_ascx": {
+        "prefix": "_xf DropDownList_ascx",
+        "body": [
+            "<DropDownList  Id=\"${1}\" DataField=\"${2}\" DataType=\"${3|string,int32,int64,boolean|}\" DataTextField=\"${4}\" DataValueField=\"${5}\"\n               DataSourceId=\"${6}\" AppendDataBoundItems=\"${7|true,false|}\" TargetDataSourceId=\"${8}\" ParameterName=\"${9}\"  TargetControlId=\"${10}\"  >\n    <ListItem Value=\"\" Selected=\"${11}\">Item1</ListItem>\n    <ListItem Value=\"\">Item2</ListItem>\n</DropDownList> \n "
+            ],
+        "description": "XMP Form Control - ASCX DropDownList"
+    },
+    "DualList_ascx": {
+        "prefix": "_xf DualList_ascx",
+        "body": [
+            "><DualList Id=\"${1}\" DataField=\"${2}\" DataSourceId=\"${3}\"  DataType=\"${4|string,int32,int64,boolean|}\" DataTextField=\"${5}\"  DataValueField=\"${6}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</DualList>\n "
+            ],
+        "description": "XMP Form Control - ASCX DualList"
+    },      
+    "EditForm_ascx": {
+        "prefix": "_xf EditForm_ascx",
+        "body": [
+            "<EditForm ClientName=\"${1}\">\n    <SelectCommand  CommandText=\"${2:SELECT 1} \"/>\n    <SubmitCommand  CommandText=\"${3:INSERT INTO table_name( ) VALUES( )}\" />\n    <ControlDataSource Id=\"${4}\" CommandText=\"${5:SELECT ..., ... FROM ... ORDER BY ... ASC}\"/>\n\n</EditForm>\n "
+            ],
+        "description": "XMP Form Control - ASCX EditForm"
+      },
+    "EditSuccessTemplate_ascx": {
+        "prefix": "_xf EditSuccessTemplate_ascx",
+        "body": [
+             "<EditSuccessTemplate>\n    <ItemTemplate> </ItemTemplate>\n</EditSuccessTemplate> \n "
+            ],
+        "description": "XMP Form Control - ASCX EditSuccessTemplate"
+      },
+    "Email_ascx": {
+        "prefix": "_xf Email_ascx",
+        "body": [
+            "<Email To=\"${1}\" From=\"${2}\" ReplyTo=\"${5}\" Subject=\"${6}\" Format=\"${7|HTML,Text|}\" >\n \n    ${8:..text, HTML and [[FieldTokens]] to make up Body of the Email...}\n\n</Email> \n "
+            ],
+        "description": "XMP Form Control - ASCX Email"
+    },
+    "FileUpload_ascx": {
+        "prefix": "_xf FileUpload_ascx",
+        "body": [
+            "<FileUpload Id=\"${1}\" Path=\"${2:~/images/}\" DataField=\"${3}\" DataType=\"string\" Extensions=\"${4:gif,jpg}\" UploadButtonText=\"${5:Upload}\" UseUniqueFileName=\"${6|true,false|}\" /> \n "
+            ],
+        "description": "XMP Form Control - ASCX FileUpload"
+    },
+    "HtmlInput_ascx": {
+        "prefix": "_xf HtmlInput_ascx",
+        "body": [
+            "<HtmlInput Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" Height=\"${3:400}\" Width=\"${4:600}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX HtmlInput"
+    },
+    "Include_ascx": {
+        "prefix": "_xf Include_ascx",
+        "body": [
+            "<Include FileName=\"${1}\" /> \n "
+            ],
+        "description": "XMP Form Control - ASCX Include"
+    },
+    "jQueryReady_ascx": {
+        "prefix": "_xf jQueryReady_ascx",
+        "body": [
+            "<jQueryReady>\n\n\n\n</jQueryReady>\n "
+            ],
+        "description": "XMP Form Control - ASCX jQueryReady"
+    },
+    "Label_ascx": {
+        "prefix": "_xf Label_ascx",
+        "body": [
+            "<Label ID=\"${1}\" For=\"${2}\" text=\"${3}\" />\n" 
+            ],
+        "description": "XMP Form Control - ASCX Label"
+    },
+    "ListBox_ascx": {
+        "prefix": "_xf ListBox_ascx",
+        "body": [
+            "<ListBox Id=\"${1}\" DataSourceId=\"${2}\" DataField=\"${3}\" DataTextField=\"${4}\"  DataValueField=\"${5}\" DataType=\"${6|string,int32,int62,boolean|}\" SelectionMode=\"${7|single,multiple|}\" SelectedItemsSeparator=\"${8:|}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>    \n</ListBox>\n "
+            ],
+        "description": "XMP Form Control - ASCX ListBox"
+    },
+    "ListDataSource_ascx": {
+        "prefix": "_xf ListDataSource_ascx",
+        "body": [
+            "<ListDataSource Id=\"${1}\" CommandText=\"${2:SELECT...}\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int62,boolean|}\" />\n<ListDataSource>\n"
+            ],
+        "description": "XMP Form Control - ASCX ListDataSource"
+    },
+    "Login_ascx": {
+        "prefix": "_xf Login_ascx",
+        "body": [
+            "<Login \n    Username='[[${1:Uname}]]' \n    Password='[[${2:Pword}]]' \n    UsernameField=\"${3:UsrName}\" \n    UserIdField=\"${4:UsrId}\" \n/>\n\n "
+            ],
+        "description": "XMP Form Control - ASCX Login"
+    },
+    "Panel_ascx": {
+        "prefix": "_xf Panel_ascx",
+        "body": [
+            "<Panel  Id=\"${1}\"  ShowRoles=\"${2:Editor}\" ShowIf=\"${3:Expression}\" >\n    ${4:...HTML, text, and Control Tags...}\n</Panel>\n "
+            ],
+        "description": "XMP Form Control - ASCX Panel"
+    },
+    "Parameter_ascx": {
+        "prefix": "_xf Parameter_ascx",
+        "body": [
+            "<Parameter Name=\"${1}\" Value='${2:<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>}' />\n "
+            ],
+        "description": "XMP Form Control - ASCX Parameter"
+    },
+    "Password_ascx": {
+        "prefix": "_xf Password_ascx",
+        "body": [
+            "<Password Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" /> \n "
+            ],
+        "description": "XMP Form Control - ASCX Password"
+    },
+    "RadioButton_ascx": {
+        "prefix": "_xf RadioButton_ascx",
+        "body": [
+            "<RadioButton  Id=\"${1}\" text=\"${2}\" DataField=\"${3}\" DataType=\"boolean\" DataValueField=\"${4}\" Checked=\"${5|true,false|}\"  />\n "
+            ],
+        "description": "XMP Form Control - ASCX RadioButton"
+    },
+    "RadioButtonList_ascx": {
+        "prefix": "_xf RadioButtonList_ascx",
+        "body": [
+            "<RadioButtonList Id=\"${1}\"  DataSourceId=\"${2}\"  DataTextField=\"${3}\"  DataValueField=\"${4}\" DataType=\"${5|string,int32,int64,boolean|}\">\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</RadioButtonList>     \n "
+            ],
+        "description": "XMP Form Control - ASCX RadioButtonList"
+    },
+    "Redirect_ascx": {
+        "prefix": "_xf Redirect_ascx",
+        "body": [
+            "<Redirect Target=\"${1}\" If=\"${2}\" Method=\"${3|Get,Post|}\"/>\n "
+            ],
+        "description": "XMP Form Control - ASCX Redirect"
+    },
+    "Register_ascx": {
+        "prefix": "_xf Register_ascx",
+        "body": [
+            "<Register TagPrefix=\"${1}\" Namespace=\"${2}\" Assembly=\"${3}\"/>\n "
+            ],
+        "description": "XMP Form Control - ASCX Register"
+    },
+    "RemoveFromRoles_ascx": {
+        "prefix": "_xf RemoveFromRoles_ascx",
+        "body": [
+            "<RemoveFromRoles RoleNames=\"${1:Role1,Editors}\" UserId='[[${2:User:Id}]]' />\n "
+            ],
+        "description": "XMP Form Control - ASCX RemoveFromRoles"
+    },
+    "ScriptBlock_ascx": {
+        "prefix": "_xf ScriptBlock_ascx",
+        "body": [
+            "<ScriptBlock ScriptId=\"${1}\" BlockType=\"${2|HeadScript,ClientScript,ClientScriptInclude,StartupScript|}\" RegisterOnce=\"${3|true,false|}\" Url=\"${4}\">\n    <Script type=\"text/javascript\">\n        ...Javascript... \n    </Script>\n</ScriptBlock>     \n "
+            ],
+        "description": "XMP Form Control - ASCX ScriptBlock"
+	},  
+	"SelectCommand_ascx": {
+        "prefix": "_xf SelectCommand_ascx",
+        "body": [
+			"<SelectCommand CommandText=\"${1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' DataType=\"${5|string,int32,int64,boolean|}\" />\n</SelectCommand>\n"
+            ],
+        "description": "XMP Control - ASCX SelectCommand"
+	},
+    "SilentPost_ascx": {
+        "prefix": "_xf SilentPost_ascx",
+        "body": [
+            "<SilentPost  If=\"${1:expression}\" Url=\"${2}\">\n    <Field Name=\"${3}\"  Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' />\n    <Field Name=\"${6}\"  Value='${7:<%#Eval(\"Values\")(\"${8:Token Name Here}\")%>}' />\n</SilentPost>\n "
+            ],
+        "description": "XMP Form Control - ASCX SilentPost"
+    },  
+	"SubmitCommand_ascx": {
+        "prefix": "_xf SubmitCommand_ascx",
+        "body": [
+			"<SubmitCommand CommandText=\"${1:SELECT...}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' DataType=\"${5|string,int32,int64,boolean|}\" />\n</SelectCommand>\n"
+            ],
+        "description": "XMP Control - ASCX SubmitCommand"
+	},
+    "Tabstrip_ascx": {
+        "prefix": "_xf Tabstrip_ascx",
+        "body": [
+            "<Tabstrip HoverBackColor=\"${1}\" HoverForeColor=\"${2}\" SelectedBackColor=\"${3}\" SelectedForeColor=\"${4}\">\n\n    <tab text=\"${5:tab1}\">\n        ${6:...HTML/text Content...}\n    </tab>\n    <tab text=\"${7:tab2}\">\n        ${8}\n    </tab>\n</Tabstrip>\n "
+            ],
+        "description": "XMP Form Control - ASCX Tabstrip"
+    },	
+    "Text_ascx": {
+        "prefix": "_xf Text_ascx",
+        "body": [
+            "<Text DataField=\"${1}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX Text"
+    },
+    "TextArea_ascx": {
+        "prefix": "_xf TextArea_ascx",
+        "body": [
+            "<TextArea Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" Height=\"${3:400}\" Width=\"${4:600}\" Placeholder=\"${5:Placeholder Text...}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX TextArea"
+    },
+    "TextBox_ascx": {
+        "prefix": "_xf TextBox_ascx",
+        "body": [
+            "<TextBox Id=\"${1}\" DataField=\"${2}\" DataType=\"string\" Width=\"${3:200}\" Placeholder=\"${4:Placeholder Text...}\" /> \n "
+            ],
+        "description": "XMP Form Control - ASCX TextBox"
+    },
+    "UpdateButton_ascx": {
+        "prefix": "_xf UpdateButton_ascx",
+        "body": [
+            "<UpdateButton text=\"${1:Update}\"/>\n "
+            ],
+        "description": "XMP Form Control - ASCX UpdateButton"
+    },
+    "UpdateImage_ascx": {
+        "prefix": "_xf UpdateImage_ascx",
+        "body": [
+            "<UpdateImage  AlternateText=\"${1:Update}\" ImageUrl=\"${2:~/images/update.gif}\"  />\n "
+            ],
+        "description": "XMP Form Control - ASCX UpdateImage"
+    },
+    "UpdateLink_ascx": {
+        "prefix": "_xf UpdateLink_ascx",
+        "body": [
+            "<UpdateLink text=\"${1:Update}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX UpdateLink"
+    },
+    "UpdateUser_ascx": {
+        "prefix": "_xf UpdateUser_ascx",
+        "body": [
+            "<UpdateUser \n    Approved =\"${1}\"\n    DisplayName ='[[${2}]]'\n    Username ='[[${3}]]'\n    Email ='[[${4}]]'\n    FirstName ='[[${5}]]'\n    LastName ='[[${6}]]' \n    Password ='[[${7}]]'\n    RoleNames ='[[${8}]]'\n    Unit ='[[${9}]]'\n    Street ='[[${10}]]'\n    City ='[[${11}]]'\n    PostalCode ='[[${12}]]'\n    Region = '[[${13}]]'\n    Country ='[[${14}]]'\n    Telephone ='[[${15}]]'\n    UpdatePasswordOnNextLogin =\"${16|true,false|}\">\n        <Property Name=\"${17}\" Value='${18:<%#Eval(\"Values\")(\"${19:Token Name Here}\")%>}' />\n</UpdateUser>\n"
+            ],
+        "description": "XMP Form Control - ASCX UpdateUser"
+    },
+    "ValidateAction_ascx": {
+        "prefix": "_xf ValidateAction_ascx",
+        "body": [
+            "<Validate Text=\"${1}\" Type=\"Action\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateAction"
+    },
+    "ValidateCheckbox_ascx": {
+        "prefix": "_xf ValidateCheckbox_ascx",
+        "body": [
+            "<Validate  text=\"${1}\" Type=\"CheckBox\" Target=\"${2}\" MustBeChecked =\"${3|true,false|}\" Message=\"${4:Please make selection}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateCheckbox"
+    },
+    "ValidateCompare_ascx": {
+        "prefix": "_xf ValidateCompare_ascx",
+        "body": [
+            "<Validate text=\"${1}\" Type=\"Compare\" Target=\"${2}\" CompareTarget=\"${3}\" Message=\"${4:The fields don't match}\"  /> \n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateCompare"
+    },
+    "ValidateDatabase_ascx": {
+        "prefix": "_xf ValidateDatabase_ascx",
+        "body": [
+            "<Validate text=\"${1}\" Type=\"Database\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateDatabase"
+    },
+    "ValidateEmail_ascx": {
+        "prefix": "_xf ValidateEmail_ascx",
+        "body": [
+            "<Validate text=\"${1}\" Type=\"Email\" Target=\"${2}\" Message=\"${3:Please enter a valid email address}\"/> \n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateEmail"
+    },
+    "ValidateRange_ascx": {
+        "prefix": "_xf ValidateRange_ascx",
+        "body": [
+            "<Validate text=\"${1}\" Type=\"Range\" Target=\"${2}\" MinimumValue=\"${3:1}\" MaximumValue=\"${4:10}\" DataType=\"${5|string,integer,double,date,currency|}\" Message=\"${6:You can only enter values between x and y ...}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateRange"
+    },
+    "ValidateRegEx_ascx": {
+        "prefix": "_xf ValidateRegEx_ascx",
+        "body": [
+            "<Validate text=\"${1}\" Type=\"RegEx\" Target=\"${2}\" ValidationExpression=\"${3}\" Message=\"${4:The value must be in the format: }\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateRegEx"
+    },
+    "ValidateRequired_ascx": {
+        "prefix": "_xf ValidateRequired_ascx",
+        "body": [
+            "<Validate  text=\"${1}\" Type=\"Required\" Target=\"${2}\" Message=\"${3:You must enter something}\" />  \n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateRequired"
+    },
+    "ValidationSummary_ascx": {
+        "prefix": "_xf ValidationSummary_ascx",
+        "body": [
+            "<ValidationSummary DisplayMode=\"${1:BulletList}\" HeaderText=\"${2:Errors:}\" CssClass=\"${3:NormalRed}\" /> \n "
+            ],
+        "description": "XMP Form Control - ASCX ValidationSummary"
+	},
+    "ValidateXML_ascx": {
+        "prefix": "_xf ValidateXML_ascx",
+        "body": [
+            "<Validate Type=\"XML\" target=\"${1}\" message=\"${2:Please enter well-formed XML}\" />\n "
+            ],
+        "description": "XMP Form Control - ASCX ValidateXML"
+    },
+    "Variable_ascx": {
+        "prefix": "_xf Variable_ascx",
+        "body": [
+            "<Variable Name=\"${1}\" Value='${2:<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>}' DataType=\"${4|string,int32,int62,boolean|}\" /> \n\n "
+            ],
+        "description": "XMP Form Control - ASCX Variable"
+    },
+    "xmp:Reigister_ascx_Form": {
+        "prefix": "_xf Register XMP Form_ascx",
+        "body": [
+            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.FormBase\" %>",
+            "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls.Form\" TagPrefix=\"xmod\" %>"
+        ],
+        "description": "XMP Form ASCX Register"
+    },
+    "xmod:Template_ascx": {
+        "prefix": "_xf xmod:Template_ascx",
+        "body": [
+            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.TemplateBase\" %>",
+            "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls\" TagPrefix=\"xmod\" %>\n\n",
+            "<xmod:masterview runat=\"server\">\n<xmod:Template runat=\"server\"  Id=\"${1}\" AddRoles=\"${2}\"  DeleteRoles=\"${3}\"  DetailRoles=\"${4}\" EditRoles=\"${5}\" >\n    <ListDataSource CommandText=\"${6:SELECT 1}\"  />\n    <DetailDataSource CommandText=\"${7:SELECT 1}\"  />\n    <DeleteCommand CommandText=\"DELETE * FROM ... WHERE UserId=@UserId\" />\n        <Pager> ... </Pager>\n        <SearchSort>...</SearchSort>\n\n    <HeaderTemplate>\n    </HeaderTemplate>\n\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n\n    <SeparatorTemplate>\n    </SeparatorTemplate>\n\n    <FooterTemplate>\n    </FooterTemplate>\n\n    <DetailTemplate>\n    </DetailTemplate>\n\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n </xmod:Template>\n</xmod:masterview> "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Template"
+    }, 
+    "Form_ascx": {
+        "prefix": "_xf Form Template_ascx",
+        "body": [
+            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.FormBase\" %>,\n<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls.Form\" TagPrefix=\"xmod\" %>\n<xmod:FormView runat=\"server\">\n    <AddItemTemplate>\n        <xmod:AddForm runat=\"server\">\n            <SubmitCommand CommandText=\"\" />\n\n            <Label For=\"txtFieldOne\" Text=\"Field One:\" />\n            <TextBox Id=\"txtFieldOne\" DataField=\"FieldOne\" DataType=\"string\" /> <br />\n",
+            "            <AddButton Text=\"Add\" /> &nbsp; <CancelButton Text=\"Cancel\" />\n        </xmod:AddForm>\n    </AddItemTemplate>\n\n    <AddSuccessTemplate>\n        <xmod:AddSuccess runat=\"server\">\n            <ItemTemplate>Add Success Template Text Here</ItemTemplate>\n        </xmod:AddSuccess>\n    </AddSuccessTemplate>\n",
+            "    <EditItemTemplate>\n        <xmod:EditForm runat=\"server\">\n            <SelectCommand CommandText=\"SELECT 1\" />\n            <Submitcommand CommandText=\"\" />\n\n            <Label For=\"txtFieldOne\" Text=\"Field One:\" />\n            <TextBox Id=\"txtFieldOne\" DataField=\"FieldOne\">\n\n            <UpdateButton Text=\"Update\" /> &nbsp; <CancelButton Text=\"Cancel\" />\n            <Textbox Id=\"txtKey\" DataField=\"KeyFieldName\" DataType=\"int32\" Visible=\"False\" />\n        </xmod:EditForm>\n    </EditItemTemplate>\n",
+            "    <EditSuccessTemplate>\n        <xmod:EditSuccess runat=\"server\">\n            <ItemTemplate>Edit Success Template Text Here</ItemTemplate>\n        </xmod:EditSuccess>\n    </EditSuccessTemplate>\n</xmod:FormView>"
+            ],
+        "description": "XMP Form Control - ASCX Form Template"
+    },
+    "fx:Reigister_ascx": {
+        "prefix": "_fx Register Form.X_ascx",
+        "body": [
+            "<%@ Register TagPrefix=\"fx\" Namespace=\"Reflect.XModPro.Templates.FormX\" Assembly=\"Reflect.XModPro.Templates.FormX\" %>"
+        ],
+        "description": "Form.X Template ASCX Register"
+    }, 
+    "fx Inline Edit Form_ascx": {
+        "prefix": "_fx FormX InLine Edit Form Template_ascx",
+        "body": [
+            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.TemplateBase\" %>",
+            "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls\" TagPrefix=\"xmod\" %>",
+            "<%@ Register TagPrefix=\"fx\" Namespace=\"Reflect.XModPro.Templates.FormX\" Assembly=\"Reflect.XModPro.Templates.FormX\" %>\n\n",
+            "<xmod:masterview runat=\"server\">\n<xmod:Template runat=\"server\" Id=\"${1}\" Ajax=\"${2|true,false|}\">\n    <ListDataSource />\n    <DeleteCommand />\n    <HeaderTemplate>\n        <table>\n            <thead>\n                <tr>\n                    <th> </th>\n                </tr>\n            </thead>\n            <tbody>\n    </HeaderTemplate>\n    <ItemTemplate>\n                <tr>\n                <fx:FormX Mode=\"${3|template,add,edit|}\">\n                <Template>\n                    <td> </td>\n                </Template>\n                <EditForm>\n                </EditForm>\n            </fx:FormX>\n                </tr>\n    </ItemTemplate>\n    <FooterTemplate>\n            </tbody>\n        </table>\n    </FooterTemplate>\n</xmod:template>\n</xmod:masterview>" 
+            ],
+        "description": "Form.X  Control - ASCX Inline edit Form Template"
+    },
+	"fx:AddButton_ascx": {
+        "prefix": "_fx AddButton_ascx",
+        "body": [
+			"<fx:AddButton Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
+            ],
+        "description": "FormX Control - ASCX fx:AddButton"
+	},
+	"fx:EditButton_ascx": {
+        "prefix": "_fx EditButton_ascx",
+        "body": [
+			"<fx:EditButton Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
+            ],
+        "description": "FormX Control - ASCX fx:EditButton"
+	},
+	"fx:Form_ascx": {
+        "prefix": "_fx Form_ascx",
+        "body": [
+			"<fx:FormX runat=\"server\" AddRoles=\"\" EditRoles=\"\" Mode=\"\">\n    <template>\n\n    </template>\n    <addform>\n\n    </addform>\n    <addsuccesstemplate>\n\n    </addsuccesstemplate>\n    <editform>\n\n    </editform>\n    <editsuccesstemplate>\n\n    </editsuccesstemplate>\n</fx:FormX>\n"
+            ],
+        "description": "FormX Control - ASCX Form"
+	}, 
+    "XMP Token Value_ascx": {
+        "prefix": "_xp Token Value_ascx",
+        "body": [
+            "<%#Eval(\"Values\")(\"${1:Token Name Here}\")%>" 
+            ],
+        "description": "XMP  Control - ASCX Inline edit Form Template"
     }
 }
-
-
-
-
