@@ -13,7 +13,7 @@
 
 # XMP Snippets
 
-XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 259 snippets for you to use, and it supports the direct editing of .ascx files.
+XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 260 snippets for you to use, and it supports the direct editing of .ascx files.
 
 XMP Snippets are very easy to use
 
@@ -68,7 +68,7 @@ Requirements to view files
 * XMod Pro module installed in DNN. No license required to run in dev environment [XMod Pro](https://www.dnndev.com  "XMod Pro Home Page")
 * Optional - Form.X module installed in DNN. License Required [Form.X](http://reflectmediagroup.com/Products/XMod-Pro-Plugins/Details/prodid/18 "Form.X Home Page")
 
-> To work with .ascx files you need to change the language mode of the files from "xml"to "html" or add the following to your VS Code settings json file: __"files.associations": {
+> To work with .ascx files you need to change the language mode of the files from "xml" to "html" or add the following to your VS Code settings json file: __"files.associations": {
     "*.ascx": "html"
     }__
 
