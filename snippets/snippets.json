@@ -1814,5 +1814,19 @@
             "<%#Eval(\"Values\")(\"${1:Token Name Here}\")%>" 
             ],
         "description": "XMP  Control - ASCX Inline edit Form Template"
+    },    
+    "XMP Join Function_ascx": {
+        "prefix": "_xp Join Function_ascx",
+        "body": [
+            "<%#Join(\"${1:Some Text} {0}, ${2:More Text} {1}\",Eval(\"Values\")(\"${3:Token Name 1}\"),Eval(\"Values\")(\"${4:Token Name 2}\"))%>" 
+            ],
+        "description": "XMP  Control - ASCX Join Function"
+    },       
+    "XMP Join Function": {
+        "prefix": "xp Join Function",
+        "body": [
+            "[[Join(\"${1:Some Text} {0}, ${2:More Text} {1}\",[[${3:Token Name 1}]]\"),[[${4:Token Name 2}]]\"))%>" 
+            ],
+        "description": "XMP  Control - Join Function"
     }
 }

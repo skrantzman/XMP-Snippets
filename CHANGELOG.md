@@ -4,6 +4,9 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evauluated.
 
+## [1.2.1] - 02/14/2019 
+- ### Added standard and ascx Join Functions.
+
 ## [1.2.0] - 02/13/2019
 - ### Added Support for Direct Editing of XMP ASCX Files.
     - Added 52 _xt snippets for XMP templates controls for ascx files.

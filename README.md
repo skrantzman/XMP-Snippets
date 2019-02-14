@@ -79,6 +79,9 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.1__ 
+- ### Added standard and ascx Join Functions.
+
 __v 1.2.0__ 
 - ### Added Support for Direct Editing of XMP ASCX Files.
     - Added 52 _xt snippets for XMP template controls for ascx files.
