@@ -13,7 +13,7 @@
 
 # XMP Snippets
 
-XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 260 snippets for you to use, and it supports the direct editing of .ascx files.
+XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 261 snippets for you to use, and it supports the direct editing of .ascx files.
 
 XMP Snippets are very easy to use
 
@@ -79,8 +79,14 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.2__ 
+- ### Added snippets and bug fix.
+    - Added Section Comment snippet.
+    - Fixed closing tag on SubmitCommands.
+
 __v 1.2.1__ 
-- ### Added standard and ascx Join Functions.
+- ### Added snippets.
+    - Added standard and ascx Join Functions
 
 __v 1.2.0__ 
 - ### Added Support for Direct Editing of XMP ASCX Files.

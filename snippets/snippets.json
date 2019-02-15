@@ -2,7 +2,7 @@
     "xmod:AddButton": {
         "prefix": "xt xmod:AddButton",
         "body": [
-            "<xmod:AddButton text=\"${1:Submit}\" ></xmod:AddButton> \n "
+            "<xmod:AddButton  text=\"${1:Submit}\" ></xmod:AddButton> \n "
             ],
         "description": "XMP Template Control - xmod:AddButton"
     },
@@ -716,7 +716,7 @@
 	"SubmitCommand": {
         "prefix": "xf SubmitCommand",
         "body": [
-			"<SubmitCommand CommandText=\"${1:SELECT...}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int64,boolean|}\" />\n</SelectCommand>\n"
+			"<SubmitCommand CommandText=\"${1:SELECT...}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int64,boolean|}\" />\n</SubmitCommand>\n"
             ],
         "description": "XMP Control - SubmitCommand"
 	},
@@ -1606,7 +1606,7 @@
 	"SubmitCommand_ascx": {
         "prefix": "_xf SubmitCommand_ascx",
         "body": [
-			"<SubmitCommand CommandText=\"${1:SELECT...}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' DataType=\"${5|string,int32,int64,boolean|}\" />\n</SelectCommand>\n"
+			"<SubmitCommand CommandText=\"${1:SELECT...}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' DataType=\"${5|string,int32,int64,boolean|}\" />\n</SubmitCommand>\n"
             ],
         "description": "XMP Control - ASCX SubmitCommand"
 	},
@@ -1763,7 +1763,7 @@
     "Form_ascx": {
         "prefix": "_xf Form Template_ascx",
         "body": [
-            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.FormBase\" %>,\n<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls.Form\" TagPrefix=\"xmod\" %>\n\n\n<xmod:FormView runat=\"server\">\n    <AddItemTemplate>\n        <xmod:AddForm runat=\"server\">\n            <SubmitCommand CommandText=\"\" />\n\n            <Label For=\"txtFieldOne\" Text=\"Field One:\" />\n            <TextBox Id=\"txtFieldOne\" DataField=\"FieldOne\" DataType=\"string\" /> <br />\n",
+            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.FormBase\" %>,\n<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls.Form\" TagPrefix=\"xmod\" %>\n<xmod:FormView runat=\"server\">\n    <AddItemTemplate>\n        <xmod:AddForm runat=\"server\">\n            <SubmitCommand CommandText=\"\" />\n\n            <Label For=\"txtFieldOne\" Text=\"Field One:\" />\n            <TextBox Id=\"txtFieldOne\" DataField=\"FieldOne\" DataType=\"string\" /> <br />\n",
             "            <AddButton Text=\"Add\" /> &nbsp; <CancelButton Text=\"Cancel\" />\n        </xmod:AddForm>\n    </AddItemTemplate>\n\n    <AddSuccessTemplate>\n        <xmod:AddSuccess runat=\"server\">\n            <ItemTemplate>Add Success Template Text Here</ItemTemplate>\n        </xmod:AddSuccess>\n    </AddSuccessTemplate>\n",
             "    <EditItemTemplate>\n        <xmod:EditForm runat=\"server\">\n            <SelectCommand CommandText=\"SELECT 1\" />\n            <Submitcommand CommandText=\"\" />\n\n            <Label For=\"txtFieldOne\" Text=\"Field One:\" />\n            <TextBox Id=\"txtFieldOne\" DataField=\"FieldOne\">\n\n            <UpdateButton Text=\"Update\" /> &nbsp; <CancelButton Text=\"Cancel\" />\n            <Textbox Id=\"txtKey\" DataField=\"KeyFieldName\" DataType=\"int32\" Visible=\"False\" />\n        </xmod:EditForm>\n    </EditItemTemplate>\n",
             "    <EditSuccessTemplate>\n        <xmod:EditSuccess runat=\"server\">\n            <ItemTemplate>Edit Success Template Text Here</ItemTemplate>\n        </xmod:EditSuccess>\n    </EditSuccessTemplate>\n</xmod:FormView>"
@@ -1828,5 +1828,16 @@
             "[[Join(\"${1:Some Text} {0}, ${2:More Text} {1}\",[[${3:Token Name 1}]]\"),[[${4:Token Name 2}]]\"))%>" 
             ],
         "description": "XMP  Control - Join Function"
+    },
+    "Comment": {
+        "prefix": "xp Comment Tag",
+        "body": [
+            "\n<!--     **********     ${1:Comment}     **********     -->\n"
+        ],
+        "description": "Add a html Comment with line break above and below"
     }
 }
+
+
+
+
