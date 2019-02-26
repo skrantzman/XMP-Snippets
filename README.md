@@ -79,6 +79,10 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.4__ 
+- ### bug fix.
+    - Added 'runat="server"' to _fx FormX InLine Edit Form Template_ascx
+
 __v 1.2.3__ 
 - ### bug fix.
     - Reasigned ascx xmod:Template from _xf to _xt prefix.

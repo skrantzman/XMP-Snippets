@@ -4,6 +4,10 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evauluated.
 
+## [1.2.4]
+- ### bug fix.
+    - Added 'runat="server"' to _fx FormX InLine Edit Form Template_ascx
+
 ## [1.2.3]
 - ### bug fix.
     - Reasigned ascx xmod:Template from _xf to _xt prefix.
