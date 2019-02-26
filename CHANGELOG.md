@@ -4,6 +4,10 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evauluated.
 
+## [1.2.3]
+- ### bug fix.
+    - Reasigned ascx xmod:Template from _xf to _xt prefix.
+
 ## [1.2.2] - 02/15/2019 
 - ### Added snippets and bug fix.
     - Added Section Comment snippet.

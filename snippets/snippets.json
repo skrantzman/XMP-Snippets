@@ -1224,6 +1224,15 @@
             ],
         "description": "XMP Template Control - ASCX xmod:Slideshow"
     },
+    "xmod:Template_ascx": {
+        "prefix": "_xt xmod:Template_ascx",
+        "body": [
+            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.TemplateBase\" %>",
+            "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls\" TagPrefix=\"xmod\" %>\n\n",
+            "<xmod:masterview runat=\"server\">\n\n<xmod:Template runat=\"server\"  Id=\"${1}\" AddRoles=\"${2}\"  DeleteRoles=\"${3}\"  DetailRoles=\"${4}\" EditRoles=\"${5}\" >\n    <ListDataSource CommandText=\"${6:SELECT 1}\"  />\n    <DetailDataSource CommandText=\"${7:SELECT 1}\"  />\n    <DeleteCommand CommandText=\"DELETE * FROM ... WHERE UserId=@UserId\" />\n        <Pager> ... </Pager>\n        <SearchSort>...</SearchSort>\n\n    <HeaderTemplate>\n    </HeaderTemplate>\n\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n\n    <SeparatorTemplate>\n    </SeparatorTemplate>\n\n    <FooterTemplate>\n    </FooterTemplate>\n\n    <DetailTemplate>\n    </DetailTemplate>\n\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n</xmod:Template>\n\n</xmod:masterview> "
+            ],
+        "description": "XMP Template Control - ASCX xmod:Template"
+    },
     "xmod:ToggleButton_ascx": {
         "prefix": "_xt xmod:ToggleButton_ascx",
         "body": [
@@ -1750,15 +1759,6 @@
             "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls.Form\" TagPrefix=\"xmod\" %>"
         ],
         "description": "XMP Form ASCX Register"
-    },
-    "xmod:Template_ascx": {
-        "prefix": "_xf xmod:Template_ascx",
-        "body": [
-            "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.TemplateBase\" %>",
-            "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls\" TagPrefix=\"xmod\" %>\n\n",
-            "<xmod:masterview runat=\"server\">\n<xmod:Template runat=\"server\"  Id=\"${1}\" AddRoles=\"${2}\"  DeleteRoles=\"${3}\"  DetailRoles=\"${4}\" EditRoles=\"${5}\" >\n    <ListDataSource CommandText=\"${6:SELECT 1}\"  />\n    <DetailDataSource CommandText=\"${7:SELECT 1}\"  />\n    <DeleteCommand CommandText=\"DELETE * FROM ... WHERE UserId=@UserId\" />\n        <Pager> ... </Pager>\n        <SearchSort>...</SearchSort>\n\n    <HeaderTemplate>\n    </HeaderTemplate>\n\n    <ItemTemplate>\n    </ItemTemplate>\n    <AlternatingItemTemplate>\n    </AlternatingItemTemplate>\n\n    <SeparatorTemplate>\n    </SeparatorTemplate>\n\n    <FooterTemplate>\n    </FooterTemplate>\n\n    <DetailTemplate>\n    </DetailTemplate>\n\n    <NoItemsTemplate>\n        <span class=\"NormalRed\">Sorry. No Records Were Found </span>\n    </NoItemsTemplate>\n </xmod:Template>\n</xmod:masterview> "
-            ],
-        "description": "XMP Template Control - ASCX xmod:Template"
     }, 
     "Form_ascx": {
         "prefix": "_xf Form Template_ascx",
@@ -1836,6 +1836,7 @@
         ],
         "description": "Add a html Comment with line break above and below"
     }
+
 }
 
 

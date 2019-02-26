@@ -79,6 +79,10 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.3__ 
+- ### bug fix.
+    - Reasigned ascx xmod:Template from _xf to _xt prefix.
+
 __v 1.2.2__ 
 - ### Added snippets and bug fix.
     - Added Section Comment snippet.
