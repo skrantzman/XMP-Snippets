@@ -4,6 +4,15 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evauluated.
 
+## [1.2.5]
+- ### Added Snippets and bug fixes.
+    - Added xf Output Parameter snippet
+    - Added fx and _fx snippets for SilentPost, SqlCommand, and Twillo actions.
+    - Fixed both the _fx fx:Addbutton and _fx fx:EditButton controls - missing runat="server"
+
+- ### bug fix.
+    - Added 'runat="server"' to _fx FormX InLine Edit Form Template_ascx
+
 ## [1.2.4]
 - ### bug fix.
     - Added 'runat="server"' to _fx FormX InLine Edit Form Template_ascx

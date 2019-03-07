@@ -79,9 +79,16 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.5__
+- ### Added Snippets and bug fixes.
+    - Added xf Output Parameter snippet.
+    - Added fx and _fx snippets for SilentPost, SqlCommand, and Twillo actions.
+    - Fixed both the _fx fx:Addbutton and _fx fx:EditButton controls - missing runat="server".
+    - Added <EditSuccessTemplate></EditSuccessTemplate> to fx and _fx In Line Edit Form .
+
 __v 1.2.4__ 
 - ### bug fix.
-    - Added 'runat="server"' to _fx FormX InLine Edit Form Template_ascx
+    - Added 'runat="server"' to _fx FormX InLine Edit Form Template_ascx.
 
 __v 1.2.3__ 
 - ### bug fix.

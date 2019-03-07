@@ -636,6 +636,13 @@
             ],
         "description": "XMP Form Control - Login"
     },
+    "Output Parameter": {
+        "prefix": "xf Output Parameter",
+        "body": [
+            "<Parameter Name=\"${1}\" Direction=\"Output\" ${2:Size=\"${3}\"} />\n "
+            ],
+        "description": "XMP Form Control - Output Parameter"
+    },
     "Panel": {
         "prefix": "xf Panel",
         "body": [
@@ -877,7 +884,7 @@
 	"fx:In Line Edit Form": {
         "prefix": "fx In Line Edit Form",
         "body": [
-            "<xmod:Template Id=\"${1}\" Ajax=\"${2|true,false|}\">\n    <ListDataSource />\n    <DeleteCommand />\n    <HeaderTemplate>\n        <table>\n            <thead>\n                <tr>\n                    <th> </th>\n                </tr>\n            </thead>\n            <tbody>\n    </HeaderTemplate>\n    <ItemTemplate>\n                <tr>\n                <fx:FormX Mode=\"${3|template,add,edit|}\">\n                <Template>\n                    <td> </td>\n                </Template>\n                <EditForm>\n                </EditForm>\n            </fx:FormX>\n                </tr>\n    </ItemTemplate>\n    <FooterTemplate>\n            </tbody>\n        </table>\n    </FooterTemplate>\n</xmod:template>\n"
+            "<xmod:Template Id=\"${1}\" Ajax=\"${2|true,false|}\">\n    <ListDataSource />\n    <DeleteCommand />\n    <HeaderTemplate>\n        <table>\n            <thead>\n                <tr>\n                    <th> </th>\n                </tr>\n            </thead>\n            <tbody>\n    </HeaderTemplate>\n    <ItemTemplate>\n                <tr>\n                <fx:FormX Mode=\"${3|template,add,edit|}\">\n                <Template>\n                    <td> </td>\n                </Template>\n                <EditForm>\n                </EditForm>\n                <EditSuccessTemplate>\n                </EditSuccessTemplate>\n            </fx:FormX>\n                </tr>\n    </ItemTemplate>\n    <FooterTemplate>\n            </tbody>\n        </table>\n    </FooterTemplate>\n</xmod:template>\n"
             ],
         "description": "FormX Control - In Line Edit Form"
 	},
@@ -887,6 +894,35 @@
             "<xmod:Register TagPrefix=\"fx\" Namespace=\"Reflect.XModPro.Templates.FormX\" Assembly=\"Reflect.XModPro.Templates.FormX\" />\n"
             ],
         "description": "FormX Control - Register"
+    },
+    
+	"fx:SendPassword": {
+        "prefix": "fx SendPassword",
+        "body": [
+            "<SendPassword UserName=\"${1}\" Email=\"${2}\" CannontSend=\"${3}\">\n</SendPassword>\n\n"
+            ],
+        "description": "FormX Control - SendPassword"
+    },
+	"fx:SqlCommand": {
+        "prefix": "fx SqlCommand",
+        "body": [
+            "<SqlCommand CommandText=\"${1}\" CommandType=\"${2}\" ConnectionString=\"${3}\"  PerformAction=\"${4}\" Event=\"${5|PostSubmit,PreSubmit|}\" >\n    <Parameter Name=\"${6}\" Value=\"${7}\" DataType=\"${9|string,int32,int62,boolean|}\" />\n</SqlCommand>\n\n"
+            ],
+        "description": "FormX Control - SqlCommand"
+    },
+	"fx:SilentPost": {
+        "prefix": "fx SilentPost",
+        "body": [
+            "<SilentPost URL=\"${1}\" PerformAction=\"${2}\" Event=\"${3|PostSubmit,PreSubmit|}\" >\n    <Field name=\"${4}\" value=\"${5}\" />\n</SilentPost>\n\n"
+            ],
+        "description": "FormX Control - SilentPost"
+    },
+	"fx:Twillo": {
+        "prefix": "fx Twillo",
+        "body": [
+            "<Twillo AccountSid=\"${1}\" AuthToken=\"${2}\" From=\"${3}\" To=\"${4}\" PerformAction=\"${5}\" Event=\"${6|PostSubmit,PreSubmit|}\" >\n${7:Text Message}\n</Twillo>\n\n"
+            ],
+        "description": "FormX Control - Twillo"
     },
     "xmod:AddButton_ascx": {
         "prefix": "_xt xmod:AddButton_ascx",
@@ -1776,6 +1812,27 @@
             "<%@ Register TagPrefix=\"fx\" Namespace=\"Reflect.XModPro.Templates.FormX\" Assembly=\"Reflect.XModPro.Templates.FormX\" %>"
         ],
         "description": "Form.X Template ASCX Register"
+    },
+	"fx:SqlCommand_ascx": {
+        "prefix": "_fx SqlCommand_ascx",
+        "body": [
+            "<SqlCommand CommandText=\"${1}\" CommandType=\"${2}\" ConnectionString=\"${3}\"  PerformAction=\"${4}\" Event=\"${5|PostSubmit,PreSubmit|}\" >\n    <Parameter Name=\"${6}\" Value=\"${7}\" DataType=\"${9|string,int32,int62,boolean|}\" />\n</SqlCommand>\n\n"
+            ],
+        "description": "FormX Control - ASCX SqlCommand"
+    },
+	"fx:SilentPost_ascx": {
+        "prefix": "_fx SilentPost_ascx",
+        "body": [
+            "<SilentPost URL=\"${1}\" PerformAction=\"${2}\" Event=\"${3|PostSubmit,PreSubmit|}\" >\n    <Field name=\"${4}\" value=\"${5}\" />\n</SilentPost>\n\n"
+            ],
+        "description": "FormX Control - ASCX SilentPost"
+    },
+	"fx:Twillo_ascx": {
+        "prefix": "_fx Twillo_ascx",
+        "body": [
+            "<Twillo AccountSid=\"${1}\" AuthToken=\"${2}\" From=\"${3}\" To=\"${4}\" PerformAction=\"${5}\" Event=\"${6|PostSubmit,PreSubmit|}\" >\n${7:Text Message}\n</Twillo>\n\n"
+            ],
+        "description": "FormX Control - ASCX Twillo"
     }, 
     "fx Inline Edit Form_ascx": {
         "prefix": "_fx FormX InLine Edit Form Template_ascx",
@@ -1783,21 +1840,21 @@
             "<%@ Control Language=\"vb\" AutoEventWireup=\"false\" Inherits=\"KnowBetter.XModPro.TemplateBase\" %>",
             "<%@ Register Assembly=\"KnowBetter.XModPro.Web.Controls\" Namespace=\"KnowBetter.XModPro.Web.Controls\" TagPrefix=\"xmod\" %>",
             "<%@ Register TagPrefix=\"fx\" Namespace=\"Reflect.XModPro.Templates.FormX\" Assembly=\"Reflect.XModPro.Templates.FormX\" %>\n\n",
-            "<xmod:masterview runat=\"server\">\n<xmod:Template runat=\"server\" Id=\"${1}\" Ajax=\"${2|true,false|}\">\n    <ListDataSource />\n    <DeleteCommand />\n    <HeaderTemplate>\n        <table>\n            <thead>\n                <tr>\n                    <th> </th>\n                </tr>\n            </thead>\n            <tbody>\n    </HeaderTemplate>\n    <ItemTemplate>\n                <tr>\n                <fx:FormX runat=\"server\" Mode=\"${3|template,add,edit|}\">\n                <Template>\n                    <td> </td>\n                </Template>\n                <EditForm>\n                </EditForm>\n            </fx:FormX>\n                </tr>\n    </ItemTemplate>\n    <FooterTemplate>\n            </tbody>\n        </table>\n    </FooterTemplate>\n</xmod:template>\n</xmod:masterview>" 
+            "<xmod:masterview runat=\"server\">\n<xmod:Template runat=\"server\" Id=\"${1}\" Ajax=\"${2|true,false|}\">\n    <ListDataSource />\n    <DeleteCommand />\n    <HeaderTemplate>\n        <table>\n            <thead>\n                <tr>\n                    <th> </th>\n                </tr>\n            </thead>\n            <tbody>\n    </HeaderTemplate>\n    <ItemTemplate>\n                <tr>\n                <fx:FormX runat=\"server\" Mode=\"${3|template,add,edit|}\">\n                <Template>\n                    <td> </td>\n                </Template>\n                <EditForm>\n                </EditForm>\n                <EditSuccessTemplate>\n                </EditSuccessTemplate>\n            </fx:FormX>\n                </tr>\n    </ItemTemplate>\n    <FooterTemplate>\n            </tbody>\n        </table>\n    </FooterTemplate>\n</xmod:template>\n</xmod:masterview>" 
             ],
         "description": "Form.X  Control - ASCX Inline edit Form Template"
     },
 	"fx:AddButton_ascx": {
         "prefix": "_fx AddButton_ascx",
         "body": [
-			"<fx:AddButton Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
+			"<fx:AddButton runat=\"server\" Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
             ],
         "description": "FormX Control - ASCX fx:AddButton"
 	},
 	"fx:EditButton_ascx": {
         "prefix": "_fx EditButton_ascx",
         "body": [
-			"<fx:EditButton Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
+			"<fx:EditButton runat=\"server\" Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
             ],
         "description": "FormX Control - ASCX fx:EditButton"
 	},
@@ -1838,7 +1895,3 @@
     }
 
 }
-
-
-
-
