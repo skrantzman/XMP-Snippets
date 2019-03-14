@@ -4,6 +4,12 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evauluated.
 
+## [1.2.51]
+- ### Added Snippets and bug fixes.
+    - Fixed _xf Form snippet. Added closing slash in a text control that was throwing an error. 
+    - Added _xf Basic Form snippt
+    - Added Separate _xf snippets for AddForm, AddSuccess, EditForm, and EditSuccess templates
+
 ## [1.2.5]
 - ### Added Snippets and bug fixes.
     - Added xf Output Parameter snippet
