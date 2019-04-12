@@ -79,6 +79,11 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.52__
+- ### Bug fixes.
+    - Fixed missing "/" in closing DetailDataSource tags. 
+    - Moved both DetailDataSource and ListDataSource tags from xf, _xf to xt and _xt
+    - Fixed missing Display= in xmod:Redirect tags
 
 __v 1.2.51__
 - ### Added Snippets and bug fixes.

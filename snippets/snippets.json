@@ -125,6 +125,13 @@
             ],
         "description": "XMP Template Control - xmod:DetailLink"
     },
+    "DetailDataSource": {
+        "prefix": "xt DetailDataSource",
+        "body": [
+            "<DetailDataSource Id=\"${1}\" CommandText=\"${2:SELECT 1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int64,boolean|}\">\n</DetailDataSource>\n"
+            ],
+        "description": "XMP Form Control - DetailDataSource"
+    },
     "xmod:Each": {
         "prefix": "xt xmod:Each",
         "body": [
@@ -208,6 +215,13 @@
             "<xmod:JsonFeed>\n    <ListDataSource CommandText=\"${1:SELECT ...}\">\n       <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' DataType=\"${5|string,int32,int64,boolean|}\" DefaultValue=\"${6}\" />\n    </ListDataSource>\n</xmod:JsonFeed>\n "
             ],
         "description": "XMP Template Control - xmod:JsonFeed"
+    },    
+    "ListDataSource": {
+        "prefix": "xt ListDataSource",
+        "body": [
+            "<ListDataSource Id=\"${1}\" CommandText=\"${2:SELECT...}\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int62,boolean|}\" />\n<ListDataSource>\n"
+            ],
+        "description": "XMP Form Control - ListDataSource"
     },
     "xmod:LoadFeed": {
         "prefix": "xt xmod:LoadFeed",
@@ -261,7 +275,7 @@
     "xmod:Redirect": {
         "prefix": "xt xmod:Redirect",
         "body": [
-            "<xmod:Redirect ${1|Button,LinkButton,ImageButton|} text=\"${2}\" Target=\"${3:http://mysite.com/} \">\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' /> \n</xmod:Redirect>\n "
+            "<xmod:Redirect Display=\"${1|Button,LinkButton,ImageButton|}\" text=\"${2}\" Target=\"${3:http://mysite.com/} \">\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' /> \n</xmod:Redirect>\n "
             ],
         "description": "XMP Template Control - xmod:Redirect"
     },
@@ -538,13 +552,6 @@
             ],
         "description": "XMP Form Control - DateInput"
     },
-    "DetailDataSource": {
-        "prefix": "xf DetailDataSource",
-        "body": [
-            "<DetailDataSource Id=\"${1}\" CommandText=\"${2:SELECT 1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int64,boolean|}\">\n<DetailDataSource>\n"
-            ],
-        "description": "XMP Form Control - DetailDataSource"
-    },
     "DropDownList": {
         "prefix": "xf DropDownList",
         "body": [
@@ -621,13 +628,6 @@
             "<ListBox Id=\"${1}\" DataSourceId=\"${2}\" DataField=\"${3}\" DataTextField=\"${4}\"  DataValueField=\"${5}\" DataType=\"${6|string,int32,int62,boolean|}\" SelectionMode=\"${7|single,multiple|}\" SelectedItemsSeparator=\"${8:|}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>    \n</ListBox>\n "
             ],
         "description": "XMP Form Control - ListBox"
-    },
-    "ListDataSource": {
-        "prefix": "xf ListDataSource",
-        "body": [
-            "<ListDataSource Id=\"${1}\" CommandText=\"${2:SELECT...}\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int62,boolean|}\" />\n<ListDataSource>\n"
-            ],
-        "description": "XMP Form Control - ListDataSource"
     },
     "Login": {
         "prefix": "xf Login",
@@ -1050,6 +1050,13 @@
             ],
         "description": "XMP Template Control - ASCX xmod:DetailLink"
     },
+    "DetailDataSource_ascx": {
+        "prefix": "_xt DetailDataSource_ascx",
+        "body": [
+            "<DetailDataSource Id=\"${1}\" CommandText=\"${2:SELECT 1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int64,boolean|}\">\n</DetailDataSource>\n"
+            ],
+        "description": "XMP Form Control - ASCX DetailDataSource"
+    },
     "xmod:Each_ascx": {
         "prefix": "_xt xmod:Each_ascx",
         "body": [
@@ -1134,6 +1141,13 @@
             ],
         "description": "XMP Template Control - ASCX xmod:JsonFeed"
     },
+    "ListDataSource_ascx": {
+        "prefix": "_xt ListDataSource_ascx",
+        "body": [
+            "<ListDataSource Id=\"${1}\" CommandText=\"${2:SELECT...}\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int62,boolean|}\" />\n<ListDataSource>\n"
+            ],
+        "description": "XMP Form Control - ASCX ListDataSource"
+    },
     "xmod:LoadFeed_ascx": {
         "prefix": "_xt xmod:LoadFeed_ascx",
         "body": [
@@ -1186,7 +1200,7 @@
     "xmod:Redirect_ascx": {
         "prefix": "_xt xmod:Redirect_ascx",
         "body": [
-            "<xmod:Redirect runat=\"server\" ${1|Button,LinkButton,ImageButton|} text=\"${2}\" Target=\"${3:http://mysite.com/} \">\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' /> \n</xmod:Redirect>\n "
+            "<xmod:Redirect runat=\"server\" Display=\"${1|Button,LinkButton,ImageButton|}\" text=\"${2}\" Target=\"${3:http://mysite.com/} \">\n    <Field Name=\"${4}\" Value='${5:<%#Eval(\"${6:Values}\")(\"${7:Token Name Here}\")%>}' /> \n</xmod:Redirect>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:Redirect"
     },
@@ -1466,13 +1480,6 @@
             ],
         "description": "XMP Form Control - ASCX DateInput"
     },
-    "DetailDataSource_ascx": {
-        "prefix": "_xf DetailDataSource_ascx",
-        "body": [
-            "<DetailDataSource Id=\"${1}\" CommandText=\"${2:SELECT 1}\" CommandType=\"StoredProcedure\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int64,boolean|}\">\n<DetailDataSource>\n"
-            ],
-        "description": "XMP Form Control - ASCX DetailDataSource"
-    },
     "DropDownList_ascx": {
         "prefix": "_xf DropDownList_ascx",
         "body": [
@@ -1542,13 +1549,6 @@
             "<ListBox Id=\"${1}\" DataSourceId=\"${2}\" DataField=\"${3}\" DataTextField=\"${4}\"  DataValueField=\"${5}\" DataType=\"${6|string,int32,int62,boolean|}\" SelectionMode=\"${7|single,multiple|}\" SelectedItemsSeparator=\"${8:|}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>    \n</ListBox>\n "
             ],
         "description": "XMP Form Control - ASCX ListBox"
-    },
-    "ListDataSource_ascx": {
-        "prefix": "_xf ListDataSource_ascx",
-        "body": [
-            "<ListDataSource Id=\"${1}\" CommandText=\"${2:SELECT...}\" CommandType=\"StoredProcedure\"\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int62,boolean|}\" />\n<ListDataSource>\n"
-            ],
-        "description": "XMP Form Control - ASCX ListDataSource"
     },
     "Login_ascx": {
         "prefix": "_xf Login_ascx",

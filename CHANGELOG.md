@@ -4,6 +4,12 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evauluated.
 
+## [1.2.52]
+- ### Bug fixes.
+    - Fixed missing "/" in closing DetailDataSource tags. 
+    - Moved both DetailDataSource and ListDataSource tags from xf, _xf to xt and _xt
+    - Fixed missing Display= in xmod:Redirect tags
+
 ## [1.2.51]
 - ### Added Snippets and bug fixes.
     - Fixed _xf Form snippet. Added closing slash in a text control that was throwing an error. 
