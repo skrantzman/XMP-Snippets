@@ -81,7 +81,7 @@ No known issues as of publish date
 
 ## Release Notes
 
-__v 1.2.6__
+__v 1.2.60__
 - ### Add Token Snippets for xmp "tk" and aspx "_tk" files (22 new snippets total).
     - add the following token types for both xmp (copy and paste), and aspx (direct editing) file types. Most tokens snippets have selectable value tab stops.
         * Cookie
