@@ -13,16 +13,18 @@
 
 # XMP Snippets
 
-XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 272 snippets for you to use, and about half support the direct editing of .ascx files.
+XMP Snippets simply allows you to quickly scaffold simple to complex XMod Pro Templates and Forms. In addition there is also support for Form.X form controls as well. Currently there are 290 snippets for you to use, and about half support the direct editing of .ascx files.
 
 XMP Snippets are very easy to use
 
-* For XMP Template Controls start by typing __xt__, followed by the start of the desiered template control.
-* For XMP Form Controls start by typing __xf__, followed by the start of the desiered form control.
-* For Form.X Form Controls start by typing __fx__, followed by the start of the desiered Form.x control.
-* For Direct Editing of XMP Template in ascx files start by typine ___xt__, folowed by the start of the desired template control.
-* For Direct Editing of XMP Forms in ascx files start by typine ___xf__, folowed by the start of the desired template control.
-* For Direct Editing of Form.x Forms in ascx files start by typine ___fx__, folowed by the start of the desired template control. 
+* For XMP Template Controls start by typing __xt__, followed by the start of the desired  template control.
+* For XMP Form Controls start by typing __xf__, followed by the start of the desired  form control.
+* Form XMP Token insertion start by typing __tk__, followed by the start of the desired  token.
+* For Form.X Form Controls start by typing __fx__, followed by the start of the desired  Form.x control.
+* For Direct Editing of XMP Template in ascx files start by typing ___xt__, followed by the start of the desired  template control.
+* For Direct Editing of XMP Forms in ascx files start by typing ___xf__, followed by the start of the desired  template control.
+* For Direct Insertion of XMP Tokens in ascx files start by typing ___tk__, followed by the start of the desired  token.
+* For Direct Editing of Form.x Forms in ascx files start by typing ___fx__, followed by the start of the desired  template control. 
 
 ## Benefits
 There are many benefits to coding XMod Pro Templates and Forms in VS Code with XMP Snippets over the traditional method. A few are listed below:
@@ -79,6 +81,21 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.6__
+- ### Add Token Snippets for xmp "tk" and aspx "_tk" files (22 new snippets total).
+    - add the following token types for both xmp (copy and paste), and aspx (direct editing) file types. Most tokens snippets have selectable value tab stops.
+        * Cookie
+        * DateAdd
+        * DataParameter
+        * FormParameter
+        * Join
+        * Module
+        * Page
+        * Portal
+        * Request
+        * URL
+        * User
+
 __v 1.2.53__
 - ### Updated _xt snippets.
     - Updated "Value" reference in _xt snippets from [[Token Name ]] to correct aspx style reference <%#Eval("Values")("Token Name")%>, which displays as [[Token Name]] in XMP Editor.
@@ -108,7 +125,7 @@ __v 1.2.4__
 
 __v 1.2.3__ 
 - ### bug fix.
-    - Reasigned ascx xmod:Template from _xf to _xt prefix.
+    - Reassigned ascx xmod:Template from _xf to _xt prefix.
 
 __v 1.2.2__ 
 - ### Added snippets and bug fix.

@@ -2,7 +2,22 @@
 All notable changes to the "xmp-snippets" extension will be documented in this file.
 
 ## Unreleased
-- Add support for user requests as they are evauluated.
+- Add support for user requests as they are evaluated.
+
+## [1.2.6]
+- ### Add Token Snippets for xmp and aspx files (22 new snippets total).
+    - Added the following token types for both xmp (copy and paste), and aspx (direct editing) file types. Most tokens snippets have selectable value tab stops.
+        * Cookie
+        * DateAdd
+        * Data Parameter
+        * Form Parameter
+        * Join
+        * Module
+        * Page
+        * Portal
+        * Request
+        * URL
+        * User
 
 ## [1.2.53]
 - ### Update.
@@ -35,7 +50,7 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 
 ## [1.2.3]
 - ### bug fix.
-    - Reasigned ascx xmod:Template from _xf to _xt prefix.
+    - Reassigned ascx xmod:Template from _xf to _xt prefix.
 
 ## [1.2.2] - 02/15/2019 
 - ### Added snippets and bug fix.
@@ -54,7 +69,7 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
     - Added  1 _xp snippet for Token Replacement in XMP ascx files.  
 
 ## [1.1.0] - 02/11/2019
-- ### Added Support for Tabstops.
+- ### Added Support for Tab Stops.
     - After inserting controls via a snippet, you can now tab through the control's properties to set their values.
 
 ## [1.0.1] - 02/9/2019
@@ -62,7 +77,7 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 
 ## [1.0.0] - 02/8/2019
 - ### Initial release.
-    - Contains 128 snippets for XMP Template, XMP Form and Form.X Contorls.
+    - Contains 128 snippets for XMP Template, XMP Form and Form.X Controls.
       - 52 xt snippets for XMP templates controls.
       - 70 xf snippets for XMP forms controls.
       -  6 fx snippets for Form.X form controls.

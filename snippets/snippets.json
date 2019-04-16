@@ -923,6 +923,83 @@
             "<Twillo AccountSid=\"${1}\" AuthToken=\"${2}\" From=\"${3}\" To=\"${4}\" PerformAction=\"${5}\" Event=\"${6|PostSubmit,PreSubmit|}\" >\n${7:Text Message}\n</Twillo>\n\n"
             ],
         "description": "FormX Control - Twillo"
+    }, 
+    "XMP Cookie Token": {
+        "prefix": "tk Cookie Token",
+        "body": [
+            "[[Cookie:${1:cookieName}]]" 
+            ],
+        "description": "XMP Token - Cookie Parameter Token"
+    },  
+    "XMP Data Parameter Token": {
+        "prefix": "tk Data Parameter Token",
+        "body": [
+            "[[${1:TemplateID}_${2|list,detail|}@${3:ParameterName}]]" 
+            ],
+        "description": "XMP Token - Data Parameter Token"
+    }, 
+    "XMP DateAdd Token": {
+        "prefix": "tk DateAdd Token",
+        "body": [
+            "[[DateAdd:${1:1},${2|d,w,m,y|},${3:MM/dd/yyyy}]]" 
+            ],
+        "description": "XMP Token - DateAdd Token"
+    }, 
+    "XMP Field Token": {
+        "prefix": "tk Field Token",
+        "body": [
+            "[[${1:Token Name Here}\"]]" 
+            ],
+        "description": "XMP Token - Field Token"
+    }, 
+    "XMP Join Function": {
+        "prefix": "tk Join Function",
+        "body": [
+            "[[Join(\"${1:Hello} {0}\"), \"${2:World!}\"]]" 
+            ],
+        "description": "XMP Token - Join Function"
+    },   
+    "XMP Module Token": {
+        "prefix": "tk Module Token",
+        "body": [
+            "[[Module:${1|Id,Title|}]]" 
+            ],
+        "description": "XMP Token - Module Token"
+    },  
+    "XMP Page Token": {
+        "prefix": "tk Page Token",
+        "body": [
+            "[[Page:${1|Id,Name,Title|}]]" 
+            ],
+        "description": "XMP Token - Page Token"
+    }, 
+    "XMP Portal Token": {
+        "prefix": "tk Portal Token",
+        "body": [
+            "[[Portal:${1|Alias,Description,Email,Expiry,HomeDirectory,HomeDirectoryMapped,HomeTabID,Id,LoginTabID,LogoFile,Name,TimeZoneOffset|}]]" 
+            ],
+        "description": "XMP Token - Portal Token"
+    }, 
+    "XMP Request Token": {
+        "prefix": "tk Request Token",
+        "body": [
+            "[[Request:${1|Agent,Browser,HostAddress,HostName,Locale,PageName,Referrer,URL|}]]" 
+            ],
+        "description": "XMP Token - Request Token"
+    }, 
+    "XMP Url Token": {
+        "prefix": "tk Url Token",
+        "body": [
+            "[[Url:${1:parameterName}]]" 
+            ],
+        "description": "XMP Token - Url Token"
+    }, 
+    "XMP User Token": {
+        "prefix": "tk User Token",
+        "body": [
+            "[[User:${2|ID,FirstName,LastName,DisplayName,UserName,Email, |}]]" 
+            ],
+        "description": "XMP Token - User Token"
     },
     "xmod:AddButton_ascx": {
         "prefix": "_xt xmod:AddButton_ascx",
@@ -1883,26 +1960,82 @@
             ],
         "description": "FormX Control - ASCX Form"
 	}, 
-    "XMP Token Value_ascx": {
-        "prefix": "_xp Token Value_ascx",
+    "XMP Cookie Token_ascx": {
+        "prefix": "_tk Cookie Token_ascx",
+        "body": [
+            "<%#CookieData(\"${1:cookieName}\")%>" 
+            ],
+        "description": "XMP Token - ASCX Cookie Parameter Token"
+    },  
+    "XMP Data Parameter Token_ascx": {
+        "prefix": "_tk Data Parameter Token_ascx",
+        "body": [
+            "<%#DBParamData(\"${1:TemplateID}_${2|list,detail|}@${3:ParameterName}\")%>" 
+            ],
+        "description": "XMP Token - ASCX Data Parameter Token"
+    }, 
+    "XMP DateAdd Token_ascx": {
+        "prefix": "_tk DateAdd Token_ascx",
+        "body": [
+            "<%#DateAddFunc(\"${1:1},${2|d,w,m,y|},${3:MM/dd/yyyy}\")%>" 
+            ],
+        "description": "XMP Token - ASCX DateAdd Token"
+    }, 
+    "XMP Field Token_ascx": {
+        "prefix": "_tk Field Token_ascx",
         "body": [
             "<%#Eval(\"Values\")(\"${1:Token Name Here}\")%>" 
             ],
-        "description": "XMP  Control - ASCX Token Value"
-    },    
+        "description": "XMP Token - ASCX Field Token"
+    }, 
     "XMP Join Function_ascx": {
         "prefix": "_xp Join Function_ascx",
         "body": [
             "<%#Join(\"${1:Some Text} {0}, ${2:More Text} {1}\",Eval(\"Values\")(\"${3:Token Name 1}\"),Eval(\"Values\")(\"${4:Token Name 2}\"))%>" 
             ],
-        "description": "XMP  Control - ASCX Join Function"
-    },       
-    "XMP Join Function": {
-        "prefix": "xp Join Function",
+        "description": "XMP Token - ASCX Join Function"
+    },   
+    "XMP Module Token_ascx": {
+        "prefix": "_tk Module Token_ascx",
         "body": [
-            "[[Join(\"${1:Some Text} {0}, ${2:More Text} {1}\",[[${3:Token Name 1}]]\"),[[${4:Token Name 2}]]\"))%>" 
+            "<%#ModuleData(\"${1|Id,Title|}\")%>" 
             ],
-        "description": "XMP  Control - Join Function"
+        "description": "XMP Token - ASCX Module Token"
+    },  
+    "XMP Page Token_ascx": {
+        "prefix": "_tk Page Token_ascx",
+        "body": [
+            "<%#PageData(\"${1|Id,Name,Title|}\")%>" 
+            ],
+        "description": "XMP Token - ASCX Page Token"
+    }, 
+    "XMP Portal Token_ascx": {
+        "prefix": "_tk Portal Token_ascx",
+        "body": [
+            "<%#PortalData(\"${1|Alias,Description,Email,Expiry,HomeDirectory,HomeDirectoryMapped,HomeTabID,Id,LoginTabID,LogoFile,Name,TimeZoneOffset|}\")%>" 
+            ],
+        "description": "XMP Token - ASCX Portal Token"
+    }, 
+    "XMP Request Token_ascx": {
+        "prefix": "_tk Request Token_ascx",
+        "body": [
+            "<%#RequestData(\"${1|Agent,Browser,HostAddress,HostName,Locale,PageName,Referrer,URL|}\")%>" 
+            ],
+        "description": "XMP Token - ASCX Request Token"
+    }, 
+    "XMP Url Token_ascx": {
+        "prefix": "_tk Url Token_ascx",
+        "body": [
+            "<%#UrlData(\"${1:parameterName}\")%>" 
+            ],
+        "description": "XMP Token - ASCX Url Token"
+    }, 
+    "XMP User Token_ascx": {
+        "prefix": "_tk User Token_ascx",
+        "body": [
+            "<%#UserData(\"${2|ID,FirstName,LastName,DisplayName,UserName,Email, |}\")%>" 
+            ],
+        "description": "XMP Token - ASCX User Token"
     },
     "Comment": {
         "prefix": "xp Comment Tag",
