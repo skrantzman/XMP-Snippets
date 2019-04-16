@@ -976,28 +976,28 @@
     "Command_ascx": {
         "prefix": "_xt Command",
         "body": [
-            "<Command runat=\"server\" Target=\"${1}\" Type=\"${2|List,Detail|}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />${0}\n</Command>\n "
+            "<Command runat=\"server\" Target=\"${1}\" Type=\"${2|List,Detail|}\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' />${0}\n</Command>\n "
             ],
         "description": "XMP Template Control - ASCX Command"
     },	
     "xmod:CommandButton_ascx": {
         "prefix": "_xt xmod:CommandButton_ascx",
         "body": [
-            "<xmod:CommandButton runat=\"server\" text=\"${1}\"\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />${0}\n    </Command>\n</xmod:CommandButton> \n "
+            "<xmod:CommandButton runat=\"server\" text=\"${1}\">\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:<%#Eval(\"Values\")(\"${6:Token Name Here}\")%>}' />${0}\n    </Command>\n</xmod:CommandButton> \n "
             ],
         "description": "XMP Template Control - ASCX xmod:CommandButton"
     },
     "xmod:CommandImage_ascx": {
         "prefix": "_xt xmod:CommandImage_ascx",
         "body": [
-            "<xmod:CommandImage runat=\"server\" text=\"${1}\" ImageUrl=\"${2}\" ImageAlign=\"${3}\">\n    <Command Target=\"${4}\" Type=\"${5|List,Detail|}\">\n        <Parameter Name=\"${6}\" Value='${7:[[${8}]]}' />${0}\n    </Command>\n</xmod:CommandImage>\n "
+            "<xmod:CommandImage runat=\"server\" text=\"${1}\" ImageUrl=\"${2}\" ImageAlign=\"${3}\">\n    <Command Target=\"${4}\" Type=\"${5|List,Detail|}\">\n        <Parameter Name=\"${6}\" Value='${7:<%#Eval(\"Values\")(\"${8:Token Name Here}\")%>}' />${0}\n    </Command>\n</xmod:CommandImage>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:CommandImage"
     },
     "xmod:CommandLink_ascx": {
         "prefix": "_xt xmod:CommandLink_ascx",
         "body": [
-            "<xmod:CommandLink runat=\"server\" text=\"${1}\" >\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />${0}\n    </Command>\n</xmod:CommandLink>  \n"
+            "<xmod:CommandLink runat=\"server\" text=\"${1}\" >\n    <Command Target=\"${2}\" Type=\"${3|List,Detail|}\">\n        <Parameter Name=\"${4}\" Value='${5:<%#Eval(\"Values\")(\"${6:Token Name Here}\")%>}' />${0}\n    </Command>\n</xmod:CommandLink>  \n"
             ],
         "description": "XMP Template Control - ASCX xmod:CommandLink"
     },
@@ -1011,42 +1011,42 @@
     "xmod:DeleteButton_ascx": {
         "prefix": "_xt xmod:DeleteButton_ascx",
         "body": [
-            "<xmod:DeleteButton runat=\"server\" text=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DeleteButton>\n${0}"
+            "<xmod:DeleteButton runat=\"server\" text=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' />\n</xmod:DeleteButton>\n${0}"
             ],
         "description": "XMP Template Control - ASCX xmod:DeleteButton"
     },
     "xmod:DeleteImage_ascx": {
         "prefix": "_xt xmod:DeleteImage_ascx",
         "body": [
-            "<xmod:DeleteImage runat=\"server\" AlternateText=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\" ImageUrl=\"${3:~/images/delete.gif}\">\n    <Parameter Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:DeleteImage>\n "
+            "<xmod:DeleteImage runat=\"server\" AlternateText=\"${1:Delete}\" OnClientClick=\"return confirm('${2:Are you sure you want to delete this record?}');\" ImageUrl=\"${3:~/images/delete.gif}\">\n    <Parameter Name=\"${4}\" Value='${5:<%#Eval(\"Values\")(\"${6:Token Name Here}\")%>}' />\n</xmod:DeleteImage>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:DeleteImage"
     },
     "xmod:DeleteLink_ascx": {
         "prefix": "_xt xmod:DeleteLink_ascx",
         "body": [
-            "<xmod:DeleteLink runat=\"server\" text=\"${1:Delete}\" onclientclick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DeleteLink>\n "
+            "<xmod:DeleteLink runat=\"server\" text=\"${1:Delete}\" onclientclick=\"return confirm('${2:Are you sure you want to delete this record?}');\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' />\n</xmod:DeleteLink>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:DeleteLink"
     },
     "xmod:DetailButton_ascx": {
         "prefix": "_xt xmod:DetailButton_ascx",
         "body": [
-            "<xmod:DetailButton runat=\"server\" text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:DetailButton>\n "
+            "<xmod:DetailButton runat=\"server\" text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' />\n</xmod:DetailButton>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:DetailButton"
     },
     "xmod:DetailImage_ascx": {
         "prefix": "_xt xmod:DetailImage_ascx",
         "body": [
-            "<xmod:DetailImage runat=\"server\" AlternateText=\"${1:View Detail}\" ImageUrl=\"${2:~/images/about.gif}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:DetailImage> \n "
+            "<xmod:DetailImage runat=\"server\" AlternateText=\"${1:View Detail}\" ImageUrl=\"${2:~/images/about.gif}\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' />\n</xmod:DetailImage> \n "
             ],
         "description": "XMP Template Control - ASCX xmod:DetailImage"
     },
     "xmod:DetailLink_ascx": {
         "prefix": "_xt xmod:DetailLink_ascx",
         "body": [
-            "<xmod:DetailLink runat=\"server\" text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:DetailLink>\n "
+            "<xmod:DetailLink runat=\"server\" text=\"${1:View Detail}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' />\n</xmod:DetailLink>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:DetailLink"
     },
@@ -1060,28 +1060,28 @@
     "xmod:Each_ascx": {
         "prefix": "_xt xmod:Each_ascx",
         "body": [
-            " <ul>\n        <xmod:Each runat=\"server\" Delimiter=\"${1:|}\" Value='${2:[[${3}]]}'>\n          <ItemTemplate><img src=\"${4:~/imgages/}\" /></ItemTemplate>\n       </xmod:Each>\n</ul>\n\n "
+            " <ul>\n        <xmod:Each runat=\"server\" Delimiter=\"${1:|}\" Value='${2:<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>}'>\n          <ItemTemplate><img src=\"${4:~/imgages/}\" /></ItemTemplate>\n       </xmod:Each>\n</ul>\n\n "
             ],
         "description": "XMP Template Control - ASCX xmod:Each"
     },
     "xmod:EditButton_ascx": {
         "prefix": "_xt xmod:EditButton_ascx",
         "body": [
-            "<xmod:EditButton runat=\"server\" text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:EditButton>\n "
+            "<xmod:EditButton runat=\"server\" text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' />\n</xmod:EditButton>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:EditButton"
     },
     "xmod:EditImage_ascx": {
         "prefix": "_xt xmod:EditImage_ascx",
         "body": [
-            "<xmod:EditImage runat=\"server\" AlternateText=\"${1:Edit}\" ImageUrl=\"${2:~/images/edit.gif}\" >\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' />\n</xmod:EditImage>\n "
+            "<xmod:EditImage runat=\"server\" AlternateText=\"${1:Edit}\" ImageUrl=\"${2:~/images/edit.gif}\" >\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' />\n</xmod:EditImage>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:EditImage"
     },
     "xmod:EditLink_ascx": {
         "prefix": "_xt xmod:EditLink_ascx",
         "body": [
-            "<xmod:EditLink runat=\"server\" text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' />\n</xmod:EditLink>\n "
+            "<xmod:EditLink runat=\"server\" text=\"${1:Edit}\" >\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' />\n</xmod:EditLink>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:EditLink"
     },    
@@ -1102,21 +1102,21 @@
     "xmod:Format_ascx": {
         "prefix": "_xt xmod:Format_ascx",
         "body": [
-            "<xmod:Format runat=\"server\"  Type=\"${1|Numeric,Float,Date,Text,RegEx,Cloak,HtmlEncode,HtmlDecode,UrlEncode,UrlDecode|}\" Value='${2:[[${3}]]}' Pattern=\"${4}\" />\n "
+            "<xmod:Format runat=\"server\"  Type=\"${1|Numeric,Float,Date,Text,RegEx,Cloak,HtmlEncode,HtmlDecode,UrlEncode,UrlDecode|}\" Value='${2:<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>}' Pattern=\"${4}\" />\n "
             ],
         "description": "XMP Template Control - ASCX xmod:Format"
     },
     "xmod:IfEmpty_ascx": {
         "prefix": "_xt xmod:IfEmpty_ascx",
         "body": [
-            "<xmod:IfEmpty runat=\"server\"   Value='${1:[[${2}]]}'>\n      ${2:...Content Goes Here...}\n</xmod:IfEmpty> \n "
+            "<xmod:IfEmpty runat=\"server\"   Value='${1:<%#Eval(\"Values\")(\"${2:Token Name Here}\")%>}'>\n      ${2:...Content Goes Here...}\n</xmod:IfEmpty> \n "
             ],
         "description": "XMP Template Control - ASCX xmod:IfEmpty"
     },
     "xmod:IfNotEmpty_ascx": {
         "prefix": "_xt xmod:IfNotEmpty_ascx",
         "body": [
-            "<xmod:IfNotEmpty runat=\"server\"  Value='${1:[[${2}]]}'>\n         ${2:...Content Goes Here...}\n</xmod:IfNotEmpty> \n "
+            "<xmod:IfNotEmpty runat=\"server\"  Value='${1:<%#Eval(\"Values\")(\"${2:Token Name Here}\")%>}'>\n         ${2:...Content Goes Here...}\n</xmod:IfNotEmpty> \n "
             ],
         "description": "XMP Template Control - ASCX xmod:IfNotEmpty"
     },
@@ -1137,7 +1137,7 @@
     "xmod:JsonFeed_ascx": {
         "prefix": "_xt xmod:JsonFeed_ascx",
         "body": [
-            "<xmod:JsonFeed runat=\"server\">\n    <ListDataSource CommandText=\"${1:SELECT ...}\">\n       <Parameter Name=\"${2}\" Value='${3:[[${4}]]}' DataType=\"${5|string,int32,int64,boolean|}\" DefaultValue=\"${6}\" />\n    </ListDataSource>\n</xmod:JsonFeed>\n "
+            "<xmod:JsonFeed runat=\"server\">\n    <ListDataSource CommandText=\"${1:SELECT ...}\">\n       <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' DataType=\"${5|string,int32,int64,boolean|}\" DefaultValue=\"${6}\" />\n    </ListDataSource>\n</xmod:JsonFeed>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:JsonFeed"
     },
@@ -1151,28 +1151,28 @@
     "xmod:LoadFeed_ascx": {
         "prefix": "_xt xmod:LoadFeed_ascx",
         "body": [
-            "<xmod:LoadFeed runat=\"server\"\n    FeedName=\"${1}\"\n    LoadingCssClass=\"${2}\"\n    LoadingImageUrl=\"${3}\"\n    Target=\"${4}\"  >\n \n    <Field Name=\"${5}\" Value='${6:[[${7}]]}' />\n</xmod:LoadFeed> \n\n "
+            "<xmod:LoadFeed runat=\"server\"\n    FeedName=\"${1}\"\n    LoadingCssClass=\"${2}\"\n    LoadingImageUrl=\"${3}\"\n    Target=\"${4}\"  >\n \n    <Field Name=\"${5}\" Value='${6:<%#Eval(\"Values\")(\"${7:Token Name Here}\")%>}' />\n</xmod:LoadFeed> \n\n "
             ],
         "description": "XMP Template Control - ASCX xmod:LoadFeed"
     },    
     "xmod:LoadFeedButton_ascx": {
         "prefix": "_xt xmod:LoadFeedButton_ascx",
         "body": [
-            "<xmod:LoadFeedButton runat=\"server\" \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\">\n\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:LoadFeedButton>\n\n "
+            "<xmod:LoadFeedButton runat=\"server\" \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\">\n\n    <Field Name=\"${4}\" Value='${5:<%#Eval(\"Values\")(\"${6:Token Name Here}\")%>}' />\n</xmod:LoadFeedButton>\n\n "
             ],
         "description": "XMP Template Control - ASCX xmod:LoadFeedButton"
     },
     "xmod:LoadFeedImage_ascx": {
         "prefix": "_xt xmod:LoadFeedImage_ascx",
         "body": [
-            "<xmod:LoadFeedImage runat=\"server\" \n    AlternateText=\"${1}\" \n    ImageUrl=\"${2}\" \n    FeedName=\"${3}\" \n    Target=\"${4}\"   >\n\n    <Field Name=\"${5}\" Value='${6:[[${7}]]}' />\n</xmod:LoadFeedImage>\n\n "
+            "<xmod:LoadFeedImage runat=\"server\" \n    AlternateText=\"${1}\" \n    ImageUrl=\"${2}\" \n    FeedName=\"${3}\" \n    Target=\"${4}\"   >\n\n    <Field Name=\"${5}\" Value='${6:<%#Eval(\"Values\")(\"${7:Token Name Here}\")%>}' />\n</xmod:LoadFeedImage>\n\n "
             ],
         "description": "XMP Template Control - ASCX xmod:LoadFeedImage"
     },
     "xmod:LoadFeedLink_ascx": {
         "prefix": "_xt xmod:LoadFeedLink_ascx",
         "body": [
-            "<xmod:LoadFeedLink runat=\"server\" \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\"  >\n\n    <Field Name=\"${4}\" Value='${5:[[${6}]]}' />\n</xmod:LoadFeedLink>\n\n "
+            "<xmod:LoadFeedLink runat=\"server\" \n    Text=\"${1}\" \n    FeedName=\"${2}\" \n    Target=\"${3}\"  >\n\n    <Field Name=\"${4}\" Value='${5:<%#Eval(\"Values\")(\"${6:Token Name Here}\")%>}' />\n</xmod:LoadFeedLink>\n\n "
             ],
         "description": "XMP Template Control - ASCX xmod:LoadFeedLink"
     },    
@@ -1186,7 +1186,7 @@
     "xmod:NavigateUrl_ascx": {
         "prefix": "_xt xmod:NavigateUrl_ascx",
         "body": [
-            "<a href=\"<xmod:NavigateUrl runat=\"server\" TabId=\"${1}\"><Parameter Name=\"${2}\" Value='${3:[[${4}]]}' /></xmod:NavigateUrl>\">${5:Link Text Here}</a>\n"
+            "<a href=\"<xmod:NavigateUrl runat=\"server\" TabId=\"${1}\"><Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' /></xmod:NavigateUrl>\">${5:Link Text Here}</a>\n"
             ],
         "description": "XMP Template Control - ASCX xmod:NavigateUrl"
     },
@@ -1263,7 +1263,7 @@
     "xmod:Select_ascx": {
         "prefix": "_xt xmod:Select_ascx",
         "body": [
-            "<xmod:Select runat=\"server\"  mode=\"${1|Standard,Inclusive|}\">\n    <Case CompareType=\"${2|Numeric,Float,Date,Text,Regex,Boolean,Role|}\" Value='${3:[[${4}]]}' Operator=\"${5|<,>,<>,=,<=,>=|}\" Expression=\"${6}\" IgnoreCase=\"${7|true,false|}\">\n        ${8}\n    </Case>\n    <Else>\n        ${9}\n    </Else>\n</xmod:Select>\n "
+            "<xmod:Select runat=\"server\"  mode=\"${1|Standard,Inclusive|}\">\n    <Case CompareType=\"${2|Numeric,Float,Date,Text,Regex,Boolean,Role|}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' Operator=\"${5|<,>,<>,=,<=,>=|}\" Expression=\"${6}\" IgnoreCase=\"${7|true,false|}\">\n        ${8}\n    </Case>\n    <Else>\n        ${9}\n    </Else>\n</xmod:Select>\n "
             ],
         "description": "XMP Template Control - ASCX xmod:Select"
     },
@@ -1865,14 +1865,14 @@
 	"fx:AddButton_ascx": {
         "prefix": "_fx AddButton_ascx",
         "body": [
-			"<fx:AddButton runat=\"server\" Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
+			"<fx:AddButton runat=\"server\" Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}' DataType=\"${5|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
             ],
         "description": "FormX Control - ASCX fx:AddButton"
 	},
 	"fx:EditButton_ascx": {
         "prefix": "_fx EditButton_ascx",
         "body": [
-			"<fx:EditButton runat=\"server\" Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='<%#Eval(\"Values\")(\"${3:Token Name Here}\")%>' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
+			"<fx:EditButton runat=\"server\" Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}' DataType=\"${5|string,int32,int62,boolean|}\" />\n</fx EditButton>"
             ],
         "description": "FormX Control - ASCX fx:EditButton"
 	},

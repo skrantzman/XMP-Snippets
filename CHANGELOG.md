@@ -4,6 +4,10 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evauluated.
 
+## [1.2.53]
+- ### Update.
+    - Updated "Value" reference in _xt snippets from [[Token Name ]] to correct aspx style reference <%#Eval("Values")("Token Name")%>, which displays as [[Token Name]] in XMP Editor.
+
 ## [1.2.52]
 - ### Bug fixes.
     - Fixed missing "/" in closing DetailDataSource tags. 

@@ -79,6 +79,10 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.53__
+- ### Updated _xt snippets.
+    - Updated "Value" reference in _xt snippets from [[Token Name ]] to correct aspx style reference <%#Eval("Values")("Token Name")%>, which displays as [[Token Name]] in XMP Editor.
+
 __v 1.2.52__
 - ### Bug fixes.
     - Fixed missing "/" in closing DetailDataSource tags. 
