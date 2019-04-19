@@ -4,6 +4,9 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evaluated.
 
+## [1.2.61]
+- ### Fixed Errors in Form.X fx:AddButton and fx:EditButton template contorls.
+
 ## [1.2.60]
 - ### Add Token Snippets for xmp and aspx files (22 new snippets total).
     - Added the following token types for both xmp (copy and paste), and aspx (direct editing) file types. Most tokens snippets have selectable value tab stops.

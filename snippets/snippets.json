@@ -394,7 +394,7 @@
     "AddForm": {
         "prefix": "xf AddForm",
         "body": [
-            "<AddForm ClientName=\"${1}\">\n    <SelectCommand  CommandText=\"${2:SELECT 1}\"  />\n    <SubmitCommand  CommandText=\"${3:INSERT INTO ...}\"  CommandType=\"StoredProcedure\"/>\n    <ControlDataSource Id=\"${4}\" CommandText=\"${5:SELECT ..., ... FROM ... ORDER BY ... ASC}\"/>\n\n </AddForm> \n "
+            "<AddForm ClientName=\"${1}\">\n    <SelectCommand  CommandText=\"${2:SELECT 1}\"  />\n    <SubmitCommand  CommandText=\"${3:INSERT INTO ...}\"  ${4:CommandType=\"StoredProcedure\"}/>\n    <ControlDataSource Id=\"${5}\" CommandText=\"${6:SELECT ..., ... FROM ... ORDER BY ... ASC}\"/>\n\n </AddForm> \n "
             ],
         "description": "XMP Form Control - AddForm"
     },
@@ -562,7 +562,7 @@
     "DualList": {
         "prefix": "xf DualList",
         "body": [
-            "><DualList Id=\"${1}\" DataField=\"${2}\" DataSourceId=\"${3}\"  DataType=\"${4|string,int32,int64,boolean|}\" DataTextField=\"${5}\"  DataValueField=\"${6}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</DualList>\n "
+            "<DualList Id=\"${1}\" DataField=\"${2}\" DataSourceId=\"${3}\"  DataType=\"${4|string,int32,int64,boolean|}\" DataTextField=\"${5}\"  DataValueField=\"${6}\" >\n    <ListItem Value=\"#00FF00\">Green</ListItem>\n    <ListItem Value=\"#FF0000\" selected=\"true\">Red</ListItem>\n    <ListItem Value=\"#0000FF\">Blue</ListItem>\n</DualList>\n "
             ],
         "description": "XMP Form Control - DualList"
     },      
@@ -611,7 +611,7 @@
     "jQueryReady": {
         "prefix": "xf jQueryReady",
         "body": [
-            "<jQueryReady>\n\n\n\n</jQueryReady>\n "
+            "<jQueryReady>\n${1}\n</jQueryReady>\n "
             ],
         "description": "XMP Form Control - jQueryReady"
     },
@@ -695,14 +695,14 @@
     "RemoveFromRoles": {
         "prefix": "xf RemoveFromRoles",
         "body": [
-            "<RemoveFromRoles RoleNames=\"${1:Role1,Editors}\" UserId='[[${2:User:Id}]]' />\n "
+            "<RemoveFromRoles RoleNames=\"${1:Role1,Role2...}\" UserId='[[${2:User:Id}]]' />\n "
             ],
         "description": "XMP Form Control - RemoveFromRoles"
     },
     "ScriptBlock": {
         "prefix": "xf ScriptBlock",
         "body": [
-            "<ScriptBlock ScriptId=\"${1}\" BlockType=\"${2|HeadScript,ClientScript,ClientScriptInclude,StartupScript|}\" RegisterOnce=\"${3|true,false|}\" Url=\"${4}\">\n    <Script type=\"text/javascript\">\n        ...Javascript... \n    </Script>\n</ScriptBlock>     \n "
+            "<ScriptBlock ScriptId=\"${1}\" BlockType=\"${2|HeadScript,ClientScript,ClientScriptInclude,StartupScript|}\" RegisterOnce=\"${3|true,false|}\" Url=\"${4}\">\n    <Script type=\"text/javascript\">\n        ${5:...Javascript...} \n    </Script>\n</ScriptBlock>     \n "
             ],
         "description": "XMP Form Control - ScriptBlock"
 	},  
@@ -870,7 +870,7 @@
 	"fx:EditButton": {
         "prefix": "fx EditButton",
         "body": [
-			"<fx:EditButton Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx EditButton>"
+			"<fx:EditButton Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='[[${3}]]' DataType=\"${4|string,int32,int62,boolean|}\" />\n</fx:EditButton>"
             ],
         "description": "FormX Control - fx:EditButton"
 	},
@@ -1942,14 +1942,14 @@
 	"fx:AddButton_ascx": {
         "prefix": "_fx AddButton_ascx",
         "body": [
-			"<fx:AddButton runat=\"server\" Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}' DataType=\"${5|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
+			"<fx:AddButton runat=\"server\" Text=\"${1:Add}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' DataType=\"${5|string,int32,int62,boolean|}\" />\n</fx:AddButton>\n"
             ],
         "description": "FormX Control - ASCX fx:AddButton"
 	},
 	"fx:EditButton_ascx": {
         "prefix": "_fx EditButton_ascx",
         "body": [
-			"<fx:EditButton runat=\"server\" Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}' DataType=\"${5|string,int32,int62,boolean|}\" />\n</fx EditButton>"
+			"<fx:EditButton runat=\"server\" Text=\"${1:Edit}\">\n    <Parameter Name=\"${2}\" Value='${3:<%#Eval(\"Values\")(\"${4:Token Name Here}\")%>}' DataType=\"${5|string,int32,int62,boolean|}\" />\n</fx:EditButton>"
             ],
         "description": "FormX Control - ASCX fx:EditButton"
 	},
