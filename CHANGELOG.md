@@ -4,6 +4,9 @@ All notable changes to the "xmp-snippets" extension will be documented in this f
 ## Unreleased
 - Add support for user requests as they are evaluated.
 
+## [1.2.62]
+- ### Fixed Errors in ControlDataSource controls by adding / to closing tags.
+
 ## [1.2.61]
 - ### Fixed Errors in Form.X fx:AddButton and fx:EditButton template contorls.
 

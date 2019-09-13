@@ -541,7 +541,7 @@
     "ControlDataSource": {
         "prefix": "xf ControlDataSource",
         "body": [
-            "<ControlDataSource Id=\"${1}\" CommandText=\"${2:SELECT ..., ... FROM ... ORDER BY ... ASC}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int64,boolean|}\" />\n<ControlDataSource>\n"
+            "<ControlDataSource Id=\"${1}\" CommandText=\"${2:SELECT ..., ... FROM ... ORDER BY ... ASC}\">\n    <Parameter Name=\"${3}\" Value='${4:[[${5}]]}' DataType=\"${6|string,int32,int64,boolean|}\" />\n</ControlDataSource>\n"
             ],
         "description": "XMP Form Control - ControlDataSource"
     },
@@ -1546,7 +1546,7 @@
     "ControlDataSource_ascx": {
         "prefix": "_xf ControlDataSource_ascx",
         "body": [
-            "<ControlDataSource Id=\"${1}\" CommandText=\"${2:SELECT ..., ... FROM ... ORDER BY ... ASC}\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int64,boolean|}\" />\n<ControlDataSource>\n"
+            "<ControlDataSource Id=\"${1}\" CommandText=\"${2:SELECT ..., ... FROM ... ORDER BY ... ASC}\">\n    <Parameter Name=\"${3}\" Value='${4:<%#Eval(\"Values\")(\"${5:Token Name Here}\")%>}' DataType=\"${6|string,int32,int64,boolean|}\" />\n</ControlDataSource>\n"
             ],
         "description": "XMP Form Control - ASCX ControlDataSource"
     },
@@ -2044,5 +2044,4 @@
         ],
         "description": "Add a html Comment with line break above and below"
     }
-
 }

@@ -81,6 +81,9 @@ No known issues as of publish date
 
 ## Release Notes
 
+__v 1.2.62__
+- ### Fixed Errors in ControlDataSource controls by adding / to closing tags.
+
 __v 1.2.61__
 - ### Fixed Errors in Form.X fx:AddButton and fx:EditButton template contorls.
     
