@@ -2,7 +2,7 @@
 
 
 [![](https://vsmarketplacebadge.apphb.com/version-short/SteveKrantzman.xmp-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=SteveKrantzman.xmp-snippets) 
-[![](https://vsmarketplacebadge.apphb.com/downloads-short/SteveKrantzman.xmp-snippets.svg)](https://marketplace.visualstudio.com/_apis/public/gallery/publishers/SteveKrantzman/vsextensions/xmp-snippets/1.2.61/vspackage) 
+[![](https://vsmarketplacebadge.apphb.com/downloads-short/SteveKrantzman.xmp-snippets.svg)](https://marketplace.visualstudio.com/_apis/public/gallery/publishers/SteveKrantzman/vsextensions/xmp-snippets/1.2.62/vspackage) 
 [![](https://vsmarketplacebadge.apphb.com/rating-short/SteveKrantzman.xmp-snippets.svg)](https://marketplace.visualstudio.com/items?itemName=SteveKrantzman.xmp-snippets&ssr=false#review-details) 
 [![](https://img.shields.io/badge/Dev--Community-XMP-orange.svg)](https://www.dnndev.com)
 
